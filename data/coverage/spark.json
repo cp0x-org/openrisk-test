@@ -1,0 +1,168 @@
+{
+  "protocolId": "spark",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 0",
+      "verbatim": "Stage 0. Spark is a protocol within the Sky ecosystem and consists of two main products: _Savings USDS_ and _SparkLend_. _Savings USDS_ is a savings product offering a fixed return on various stablecoins including `USDS`, `DAI` and `USDC`. _SparkLend_ is a lending protocol that enables users to lend and borrow various crypto assets. It offers deep stablecoin liquidity that is provided to a large part by Sky through Spark's _Liquidity Management Layer_. Spark's _Liquidity Management Layer_ allocates Sky stablecoin liquidity to various DeFi lending markets including _SparkLend_. The focus in this review is thus on its role within _SparkLend_ itself.",
+      "asOf": "2025-06-05",
+      "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "0",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "spark",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-06-05",
+            "updateDate": null,
+            "path": "src/content/protocols/spark/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "accesibility": "Low",
+              "overall": "Stage"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "3/5",
+      "verbatim": "Passes Open Access, Verifiability, Exit. Control and Autonomy inherit Sky governance surface.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "c",
+      "label": "A",
+      "verbatim": "Credit rating A. Sky backstop and PSM depth offset governance concentration.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "B+",
+      "verbatim": "Technical A−, operational B: subDAO dependency flagged.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "sUSDS vault rated BB+; SparkLend markets unrated.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "n"
+    },
+    "philidor": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "sUSDS scored 6.8/10; lending side out of scope (not a vault).",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "blockan": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Live dashboard: D3M exposure, collateral health, liquidation curves.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "SparkLend position management live.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pigi": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "sUSDS tracked: risk-adjusted yield rank 12/50.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Monitored: 9 alert rules, quiet 30d.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "c",
+      "label": "4 rpt",
+      "verbatim": "4 reports incl. sUSDS reserve composition review.",
+      "asOf": "2026-04",
+      "sourceUrl": null
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "protocolId": "morphovaults",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [],
+      "raw": {
+        "reason": "no_defiscan_review_mapped_or_found"
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "4/5",
+      "verbatim": "Passes four; Control partial — curator role centralization varies per vault.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "6 flagship vaults rated (A−…BBB−); long tail unrated.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "n"
+    },
+    "xerberus": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Median A− across 48 rated MetaMorpho vaults.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "n"
+    },
+    "philidor": {
+      "status": "c",
+      "label": "8.1",
+      "verbatim": "Median 8.1/10 — strongest cohort in the 700-vault set.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "blockan": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "Aggregated exposure via Morpho dashboard.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Full curator-behavior coverage: allocation drift, timelock usage, cap discipline.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "defisaver": {
+      "status": "n"
+    },
+    "pigi": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "48 vaults tracked with curator concentration metrics.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Curator-action alerts live.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "Covered within Morpho oracle-risk series.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "protocolId": "zerox",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [],
+      "raw": {
+        "reason": "no_defiscan_review_mapped_or_found"
+      }
+    },
+    "defipunkd": {
+      "status": "p",
+      "label": "2/5",
+      "verbatim": "Assessment in progress: Open Access, Verifiability pass; remaining dims pending.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "n"
+    },
+    "sphere": {
+      "status": "c",
+      "label": "B−",
+      "verbatim": "Composite B−; legacy governance surface.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "n"
+    },
+    "risklayer": {
+      "status": "n"
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "n"
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "n"
+    },
+    "pigi": {
+      "status": "n"
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "n"
+    },
+    "llamarisk": {
+      "status": "n"
+    }
+  }
+}

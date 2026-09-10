@@ -1,0 +1,159 @@
+{
+  "protocolId": "liquity",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 2",
+      "verbatim": "Stage 2. Liquity is a decentralized borrowing protocol that allows you to draw interest-free loans against Ether used as collateral. Loans are paid out in LUSD (a USD pegged stablecoin) and need to maintain a minimum collateral ratio of 110%. In addition to the collateral, the loans are secured by a Stability Pool containing LUSD and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms under Liquidation.",
+      "asOf": "2024-10-23",
+      "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "2",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "liquity",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2024-10-23",
+            "updateDate": null,
+            "path": "src/content/protocols/liquity/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeability": "Low",
+              "autonomy": "Low",
+              "exit_window": "Low",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "5/5",
+      "verbatim": "Passes all five dimensions. v1 is the registry's canonical maximum-autonomy entry.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "v1 rated A− (immutability premium); v2 unrated pending post-incident review.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "A",
+      "verbatim": "Technical A+, operational A−.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "n"
+    },
+    "risklayer": {
+      "status": "n"
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Trove distribution + redemption pressure dashboard.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Trove automation live for v1 and v2.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pigi": {
+      "status": "n"
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "v2 monitored post-incident; v1 unmonitored (immutable).",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "c",
+      "label": "2 rpt",
+      "verbatim": "BOLD peg dynamics review; v2.1 migration note.",
+      "asOf": "2026-02",
+      "sourceUrl": null
+    }
+  }
+}

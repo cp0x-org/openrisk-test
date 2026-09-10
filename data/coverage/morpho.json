@@ -1,0 +1,175 @@
+{
+  "protocolId": "morpho",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 1",
+      "verbatim": "Stage 1. Morpho is a lending protocol with permissionless market creation. It enables the deployment of minimal and isolated lending markets by specifying: one collateral asset, one loan asset, a Liquidation Loan To Value (LLTV), an Interest Rate Model (IRM), and an oracle. Users may lend funds directly on individual Morpho Markets or through Morpho Vaults. These vaults are created permissionlessly by third parties, or risk curators, and offer managed lending strategies by aggregating different Morpho Markets. Morpho governance operates within a very limited scope and without direct control over the Morpho protocol.",
+      "asOf": "2025-05-21",
+      "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "1",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "M",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "M",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "M",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "morpho",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 1,
+            "risks": [
+              "L",
+              "M",
+              "M",
+              "M",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-05-21",
+            "updateDate": null,
+            "path": "src/content/protocols/morpho/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeability": "Medium",
+              "autonomy": "Medium",
+              "exit_window": "Medium",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "5/5",
+      "verbatim": "Passes all five dimensions. Immutable singleton, permissionless market creation.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Credit rating A−. Isolated-market design limits contagion; curator quality varies.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Technical A. Operational B+ on curator concentration.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "Rated via vault layer; core protocol out of rating scope.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "78",
+      "verbatim": "Attested 78/100; deduction for oracle heterogeneity across markets.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Live dashboard: per-market LLTV stress, oracle deviation tracking.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "Curator-level coverage; core markets aggregated only.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "defisaver": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Morpho position automation live.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pigi": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Tracked across 40+ markets.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Monitored: oracle + utilization alerts, 1 warning past 30d.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "c",
+      "label": "3 rpt",
+      "verbatim": "3 reports on oracle configuration risk in long-tail markets.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    }
+  }
+}

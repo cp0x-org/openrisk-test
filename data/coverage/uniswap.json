@@ -1,0 +1,183 @@
+{
+  "protocolId": "uniswap",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "p",
+      "label": "Stage 2",
+      "verbatim": "Stage 2. Uniswap v3 is an AMM that builds upon Uniswap v2 by introducing a concentrated liquidity model, providing liquidity providers with granular control over capital allocation. Unlike v2, where liquidity is distributed uniformly across all price ranges, v3 allows LPs to specify custom price ranges in which their liquidity is active. This approach significantly improves capital efficiency, as LPs can concentrate their assets in high-demand price ranges, earning fees only within those specified ranges. Uniswap v3 also introduces multiple fee tiers (0.01%, 0.05%, 0.3%, and 1%) to support different asset volatility profiles, allowing LPs to adjust their fee preferences based on expected risk and return. Additionally, it incorporates \"range orders,\" which effectively turn liquidity positions into limit orders, further enhancing LP strategy flexibility. The protocol is deployed across multiple chains enabling a wide range of use cases across decentralized finance (DeFi) applications. [Partial: DeFiScan covers Uniswap v2/v3; v4 / UniswapX not reviewed as one family entry]",
+      "asOf": "2025-01-31",
+      "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "2",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "review_count",
+          "label": "Reviews matched",
+          "value": "2",
+          "valueType": "count"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "uniswap-v3",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-01-08",
+            "updateDate": "2025-01-31",
+            "path": "src/content/protocols/uniswap-v3/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeabillity": "Low",
+              "autonomy": "Low",
+              "exit": "Low",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          },
+          {
+            "slug": "uniswap-v2",
+            "chain": "ethereum",
+            "role": "secondary",
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-01-22",
+            "updateDate": null,
+            "path": "src/content/protocols/uniswap-v2/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v2/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeabillity": "Low",
+              "autonomy": "Low",
+              "exit": "Low",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "5/5",
+      "verbatim": "Passes all five. v4 hooks noted as per-pool risk relocation, not protocol risk.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "n"
+    },
+    "sphere": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Technical A; operational A−.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "n"
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "84",
+      "verbatim": "Attested 84/100.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "n"
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "n"
+    },
+    "pigi": {
+      "status": "n"
+    },
+    "zyfai": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Pool-level security grades for top 200 v3/v4 pools.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Hook-deployment anomaly monitoring live.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "n"
+    }
+  }
+}

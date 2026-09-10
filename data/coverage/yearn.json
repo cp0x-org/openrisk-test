@@ -1,0 +1,89 @@
+{
+  "protocolId": "yearn",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [],
+      "raw": {
+        "reason": "no_defiscan_review_mapped_or_found"
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "3/5",
+      "verbatim": "Passes Exit, Open Access, Verifiability.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "n"
+    },
+    "sphere": {
+      "status": "c",
+      "label": "B",
+      "verbatim": "Composite B.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Protocol-level A−; per-vault range BB…AA across 31 vaults.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "n"
+    },
+    "philidor": {
+      "status": "c",
+      "label": "7.4",
+      "verbatim": "Median vault 7.4/10; code maturity vector strongest.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "blockan": {
+      "status": "n"
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "n"
+    },
+    "pigi": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "31 vaults tracked; risk-adjusted APY leader in 4 categories.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "LP-facing vaults only.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pharos": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "Strategy-change alerts in beta.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "n"
+    }
+  }
+}

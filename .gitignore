@@ -8,6 +8,6 @@ web/public/data/
 .env.*
 !.env.example
 .vite/
-coverage/
+/coverage/
 *.tsbuildinfo
-todo/
+/todo/

@@ -1,0 +1,163 @@
+{
+  "protocolId": "lido",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 0",
+      "verbatim": "Stage 0. _Lido V2_ is a liquid-staking protocol. Liquid staking allows users to deposit `ETH` for staking to a set of _Node Operators_ who run validators with `ETH` staked in Lido. In exchange for depositing `ETH` users get `stETH`, _Liquid staked Ether_, a token issued by Lido which represents the staked `ETH`. This token can then be used throughout DeFi in other protocols, for example, as collateral. Lido takes a 10% fee on the yield, split between the _Lido Treasury_ and _Node Operators_. _Lido V2_ uses a system of _Staking Modules_ as explained in the [Protocol Analysis](#protocol-analysis). Each _Staking Module_ has its own set of _Node Operators_, incentive mechanisms, and potential penalties. Currently three modules exist: the _Curated_, _Simple-DVT_, and _Community_ staking modules. Validators in the first two have to be approved by _Lido Governance_, whereas anyone can become a _Node Operator_ for the _Community Staking Module_ by depositing a bond.",
+      "asOf": "2025-06-19",
+      "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "0",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "lido-v2",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "L",
+              "H",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-06-19",
+            "updateDate": null,
+            "path": "src/content/protocols/lido-v2/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeability": "High",
+              "autonomy": "Low",
+              "exit_window": "High",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "4/5",
+      "verbatim": "Passes four; Control partial pending full dual-governance rollout metrics.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "c",
+      "label": "AA−",
+      "verbatim": "Credit rating AA−: deepest liquidity in class, operator set diversified.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Composite A−.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "c",
+      "label": "AA",
+      "verbatim": "stETH rated AA — highest in LST cohort.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "91",
+      "verbatim": "Attested 91/100 — top score in registry.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "stETH collateral markets tracked in lending dashboards.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "n"
+    },
+    "pigi": {
+      "status": "n"
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Oracle quorum + withdrawal queue monitoring.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "c",
+      "label": "6 rpt",
+      "verbatim": "6 reports: operator concentration, dual governance review, depeg stress scenarios.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    }
+  }
+}

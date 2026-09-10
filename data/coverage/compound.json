@@ -1,0 +1,199 @@
+{
+  "protocolId": "compound",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 0",
+      "verbatim": "Stage 0. Compound-v3 is a lending protocol that accepts a base asset as liquidity and allows borrowing this base asset with a variety of other assets as collateral. Multiple base assets are supported such as USDC, WETH, USDT, wstETH, and USDS. Each base asset represents an isolated lending market managed by a separate instance of the protocol. Compound governance is able to update various parameters for each of these markets.",
+      "asOf": "2025-03-18",
+      "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "0",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "review_count",
+          "label": "Reviews matched",
+          "value": "2",
+          "valueType": "count"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "compound-v3",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-03-18",
+            "updateDate": null,
+            "path": "src/content/protocols/compound-v3/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeability": "High",
+              "autonomy": "High",
+              "exit_window": "High",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          },
+          {
+            "slug": "compound-v2",
+            "chain": "ethereum",
+            "role": "secondary",
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "1970-01-01",
+            "updateDate": null,
+            "path": "src/content/protocols/compound-v2/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/compound-v2/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeability": "High",
+              "autonomy": "High",
+              "exit_window": "High",
+              "accessibility": "Low",
+              "overall": "Stage"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "4/5",
+      "verbatim": "Passes four dimensions; Autonomy partial on price-feed admin.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "c",
+      "label": "A",
+      "verbatim": "Credit rating A. Long track record, conservative listings, slow-moving governance.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "B+",
+      "verbatim": "Composite B+ — technical strong, operational aging.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "n"
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "81",
+      "verbatim": "Attested 81/100.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Live dashboard: v2 wind-down exposure + v3 market health.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "v2/v3 position management live.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pigi": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "v3 base markets only.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Monitored: 8 alert rules.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "c",
+      "label": "2 rpt",
+      "verbatim": "2 reports on v2 deprecation risk.",
+      "asOf": "2026-03",
+      "sourceUrl": null
+    }
+  }
+}

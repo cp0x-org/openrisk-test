@@ -1,0 +1,97 @@
+{
+  "protocolId": "euler",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [],
+      "raw": {
+        "reason": "no_defiscan_review_mapped_or_found"
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "4/5",
+      "verbatim": "Passes Control, Exit, Open Access, Verifiability. Autonomy partial on per-vault oracle choice.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "c",
+      "label": "BBB+",
+      "verbatim": "Credit rating BBB+. Post-mortem discipline and audit depth notable; v1 history priced in.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "B+",
+      "verbatim": "Technical A−; operational B on vault-governor variance.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "c",
+      "label": "BBB",
+      "verbatim": "Vault-level ratings across 22 EVK vaults, median BBB.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "n"
+    },
+    "philidor": {
+      "status": "c",
+      "label": "7.1",
+      "verbatim": "Median vault score 7.1/10 across scored EVK set.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "blockan": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Live dashboard: vault utilization, collateral chains, liquidation depth.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "EulerEarn strategies tracked via curator lens.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "defisaver": {
+      "status": "n"
+    },
+    "pigi": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "EVK vaults tracked: exploit history flagged (v1, resolved).",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Monitored: 11 alert rules.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "n"
+    }
+  }
+}

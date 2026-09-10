@@ -1,0 +1,170 @@
+{
+  "protocolId": "aave",
+  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 0",
+      "verbatim": "Stage 0. Aave v3 is a lending protocol that allows users to lend and borrow different ERC20 assets. Users are able to create positions that consist of debt in different loan assets which is secured by different collateral assets. The lending market allows anyone to liquidate insolvent positions, based on an external price feed and specific collateral factors representing an asset's specific risk profile. Furthermore, instead of borrowing supplied assets, Aave V3 also issues its own stablecoin, GHO. Users can borrow and lend GHO like any other asset in the system. The Aave DAO is Aave's onchain governance system, allowing AAVE, stkAAVE and aAAVE holders to govern over various aspects ranging across treasury management, risk management and strategic initiatives. Different Aave protocol _Instances_ exist and are managed by the Aave DAO. These instances focus on specific use cases and chains. This review covers the Ethereum Mainnet Core instance.",
+      "asOf": "2025-05-07",
+      "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectorId": "defiscan"
+      },
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "0",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "H",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "aave",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "reasons": [],
+            "publishDate": "2025-05-07",
+            "updateDate": null,
+            "path": "src/content/protocols/aave/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
+            "scoreLines": {
+              "chain": "Low",
+              "upgradeability": "High",
+              "autonomy": "High",
+              "exit_window": "High",
+              "accessibility": "Low"
+            }
+          }
+        ]
+      }
+    },
+    "defipunkd": {
+      "status": "c",
+      "label": "4/5",
+      "verbatim": "Passes Control, Exit, Open Access, Verifiability. Autonomy partial: oracle dependency on Chainlink.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    },
+    "credora": {
+      "status": "c",
+      "label": "AA−",
+      "verbatim": "Credit rating AA− (stable). Deep liquidity, conservative LTVs, proven liquidation engine.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "sphere": {
+      "status": "c",
+      "label": "A−",
+      "verbatim": "Technical A, financial A−, operational B+. Composite A− across 41 indicators.",
+      "asOf": "2026-05",
+      "sourceUrl": null
+    },
+    "xerberus": {
+      "status": "p",
+      "label": "◐",
+      "verbatim": "Rated at market level only: aWETH, aUSDC pools. Protocol-level rating pending.",
+      "asOf": "2026-07",
+      "sourceUrl": null
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "87",
+      "verbatim": "Proof-of-Risk attested score 87/100 across 12 validators, dispute window clean.",
+      "asOf": "2026-08",
+      "sourceUrl": null
+    },
+    "philidor": {
+      "status": "n"
+    },
+    "blockan": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Live dashboard: market exposure, liquidation depth, collateral-at-risk simulations.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "curatorw": {
+      "status": "n"
+    },
+    "defisaver": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Position health tracking + automation live for v3 markets.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "pigi": {
+      "status": "c",
+      "label": "live",
+      "verbatim": "Vault analytics live: risk-adjusted APY percentile 71, exploit history clean.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "zyfai": {
+      "status": "n"
+    },
+    "pharos": {
+      "status": "c",
+      "label": "24/7",
+      "verbatim": "Monitored: 14 alert rules, 2 informational alerts past 30d.",
+      "asOf": "live",
+      "sourceUrl": null
+    },
+    "llamarisk": {
+      "status": "c",
+      "label": "8 rpt",
+      "verbatim": "8 published reports incl. GHO collateral review and E-mode parameter recommendations.",
+      "asOf": "2026-06",
+      "sourceUrl": null
+    }
+  }
+}
