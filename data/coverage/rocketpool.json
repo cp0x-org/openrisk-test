@@ -1,6 +1,6 @@
 {
   "protocolId": "rocketpool",
-  "updatedAt": "2026-09-10T06:59:02.780Z",
+  "updatedAt": "2026-09-10T06:59:14.117Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T06:59:02.780Z",
+        "collectedAt": "2026-09-10T06:59:14.117Z",
         "collectorId": "defiscan"
       },
       "facets": [],

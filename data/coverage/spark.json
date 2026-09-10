@@ -1,6 +1,6 @@
 {
   "protocolId": "spark",
-  "updatedAt": "2026-09-10T06:59:02.780Z",
+  "updatedAt": "2026-09-10T06:59:14.117Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T06:59:02.780Z",
+        "collectedAt": "2026-09-10T06:59:14.117Z",
         "collectorId": "defiscan"
       },
       "facets": [
