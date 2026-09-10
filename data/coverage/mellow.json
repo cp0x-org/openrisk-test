@@ -1,6 +1,6 @@
 {
   "protocolId": "mellow",
-  "updatedAt": "2026-09-10T07:01:50.959Z",
+  "updatedAt": "2026-09-10T07:02:06.375Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:01:50.959Z",
+        "collectedAt": "2026-09-10T07:02:06.375Z",
         "collectorId": "defiscan"
       },
       "facets": [],
