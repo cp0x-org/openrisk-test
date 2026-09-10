@@ -1,6 +1,6 @@
 {
   "protocolId": "rocketpool",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,72 +10,13 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [],
       "raw": {
         "reason": "no_defiscan_review_mapped_or_found"
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "4/5",
-      "verbatim": "Passes four; Autonomy partial on oDAO oracle duties.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "rETH under review for institutional coverage.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "sphere": {
-      "status": "c",
-      "label": "B+",
-      "verbatim": "Composite B+.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "c",
-      "label": "A−",
-      "verbatim": "rETH rated A−.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "n"
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "n"
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Deposit-pool monitoring in beta.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "n"
     }
   }
 }

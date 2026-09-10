@@ -1,6 +1,6 @@
 {
   "protocolId": "balancer",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,68 +10,13 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [],
       "raw": {
         "reason": "no_defiscan_review_mapped_or_found"
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "3/5",
-      "verbatim": "Passes Exit, Open Access, Verifiability. Control partial: emergency sub-DAO scope.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "n"
-    },
-    "sphere": {
-      "status": "c",
-      "label": "C+",
-      "verbatim": "Operational C after Nov 2025 exploit; remediation tracked.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "n"
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "n"
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "n"
-    },
-    "zyfai": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Pool grades live; exploit-affected pools flagged historical.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Monitored: invariant deviation alerts added post-incident.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "n"
     }
   }
 }

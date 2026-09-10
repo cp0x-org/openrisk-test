@@ -1,6 +1,6 @@
 {
   "protocolId": "morpho",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -87,89 +87,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "5/5",
-      "verbatim": "Passes all five dimensions. Immutable singleton, permissionless market creation.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "c",
-      "label": "A−",
-      "verbatim": "Credit rating A−. Isolated-market design limits contagion; curator quality varies.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "sphere": {
-      "status": "c",
-      "label": "A−",
-      "verbatim": "Technical A. Operational B+ on curator concentration.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Rated via vault layer; core protocol out of rating scope.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "c",
-      "label": "78",
-      "verbatim": "Attested 78/100; deduction for oracle heterogeneity across markets.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Live dashboard: per-market LLTV stress, oracle deviation tracking.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "curatorw": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Curator-level coverage; core markets aggregated only.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "defisaver": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Morpho position automation live.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Tracked across 40+ markets.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Monitored: oracle + utilization alerts, 1 warning past 30d.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "c",
-      "label": "3 rpt",
-      "verbatim": "3 reports on oracle configuration risk in long-tail markets.",
-      "asOf": "2026-05",
-      "sourceUrl": null
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "protocolId": "spark",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -84,85 +84,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "3/5",
-      "verbatim": "Passes Open Access, Verifiability, Exit. Control and Autonomy inherit Sky governance surface.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "c",
-      "label": "A",
-      "verbatim": "Credit rating A. Sky backstop and PSM depth offset governance concentration.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "sphere": {
-      "status": "c",
-      "label": "B+",
-      "verbatim": "Technical A−, operational B: subDAO dependency flagged.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "sUSDS vault rated BB+; SparkLend markets unrated.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "sUSDS scored 6.8/10; lending side out of scope (not a vault).",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "blockan": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Live dashboard: D3M exposure, collateral health, liquidation curves.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "SparkLend position management live.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "sUSDS tracked: risk-adjusted yield rank 12/50.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Monitored: 9 alert rules, quiet 30d.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "c",
-      "label": "4 rpt",
-      "verbatim": "4 reports incl. sUSDS reserve composition review.",
-      "asOf": "2026-04",
-      "sourceUrl": null
     }
   }
 }

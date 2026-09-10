@@ -1,6 +1,6 @@
 {
   "protocolId": "yearn",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,80 +10,13 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [],
       "raw": {
         "reason": "no_defiscan_review_mapped_or_found"
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "3/5",
-      "verbatim": "Passes Exit, Open Access, Verifiability.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "n"
-    },
-    "sphere": {
-      "status": "c",
-      "label": "B",
-      "verbatim": "Composite B.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "c",
-      "label": "A−",
-      "verbatim": "Protocol-level A−; per-vault range BB…AA across 31 vaults.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "c",
-      "label": "7.4",
-      "verbatim": "Median vault 7.4/10; code maturity vector strongest.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "blockan": {
-      "status": "n"
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "31 vaults tracked; risk-adjusted APY leader in 4 categories.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "LP-facing vaults only.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pharos": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Strategy-change alerts in beta.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "n"
     }
   }
 }

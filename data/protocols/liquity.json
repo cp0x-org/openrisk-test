@@ -6,49 +6,16 @@
     "v1",
     "v2"
   ],
-  "defillamaSlug": "liquity-v1",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "v1 fully immutable, zero governance",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "None — contracts frozen at deploy",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Emergency",
-      "value": "None by design; recovery mode is algorithmic",
-      "provenance": "onchain"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2024",
-      "summary": "ChainSecurity, Coinspect — v2/BOLD",
-      "provenance": "docs"
-    },
-    {
-      "year": "2021",
-      "summary": "Trail of Bits — v1",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2025",
-      "summary": "v2 stability pool bug — funds frozen, migration to v2.1",
-      "severity": "ser"
-    }
-  ],
-  "chain": "ethereum",
-  "defillamaParent": "parent#liquity",
+  "defillamaSlug": "liquity-v1",
   "defillamaSlugs": [
     "liquity-v1",
     "liquity-v2"
-  ]
+  ],
+  "defillamaParent": "parent#liquity",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

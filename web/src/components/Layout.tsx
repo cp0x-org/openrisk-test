@@ -11,8 +11,8 @@ export const Layout = ({ snapshot }: Props) => {
   return (
     <>
       <div className="ribbon">
-        OPEN DATA · AGPL-3.0 · Ethereum mainnet · TVL — DefiLlama, {live} ·{" "}
-        <b>no composite score · assessments shown verbatim</b>
+        OPEN DATA · AGPL-3.0 · Ethereum mainnet · TVL — DefiLlama · DeFiScan via collectors ·{" "}
+        <b>no composite score · no mock assessments</b>
       </div>
 
       <header className="top">

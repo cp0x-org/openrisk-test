@@ -6,43 +6,15 @@
     "AggRouter v6",
     "LOP"
   ],
-  "defillamaSlug": "1inch-swap",
+  "chain": "ethereum",
   "volumeMetric": true,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "1inch DAO + team multisig on router deploys",
-      "provenance": "docs"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Routers immutable; new versions deployed alongside",
-      "provenance": "docs"
-    },
-    {
-      "key": "Emergency",
-      "value": "None — users approve per-router",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2024",
-      "summary": "OpenZeppelin — AggRouter v6",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2025",
-      "summary": "Fusion resolver compromise — ~$5M, mostly returned",
-      "severity": "ser"
-    }
-  ],
-  "chain": "ethereum",
-  "defillamaParent": "parent#1inch",
+  "defillamaSlug": "1inch-swap",
   "defillamaSlugs": [
     "1inch-swap"
-  ]
+  ],
+  "defillamaParent": "parent#1inch",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

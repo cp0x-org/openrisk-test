@@ -6,49 +6,16 @@
     "v3",
     "v4"
   ],
-  "defillamaSlug": "aave-v3",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "Aave Governance v3 — onchain AAVE/stkAAVE voting",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Upgradeable proxies behind Level-1 executor + timelock",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Emergency",
-      "value": "Guardian multisig can pause markets; scope documented",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2025",
-      "summary": "Certora — v4 core, formal verification",
-      "provenance": "docs"
-    },
-    {
-      "year": "2024",
-      "summary": "Spearbit — v3.2 review",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2023",
-      "summary": "Curve-pool CRV exposure stress — no bad debt materialized",
-      "severity": "ok"
-    }
-  ],
-  "chain": "ethereum",
-  "defillamaParent": "parent#aave",
+  "defillamaSlug": "aave-v3",
   "defillamaSlugs": [
     "aave-v3",
     "aave-v4"
-  ]
+  ],
+  "defillamaParent": "parent#aave",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

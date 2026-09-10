@@ -6,42 +6,15 @@
     "stETH",
     "wstETH"
   ],
-  "defillamaSlug": "lido",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "LDO DAO + dual governance (stETH holder veto)",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Upgradeable core behind DAO vote + timelock",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Emergency",
-      "value": "GateSeal emergency pause, expiring committee",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2024",
-      "summary": "Statemind, Certora — dual governance",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2025",
-      "summary": "One oracle key compromised — quorum held, no impact",
-      "severity": "ok"
-    }
-  ],
-  "chain": "ethereum",
+  "defillamaSlug": "lido",
   "defillamaSlugs": [
     "lido"
-  ]
+  ],
+  "defillamaParent": null,
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

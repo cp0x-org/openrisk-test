@@ -1,6 +1,6 @@
 {
   "protocolId": "curve",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -86,73 +86,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "4/5",
-      "verbatim": "Passes four; Verifiability partial on legacy pool zoo.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "n"
-    },
-    "sphere": {
-      "status": "c",
-      "label": "B+",
-      "verbatim": "Composite B+; 2023 incident weighted in operational score.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "n"
-    },
-    "risklayer": {
-      "status": "c",
-      "label": "74",
-      "verbatim": "Attested 74/100; legacy-pool heterogeneity deduction.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "crvUSD markets dashboard only.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "n"
-    },
-    "zyfai": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Pool risk grades across 180 Curve pools.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Monitored: pool imbalance + oracle alerts.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "c",
-      "label": "12 rpt",
-      "verbatim": "12 reports: crvUSD parameters, gauge risk, collateral onboarding reviews.",
-      "asOf": "2026-07",
-      "sourceUrl": null
     }
   }
 }

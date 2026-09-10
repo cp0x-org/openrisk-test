@@ -1,6 +1,6 @@
 {
   "protocolId": "uniswap",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "p",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -119,65 +119,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "5/5",
-      "verbatim": "Passes all five. v4 hooks noted as per-pool risk relocation, not protocol risk.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "n"
-    },
-    "sphere": {
-      "status": "c",
-      "label": "A−",
-      "verbatim": "Technical A; operational A−.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "n"
-    },
-    "risklayer": {
-      "status": "c",
-      "label": "84",
-      "verbatim": "Attested 84/100.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "n"
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "n"
-    },
-    "zyfai": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Pool-level security grades for top 200 v3/v4 pools.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Hook-deployment anomaly monitoring live.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "n"
     }
   }
 }

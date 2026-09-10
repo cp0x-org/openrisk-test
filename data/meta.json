@@ -4,7 +4,11 @@
   "chain": "ethereum",
   "license": "AGPL-3.0",
   "noCompositeScoring": true,
-  "seededFrom": "openrisk-mockup",
+  "mockData": false,
+  "collectors": [
+    "defillama",
+    "defiscan"
+  ],
   "protocolCount": 20,
-  "feedCount": 14
+  "feedCount": 1
 }

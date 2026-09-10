@@ -1,6 +1,6 @@
 {
   "protocolId": "liquity",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -87,73 +87,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "5/5",
-      "verbatim": "Passes all five dimensions. v1 is the registry's canonical maximum-autonomy entry.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "v1 rated A− (immutability premium); v2 unrated pending post-incident review.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "sphere": {
-      "status": "c",
-      "label": "A",
-      "verbatim": "Technical A+, operational A−.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "n"
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Trove distribution + redemption pressure dashboard.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Trove automation live for v1 and v2.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pigi": {
-      "status": "n"
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "v2 monitored post-incident; v1 unmonitored (immutable).",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "c",
-      "label": "2 rpt",
-      "verbatim": "BOLD peg dynamics review; v2.1 migration note.",
-      "asOf": "2026-02",
-      "sourceUrl": null
     }
   }
 }

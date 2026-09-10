@@ -5,36 +5,15 @@
   "families": [
     "v3"
   ],
-  "defillamaSlug": "gearbox",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "GEAR token DAO with technical multisig",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Upgradeable credit facades, DAO-gated",
-      "provenance": "docs"
-    },
-    {
-      "key": "Emergency",
-      "value": "Pausable credit managers",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2023",
-      "summary": "ChainSecurity — v3 core",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [],
-  "chain": "ethereum",
+  "defillamaSlug": "gearbox",
   "defillamaSlugs": [
     "gearbox"
-  ]
+  ],
+  "defillamaParent": null,
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

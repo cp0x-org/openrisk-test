@@ -6,44 +6,16 @@
     "v2",
     "v3"
   ],
-  "defillamaSlug": "compound-v3",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "COMP Governor Bravo — onchain voting",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Comet upgradeable via governance, timelock 2d",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Emergency",
-      "value": "Pause guardian multisig",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2023",
-      "summary": "OpenZeppelin — continuous engagement",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2021",
-      "summary": "COMP distribution bug — ~$80M misdirected",
-      "severity": "ser"
-    }
-  ],
-  "chain": "ethereum",
-  "defillamaParent": "parent#compound-finance",
+  "defillamaSlug": "compound-v3",
   "defillamaSlugs": [
     "compound-v3",
     "compound-v2"
-  ]
+  ],
+  "defillamaParent": "parent#compound-finance",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

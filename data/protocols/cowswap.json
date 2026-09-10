@@ -5,42 +5,15 @@
   "families": [
     "CoW Protocol"
   ],
-  "defillamaSlug": "cowswap",
+  "chain": "ethereum",
   "volumeMetric": true,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "CoW DAO; solver set permissioned by governance",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Settlement contract non-upgradeable",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Emergency",
-      "value": "Solver slashing + removal via DAO",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2023",
-      "summary": "G0 Group — settlement",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2023",
-      "summary": "Solver exploit — ~$166K, slashed & patched",
-      "severity": "ser"
-    }
-  ],
-  "chain": "ethereum",
+  "defillamaSlug": "cowswap",
   "defillamaSlugs": [
     "cowswap"
-  ]
+  ],
+  "defillamaParent": null,
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

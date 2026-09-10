@@ -5,36 +5,15 @@
   "families": [
     "rETH"
   ],
-  "defillamaSlug": "rocket-pool",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "pDAO/oDAO split; RPL votes onchain",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Upgradeable via oDAO-executed governance",
-      "provenance": "docs"
-    },
-    {
-      "key": "Emergency",
-      "value": "oDAO can pause deposits",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2024",
-      "summary": "Sigma Prime — Saturn upgrades",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [],
-  "chain": "ethereum",
+  "defillamaSlug": "rocket-pool",
   "defillamaSlugs": [
     "rocket-pool"
-  ]
+  ],
+  "defillamaParent": null,
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

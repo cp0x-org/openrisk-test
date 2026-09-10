@@ -1,6 +1,6 @@
 {
   "protocolId": "fluid",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,80 +10,13 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [],
       "raw": {
         "reason": "no_defiscan_review_mapped_or_found"
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "3/5",
-      "verbatim": "Passes Open Access, Verifiability, Control-partial. Smart-collateral design increases upgrade surface.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "c",
-      "label": "BBB",
-      "verbatim": "Credit rating BBB. Strong engineering; shorter track record and team-key concentration.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "sphere": {
-      "status": "c",
-      "label": "B",
-      "verbatim": "Technical B+, operational B−: admin key scope flagged.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "n"
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Fluid earn vaults 6.4/10; DEX layer unscored.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "blockan": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Vault-level dashboards for USDC/ETH markets only.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Earn vaults tracked: risk-adjusted APY rank 8/50.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Monitored: liquidity-layer utilization alerts.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "n"
     }
   }
 }

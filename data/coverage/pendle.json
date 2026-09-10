@@ -1,6 +1,6 @@
 {
   "protocolId": "pendle",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -86,77 +86,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "3/5",
-      "verbatim": "Passes Open Access, Verifiability, Exit.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "n"
-    },
-    "sphere": {
-      "status": "c",
-      "label": "B+",
-      "verbatim": "Technical A−: novel mechanism complexity priced.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "c",
-      "label": "BBB+",
-      "verbatim": "PT/YT market ratings across 60+ pools, median BBB+.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "c",
-      "label": "7.8",
-      "verbatim": "LP vault cohort 7.8/10.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "blockan": {
-      "status": "n"
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "PT strategies tracked; implied-yield risk bands.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Selected pools graded.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Maturity-event and oracle alerts.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "One published note: PT collateral in lending markets.",
-      "asOf": "2026-01",
-      "sourceUrl": null
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-20T00:00:00.000Z",
+  "updatedAt": "2026-09-10T07:14:22.851Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -10,123 +10,7 @@
       "focus": "Decentralization maturity framework: who controls keys, upgrades, and admin powers",
       "url": "https://www.defiscan.info",
       "methodologyUrl": "https://deficollective.org/blog/introducing-defiscan/"
-    },
-    {
-      "id": "defipunkd",
-      "name": "DeFiPunk'd",
-      "type": "rating",
-      "typeLabel": "R",
-      "focus": "Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via distributed LLM consensus",
-      "url": "https://defipunkd.com",
-      "methodologyUrl": "https://defipunkd.com"
-    },
-    {
-      "id": "credora",
-      "name": "Credora",
-      "type": "rating",
-      "typeLabel": "R",
-      "focus": "Institutional-grade credit risk ratings for DeFi protocols and borrowers",
-      "url": "https://credora.io",
-      "methodologyUrl": "https://credora.io"
-    },
-    {
-      "id": "sphere",
-      "name": "DeFi Sphere",
-      "type": "rating",
-      "typeLabel": "R",
-      "focus": "Multi-dimensional protocol analysis covering technical, financial, and operational risk",
-      "url": "https://defisphere.com",
-      "methodologyUrl": "https://defisphere.com"
-    },
-    {
-      "id": "xerberus",
-      "name": "Xerberus",
-      "type": "rating",
-      "typeLabel": "R",
-      "focus": "Independent risk rating protocol for DeFi vaults. 300+ subscores across 85+ mechanisms",
-      "url": "https://xerberus.io",
-      "methodologyUrl": "https://xerberus.io"
-    },
-    {
-      "id": "risklayer",
-      "name": "RiskLayer",
-      "type": "rating",
-      "typeLabel": "R",
-      "focus": "Economic security middleware on EigenLayer. Proof of Risk consensus, validator-attested scores",
-      "url": "https://risklayer.xyz",
-      "methodologyUrl": "https://risklayer.xyz"
-    },
-    {
-      "id": "philidor",
-      "name": "Philidor",
-      "type": "rating",
-      "typeLabel": "R",
-      "focus": "Deterministic vault risk scoring across 700+ vaults. Asset quality, code maturity, governance controls",
-      "url": "https://philidor.xyz",
-      "methodologyUrl": "https://philidor.xyz"
-    },
-    {
-      "id": "blockan",
-      "name": "BlockAnalitica",
-      "type": "dash",
-      "typeLabel": "D",
-      "focus": "Quantitative on-chain risk dashboards for lending markets: liquidations, collateral health, exposure",
-      "url": "https://blockanalitica.com",
-      "methodologyUrl": "https://blockanalitica.com"
-    },
-    {
-      "id": "curatorw",
-      "name": "CuratorWatch",
-      "type": "dash",
-      "typeLabel": "D",
-      "focus": "Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior",
-      "url": "https://curatorwatch.com",
-      "methodologyUrl": "https://curatorwatch.com"
-    },
-    {
-      "id": "defisaver",
-      "name": "DeFi Saver",
-      "type": "dash",
-      "typeLabel": "D",
-      "focus": "Live loan health and liquidation statistics for leveraged DeFi positions",
-      "url": "https://defisaver.com",
-      "methodologyUrl": "https://defisaver.com"
-    },
-    {
-      "id": "pigi",
-      "name": "pigi.finance",
-      "type": "dash",
-      "typeLabel": "D",
-      "focus": "Vault analytics and risk-adjusted yield across 50+ protocols; exploit history, holder concentration",
-      "url": "https://pigi.finance",
-      "methodologyUrl": "https://pigi.finance"
-    },
-    {
-      "id": "zyfai",
-      "name": "Zyfai Risk",
-      "type": "dash",
-      "typeLabel": "D",
-      "focus": "Real-time risk dashboard for liquidity pools: risk metrics, TVL, APY, security grades",
-      "url": "https://zyfai.com",
-      "methodologyUrl": "https://zyfai.com"
-    },
-    {
-      "id": "pharos",
-      "name": "Pharos",
-      "type": "monitor",
-      "typeLabel": "M",
-      "focus": "Real-time risk monitoring and automated alerts for live protocol risk events",
-      "url": "https://pharos.xyz",
-      "methodologyUrl": "https://pharos.xyz"
-    },
-    {
-      "id": "llamarisk",
-      "name": "LlamaRisk",
-      "type": "research",
-      "typeLabel": "Ξ",
-      "focus": "Protocol risk research and parameter recommendations; collateral and governance risk",
-      "url": "https://llamarisk.com",
-      "methodologyUrl": "https://llamarisk.com"
     }
-  ]
+  ],
+  "note": "Only feeds with an automated collector. Add entries when a new collector ships."
 }

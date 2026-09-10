@@ -63,9 +63,11 @@ export const MatrixPage = ({ snapshot }: Props) => {
           No single feed should be canonical. <em>The aggregation is the value.</em>
         </h1>
         <p className="lede">
-          Twenty Ethereum protocols where user capital is directly at risk, held against fourteen
-          independent risk feeds. No composite score, no editorial synthesis — coverage, verbatim
-          assessments, and <s>gaps shown as data</s>.
+          {kpis.protocolCount} Ethereum protocols where user capital is directly at risk, held
+          against {kpis.feedCount} independent risk feed
+          {kpis.feedCount === 1 ? "" : "s"}. No composite score, no editorial synthesis — coverage,
+          verbatim assessments, and <s>gaps shown as data</s>. Only collector-sourced assessments
+          are shown.
         </p>
         <div className="kpis">
           <div className="kpi">

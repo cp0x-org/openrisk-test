@@ -1,6 +1,6 @@
 {
   "protocolId": "aave",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -86,85 +86,6 @@
           }
         ]
       }
-    },
-    "defipunkd": {
-      "status": "c",
-      "label": "4/5",
-      "verbatim": "Passes Control, Exit, Open Access, Verifiability. Autonomy partial: oracle dependency on Chainlink.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "c",
-      "label": "AA−",
-      "verbatim": "Credit rating AA− (stable). Deep liquidity, conservative LTVs, proven liquidation engine.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "sphere": {
-      "status": "c",
-      "label": "A−",
-      "verbatim": "Technical A, financial A−, operational B+. Composite A− across 41 indicators.",
-      "asOf": "2026-05",
-      "sourceUrl": null
-    },
-    "xerberus": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Rated at market level only: aWETH, aUSDC pools. Protocol-level rating pending.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "c",
-      "label": "87",
-      "verbatim": "Proof-of-Risk attested score 87/100 across 12 validators, dispute window clean.",
-      "asOf": "2026-08",
-      "sourceUrl": null
-    },
-    "philidor": {
-      "status": "n"
-    },
-    "blockan": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Live dashboard: market exposure, liquidation depth, collateral-at-risk simulations.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "curatorw": {
-      "status": "n"
-    },
-    "defisaver": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Position health tracking + automation live for v3 markets.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "Vault analytics live: risk-adjusted APY percentile 71, exploit history clean.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "c",
-      "label": "24/7",
-      "verbatim": "Monitored: 14 alert rules, 2 informational alerts past 30d.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "llamarisk": {
-      "status": "c",
-      "label": "8 rpt",
-      "verbatim": "8 published reports incl. GHO collateral review and E-mode parameter recommendations.",
-      "asOf": "2026-06",
-      "sourceUrl": null
     }
   }
 }

@@ -5,37 +5,15 @@
   "families": [
     "LRT vaults"
   ],
-  "defillamaSlug": "mellow",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "Mellow multisig + curator roles per vault",
-      "provenance": "selfrep"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Upgradeable vault system, timelocked admin",
-      "provenance": "docs"
-    },
-    {
-      "key": "Emergency",
-      "value": "Curator emergency withdrawal paths",
-      "provenance": "selfrep"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2024",
-      "summary": "ChainSecurity, Statemind — LRT vaults",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [],
-  "chain": "ethereum",
-  "defillamaParent": "parent#mellow-protocol",
+  "defillamaSlug": "mellow",
   "defillamaSlugs": [
     "mellow"
-  ]
+  ],
+  "defillamaParent": "parent#mellow-protocol",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

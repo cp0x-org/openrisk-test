@@ -1,6 +1,6 @@
 {
   "protocolId": "mellow",
-  "updatedAt": "2026-09-10T07:03:42.075Z",
+  "updatedAt": "2026-09-10T07:14:25.900Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,72 +10,13 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:42.075Z",
+        "collectedAt": "2026-09-10T07:14:25.900Z",
         "collectorId": "defiscan"
       },
       "facets": [],
       "raw": {
         "reason": "no_defiscan_review_mapped_or_found"
       }
-    },
-    "defipunkd": {
-      "status": "p",
-      "label": "2/5",
-      "verbatim": "Preliminary: Open Access, Verifiability pass; curator-power dims in review.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "credora": {
-      "status": "n"
-    },
-    "sphere": {
-      "status": "n"
-    },
-    "xerberus": {
-      "status": "c",
-      "label": "BB",
-      "verbatim": "Protocol rating BB — curator concentration and restaking dependency chain.",
-      "asOf": "2026-07",
-      "sourceUrl": null
-    },
-    "risklayer": {
-      "status": "n"
-    },
-    "philidor": {
-      "status": "c",
-      "label": "6.2",
-      "verbatim": "Median vault 6.2/10; governance-controls vector weakest.",
-      "asOf": "2026-06",
-      "sourceUrl": null
-    },
-    "blockan": {
-      "status": "n"
-    },
-    "curatorw": {
-      "status": "p",
-      "label": "◐",
-      "verbatim": "Mellow-on-Morpho allocations visible via curator lens.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "defisaver": {
-      "status": "n"
-    },
-    "pigi": {
-      "status": "c",
-      "label": "live",
-      "verbatim": "LRT vaults tracked; concentration warnings active.",
-      "asOf": "live",
-      "sourceUrl": null
-    },
-    "zyfai": {
-      "status": "n"
-    },
-    "pharos": {
-      "status": "n"
-    },
-    "llamarisk": {
-      "status": "n"
     }
   }
 }

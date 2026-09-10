@@ -6,44 +6,17 @@
     "SparkLend",
     "sUSDS"
   ],
-  "defillamaSlug": "sparklend",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "Sky sub-DAO; parameters set via Sky executive votes",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Upgradeable via Sky governance spells, 48h delay",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Emergency",
-      "value": "Freezer module — emergency shutdown inherited from Sky",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2025",
-      "summary": "ChainSecurity — SparkLend markets",
-      "provenance": "docs"
-    },
-    {
-      "year": "2024",
-      "summary": "Cantina competition — sUSDS",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [],
-  "chain": "ethereum",
-  "defillamaParent": "parent#spark",
+  "defillamaSlug": "sparklend",
   "defillamaSlugs": [
     "sparklend",
     "spark-savings",
     "spark-liquidity-layer"
-  ]
+  ],
+  "defillamaParent": "parent#spark",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }

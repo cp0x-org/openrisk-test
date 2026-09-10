@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "defillama",
-  "updatedAt": "2026-09-10T07:03:42.073Z",
+  "updatedAt": "2026-09-10T07:14:25.891Z",
   "protocols": {
     "aave": {
       "tvlUsd": 15314051843.948256,
@@ -25,8 +25,8 @@
       ]
     },
     "balancer": {
-      "tvlUsd": 40943993.72611545,
-      "ethereumTvlUsd": 40943993.72611545,
+      "tvlUsd": 40943075.279598445,
+      "ethereumTvlUsd": 40943075.279598445,
       "volume24hUsd": null,
       "defillamaSlug": "balancer-v2",
       "defillamaSlugs": [
@@ -256,8 +256,8 @@
       ]
     },
     "spark": {
-      "tvlUsd": 7782139215.961763,
-      "ethereumTvlUsd": 7782139215.961763,
+      "tvlUsd": 7819611005.304464,
+      "ethereumTvlUsd": 7819611005.304464,
       "volume24hUsd": null,
       "defillamaSlug": "sparklend",
       "defillamaSlugs": [
@@ -294,8 +294,8 @@
       ]
     },
     "yearn": {
-      "tvlUsd": 211265612.90151185,
-      "ethereumTvlUsd": 211265612.90151185,
+      "tvlUsd": 211280674.3491885,
+      "ethereumTvlUsd": 211280674.3491885,
       "volume24hUsd": null,
       "defillamaSlug": "yearn-finance",
       "defillamaSlugs": [

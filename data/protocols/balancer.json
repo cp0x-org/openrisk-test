@@ -6,44 +6,16 @@
     "v2",
     "v3"
   ],
-  "defillamaSlug": "balancer-v2",
+  "chain": "ethereum",
   "volumeMetric": false,
   "tvlWithin": null,
-  "governance": [
-    {
-      "key": "Control",
-      "value": "veBAL governance + ops multisigs",
-      "provenance": "onchain"
-    },
-    {
-      "key": "Upgradeability",
-      "value": "Vault immutable; periphery via authorizer",
-      "provenance": "docs"
-    },
-    {
-      "key": "Emergency",
-      "value": "Emergency sub-DAO can pause pools",
-      "provenance": "docs"
-    }
-  ],
-  "audits": [
-    {
-      "year": "2024",
-      "summary": "Certora, Trail of Bits — v3",
-      "provenance": "docs"
-    }
-  ],
-  "incidents": [
-    {
-      "year": "2025",
-      "summary": "v2 composable-pool rounding exploit — ~$116M drained",
-      "severity": "crit"
-    }
-  ],
-  "chain": "ethereum",
-  "defillamaParent": "parent#balancer",
+  "defillamaSlug": "balancer-v2",
   "defillamaSlugs": [
     "balancer-v2",
     "balancer-v3"
-  ]
+  ],
+  "defillamaParent": "parent#balancer",
+  "governance": [],
+  "audits": [],
+  "incidents": []
 }
