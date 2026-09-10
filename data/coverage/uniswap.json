@@ -1,6 +1,6 @@
 {
   "protocolId": "uniswap",
-  "updatedAt": "2026-09-10T07:02:27.079Z",
+  "updatedAt": "2026-09-10T07:02:41.822Z",
   "assessments": {
     "defiscan": {
       "status": "p",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:02:27.079Z",
+        "collectedAt": "2026-09-10T07:02:41.822Z",
         "collectorId": "defiscan"
       },
       "facets": [
