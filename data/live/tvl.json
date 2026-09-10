@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "defillama",
-  "updatedAt": "2026-09-10T07:03:42.073Z",
+  "updatedAt": "2026-09-10T07:04:06.727Z",
   "protocols": {
     "aave": {
       "tvlUsd": 15314051843.948256,
