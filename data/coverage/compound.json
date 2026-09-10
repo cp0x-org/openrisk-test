@@ -1,6 +1,6 @@
 {
   "protocolId": "compound",
-  "updatedAt": "2026-09-10T06:58:38.951Z",
+  "updatedAt": "2026-09-10T06:59:02.780Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T06:58:38.951Z",
+        "collectedAt": "2026-09-10T06:59:02.780Z",
         "collectorId": "defiscan"
       },
       "facets": [
