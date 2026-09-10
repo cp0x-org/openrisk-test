@@ -1,6 +1,6 @@
 {
   "protocolId": "zerox",
-  "updatedAt": "2026-09-10T06:57:16.423Z",
+  "updatedAt": "2026-09-10T06:57:31.691Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T06:57:16.423Z",
+        "collectedAt": "2026-09-10T06:57:31.691Z",
         "collectorId": "defiscan"
       },
       "facets": [],
