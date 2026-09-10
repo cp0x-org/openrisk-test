@@ -1,6 +1,6 @@
 {
   "protocolId": "lido",
-  "updatedAt": "2026-09-10T07:03:13.085Z",
+  "updatedAt": "2026-09-10T07:03:26.746Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:13.085Z",
+        "collectedAt": "2026-09-10T07:03:26.746Z",
         "collectorId": "defiscan"
       },
       "facets": [
