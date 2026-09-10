@@ -1,6 +1,6 @@
 {
   "protocolId": "cowswap",
-  "updatedAt": "2026-09-10T07:01:16.269Z",
+  "updatedAt": "2026-09-10T07:01:31.641Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:01:16.269Z",
+        "collectedAt": "2026-09-10T07:01:31.641Z",
         "collectorId": "defiscan"
       },
       "facets": [],

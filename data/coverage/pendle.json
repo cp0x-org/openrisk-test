@@ -1,6 +1,6 @@
 {
   "protocolId": "pendle",
-  "updatedAt": "2026-09-10T07:01:16.269Z",
+  "updatedAt": "2026-09-10T07:01:31.641Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:01:16.269Z",
+        "collectedAt": "2026-09-10T07:01:31.641Z",
         "collectorId": "defiscan"
       },
       "facets": [
