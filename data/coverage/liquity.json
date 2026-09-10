@@ -1,6 +1,6 @@
 {
   "protocolId": "liquity",
-  "updatedAt": "2026-09-10T07:00:23.628Z",
+  "updatedAt": "2026-09-10T07:00:37.903Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:00:23.628Z",
+        "collectedAt": "2026-09-10T07:00:37.903Z",
         "collectorId": "defiscan"
       },
       "facets": [
