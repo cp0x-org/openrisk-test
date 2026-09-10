@@ -1,0 +1,41 @@
+{
+  "id": "pendle",
+  "name": "Pendle",
+  "category": "yield",
+  "families": [
+    "v2"
+  ],
+  "defillamaSlug": "pendle-v2",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "vePENDLE governance + team multisig",
+      "provenance": "docs"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Upgradeable markets behind timelock",
+      "provenance": "docs"
+    },
+    {
+      "key": "Emergency",
+      "value": "Pausing guardian on new listings",
+      "provenance": "selfrep"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2023",
+      "summary": "ChainSecurity, Spearbit — v2",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [],
+  "chain": "ethereum",
+  "defillamaParent": "parent#pendle",
+  "defillamaSlugs": [
+    "pendle-v2"
+  ]
+}

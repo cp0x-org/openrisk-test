@@ -1,0 +1,52 @@
+{
+  "id": "morpho",
+  "name": "Morpho",
+  "category": "lending",
+  "families": [
+    "Morpho Blue"
+  ],
+  "defillamaSlug": "morpho-blue",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "Immutable core; MORPHO governance owns periphery only",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Morpho Blue singleton is non-upgradeable",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Emergency",
+      "value": "No pause on core; risk pushed to vault/curator layer",
+      "provenance": "docs"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2024",
+      "summary": "Spearbit + Cantina — Blue core",
+      "provenance": "docs"
+    },
+    {
+      "year": "2023",
+      "summary": "Multiple firms — 25+ engagements",
+      "provenance": "selfrep"
+    }
+  ],
+  "incidents": [
+    {
+      "year": "2025",
+      "summary": "Front-end bug intercepted by whitehat — $2.6M returned",
+      "severity": "ser"
+    }
+  ],
+  "chain": "ethereum",
+  "defillamaParent": "parent#morpho",
+  "defillamaSlugs": [
+    "morpho-blue"
+  ]
+}

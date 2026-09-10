@@ -1,0 +1,43 @@
+{
+  "id": "fluid",
+  "name": "Fluid",
+  "category": "lending",
+  "families": [
+    "Lending",
+    "DEX"
+  ],
+  "defillamaSlug": "fluid-lending",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "Instadapp/Fluid team multisig + INST governance",
+      "provenance": "docs"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Upgradeable liquidity layer, timelocked",
+      "provenance": "docs"
+    },
+    {
+      "key": "Emergency",
+      "value": "Guardian can pause new borrows",
+      "provenance": "selfrep"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2024",
+      "summary": "StateMind, MixBytes — liquidity layer",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [],
+  "chain": "ethereum",
+  "defillamaParent": "parent#fluid",
+  "defillamaSlugs": [
+    "fluid-lending",
+    "fluid-dex"
+  ]
+}

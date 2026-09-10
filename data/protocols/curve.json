@@ -1,0 +1,48 @@
+{
+  "id": "curve",
+  "name": "Curve",
+  "category": "dex",
+  "families": [
+    "AMM",
+    "crvUSD"
+  ],
+  "defillamaSlug": "curve-dex",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "veCRV DAO — onchain parameter votes",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Pools immutable; new factories via DAO",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Emergency",
+      "value": "EmergencyDAO can kill gauges ≤2 months old",
+      "provenance": "docs"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2024",
+      "summary": "ChainSecurity — crvUSD, twocrypto-ng",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [
+    {
+      "year": "2023",
+      "summary": "Vyper compiler reentrancy — ~$70M across pools, most recovered",
+      "severity": "crit"
+    }
+  ],
+  "chain": "ethereum",
+  "defillamaParent": "parent#curve-finance",
+  "defillamaSlugs": [
+    "curve-dex"
+  ]
+}

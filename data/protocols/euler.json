@@ -1,0 +1,47 @@
+{
+  "id": "euler",
+  "name": "Euler",
+  "category": "lending",
+  "families": [
+    "v2 / EVK"
+  ],
+  "defillamaSlug": "euler-v2",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "Vault-level governors; EUL DAO on periphery",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "EVK vaults immutable once deployed, per-vault config",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Emergency",
+      "value": "Per-vault pause via governor role",
+      "provenance": "docs"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2024",
+      "summary": "10+ firms + $1.25M Cantina competition — v2",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [
+    {
+      "year": "2023",
+      "summary": "v1 flash-loan exploit — $197M taken, fully recovered",
+      "severity": "crit"
+    }
+  ],
+  "chain": "ethereum",
+  "defillamaParent": "parent#euler",
+  "defillamaSlugs": [
+    "euler-v2"
+  ]
+}

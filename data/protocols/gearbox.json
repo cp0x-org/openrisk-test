@@ -1,0 +1,40 @@
+{
+  "id": "gearbox",
+  "name": "Gearbox",
+  "category": "lending",
+  "families": [
+    "v3"
+  ],
+  "defillamaSlug": "gearbox",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "GEAR token DAO with technical multisig",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Upgradeable credit facades, DAO-gated",
+      "provenance": "docs"
+    },
+    {
+      "key": "Emergency",
+      "value": "Pausable credit managers",
+      "provenance": "docs"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2023",
+      "summary": "ChainSecurity — v3 core",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [],
+  "chain": "ethereum",
+  "defillamaSlugs": [
+    "gearbox"
+  ]
+}

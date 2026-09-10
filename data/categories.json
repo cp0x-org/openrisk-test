@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "lending",
+      "name": "Lending",
+      "color": "#3987e5"
+    },
+    {
+      "id": "dex",
+      "name": "DEX / AMM",
+      "color": "#d95926"
+    },
+    {
+      "id": "agg",
+      "name": "Swap Aggregator",
+      "color": "#199e70"
+    },
+    {
+      "id": "yield",
+      "name": "Yield / Vault",
+      "color": "#c98500"
+    },
+    {
+      "id": "lst",
+      "name": "Liquid Staking",
+      "color": "#d55181"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "morphovaults",
+  "name": "Morpho Vaults",
+  "category": "yield",
+  "families": [
+    "MetaMorpho"
+  ],
+  "defillamaSlug": null,
+  "volumeMetric": false,
+  "tvlWithin": "morpho",
+  "governance": [
+    {
+      "key": "Control",
+      "value": "Per-vault curator with public role; timelocked caps",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Vault code immutable; allocations curator-set",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Emergency",
+      "value": "Guardian veto on curator actions (if set)",
+      "provenance": "onchain"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2024",
+      "summary": "Spearbit — MetaMorpho",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [
+    {
+      "year": "2026",
+      "summary": "Curator concentration event — one vault 94% single-market",
+      "severity": "ser"
+    }
+  ],
+  "chain": "ethereum",
+  "defillamaSlugs": []
+}

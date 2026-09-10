@@ -1,0 +1,48 @@
+{
+  "id": "zerox",
+  "name": "0x / Matcha",
+  "category": "agg",
+  "families": [
+    "0x v4",
+    "Matcha"
+  ],
+  "defillamaSlug": "0x",
+  "volumeMetric": true,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "0x Labs multisig + ZRX governance (legacy)",
+      "provenance": "docs"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "Exchange proxy upgradeable via 0x governance timelock",
+      "provenance": "docs"
+    },
+    {
+      "key": "Emergency",
+      "value": "Feature-level pause",
+      "provenance": "docs"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2021",
+      "summary": "ConsenSys Diligence — exchange proxy",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [
+    {
+      "year": "2019",
+      "summary": "v2 signature validator bug — paused, no loss",
+      "severity": "ok"
+    }
+  ],
+  "chain": "ethereum",
+  "defillamaParent": "parent#0x-protocol",
+  "defillamaSlugs": [
+    "0x"
+  ]
+}

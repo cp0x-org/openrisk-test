@@ -1,0 +1,3545 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-10T06:12:59.005Z",
+  "liveUpdatedAt": "2026-09-10T06:12:55.158Z",
+  "meta": {
+    "version": 1,
+    "project": "openrisk",
+    "chain": "ethereum",
+    "license": "AGPL-3.0",
+    "noCompositeScoring": true,
+    "seededFrom": "openrisk-mockup",
+    "protocolCount": 20,
+    "feedCount": 14
+  },
+  "categories": [
+    {
+      "id": "lending",
+      "name": "Lending",
+      "color": "#3987e5"
+    },
+    {
+      "id": "dex",
+      "name": "DEX / AMM",
+      "color": "#d95926"
+    },
+    {
+      "id": "agg",
+      "name": "Swap Aggregator",
+      "color": "#199e70"
+    },
+    {
+      "id": "yield",
+      "name": "Yield / Vault",
+      "color": "#c98500"
+    },
+    {
+      "id": "lst",
+      "name": "Liquid Staking",
+      "color": "#d55181"
+    }
+  ],
+  "feeds": [
+    {
+      "id": "defiscan",
+      "name": "DeFiScan",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Decentralization maturity framework: who controls keys, upgrades, and admin powers",
+      "url": "https://www.defiscan.info",
+      "methodologyUrl": "https://deficollective.org/blog/introducing-defiscan/"
+    },
+    {
+      "id": "defipunkd",
+      "name": "DeFiPunk'd",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via distributed LLM consensus",
+      "url": "https://defipunkd.com",
+      "methodologyUrl": "https://defipunkd.com"
+    },
+    {
+      "id": "credora",
+      "name": "Credora",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Institutional-grade credit risk ratings for DeFi protocols and borrowers",
+      "url": "https://credora.io",
+      "methodologyUrl": "https://credora.io"
+    },
+    {
+      "id": "sphere",
+      "name": "DeFi Sphere",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Multi-dimensional protocol analysis covering technical, financial, and operational risk",
+      "url": "https://defisphere.com",
+      "methodologyUrl": "https://defisphere.com"
+    },
+    {
+      "id": "xerberus",
+      "name": "Xerberus",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Independent risk rating protocol for DeFi vaults. 300+ subscores across 85+ mechanisms",
+      "url": "https://xerberus.io",
+      "methodologyUrl": "https://xerberus.io"
+    },
+    {
+      "id": "risklayer",
+      "name": "RiskLayer",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Economic security middleware on EigenLayer. Proof of Risk consensus, validator-attested scores",
+      "url": "https://risklayer.xyz",
+      "methodologyUrl": "https://risklayer.xyz"
+    },
+    {
+      "id": "philidor",
+      "name": "Philidor",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Deterministic vault risk scoring across 700+ vaults. Asset quality, code maturity, governance controls",
+      "url": "https://philidor.xyz",
+      "methodologyUrl": "https://philidor.xyz"
+    },
+    {
+      "id": "blockan",
+      "name": "BlockAnalitica",
+      "type": "dash",
+      "typeLabel": "D",
+      "focus": "Quantitative on-chain risk dashboards for lending markets: liquidations, collateral health, exposure",
+      "url": "https://blockanalitica.com",
+      "methodologyUrl": "https://blockanalitica.com"
+    },
+    {
+      "id": "curatorw",
+      "name": "CuratorWatch",
+      "type": "dash",
+      "typeLabel": "D",
+      "focus": "Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior",
+      "url": "https://curatorwatch.com",
+      "methodologyUrl": "https://curatorwatch.com"
+    },
+    {
+      "id": "defisaver",
+      "name": "DeFi Saver",
+      "type": "dash",
+      "typeLabel": "D",
+      "focus": "Live loan health and liquidation statistics for leveraged DeFi positions",
+      "url": "https://defisaver.com",
+      "methodologyUrl": "https://defisaver.com"
+    },
+    {
+      "id": "pigi",
+      "name": "pigi.finance",
+      "type": "dash",
+      "typeLabel": "D",
+      "focus": "Vault analytics and risk-adjusted yield across 50+ protocols; exploit history, holder concentration",
+      "url": "https://pigi.finance",
+      "methodologyUrl": "https://pigi.finance"
+    },
+    {
+      "id": "zyfai",
+      "name": "Zyfai Risk",
+      "type": "dash",
+      "typeLabel": "D",
+      "focus": "Real-time risk dashboard for liquidity pools: risk metrics, TVL, APY, security grades",
+      "url": "https://zyfai.com",
+      "methodologyUrl": "https://zyfai.com"
+    },
+    {
+      "id": "pharos",
+      "name": "Pharos",
+      "type": "monitor",
+      "typeLabel": "M",
+      "focus": "Real-time risk monitoring and automated alerts for live protocol risk events",
+      "url": "https://pharos.xyz",
+      "methodologyUrl": "https://pharos.xyz"
+    },
+    {
+      "id": "llamarisk",
+      "name": "LlamaRisk",
+      "type": "research",
+      "typeLabel": "Ξ",
+      "focus": "Protocol risk research and parameter recommendations; collateral and governance risk",
+      "url": "https://llamarisk.com",
+      "methodologyUrl": "https://llamarisk.com"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "aave",
+      "name": "Aave",
+      "category": "lending",
+      "families": [
+        "v3",
+        "v4"
+      ],
+      "defillamaSlug": "aave-v3",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Aave Governance v3 — onchain AAVE/stkAAVE voting",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable proxies behind Level-1 executor + timelock",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "Guardian multisig can pause markets; scope documented",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2025",
+          "summary": "Certora — v4 core, formal verification",
+          "provenance": "docs"
+        },
+        {
+          "year": "2024",
+          "summary": "Spearbit — v3.2 review",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2023",
+          "summary": "Curve-pool CRV exposure stress — no bad debt materialized",
+          "severity": "ok"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#aave",
+      "defillamaSlugs": [
+        "aave-v3",
+        "aave-v4"
+      ],
+      "tvlUsd": 15349115260.771301,
+      "ethereumTvlUsd": 15349115260.771301,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 0",
+          "verbatim": "Stage 0. Aave v3 is a lending protocol that allows users to lend and borrow different ERC20 assets. Users are able to create positions that consist of debt in different loan assets which is secured by different collateral assets. The lending market allows anyone to liquidate insolvent positions, based on an external price feed and specific collateral factors representing an asset's specific risk profile. Furthermore, instead of borrowing supplied assets, Aave V3 also issues its own stablecoin, GHO. Users can borrow and lend GHO like any other asset in the system. The Aave DAO is Aave's onchain governance system, allowing AAVE, stkAAVE and aAAVE holders to govern over various aspects ranging across treasury management, risk management and strategic initiatives. Different Aave protocol _Instances_ exist and are managed by the Aave DAO. These instances focus on specific use cases and chains. This review covers the Ethereum Mainnet Core instance.",
+          "asOf": "2025-05-07",
+          "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "0",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "aave",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "H",
+                  "H",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-05-07",
+                "updateDate": null,
+                "path": "src/content/protocols/aave/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "High",
+                  "autonomy": "High",
+                  "exit_window": "High",
+                  "accessibility": "Low"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes Control, Exit, Open Access, Verifiability. Autonomy partial: oracle dependency on Chainlink.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "AA−",
+          "verbatim": "Credit rating AA− (stable). Deep liquidity, conservative LTVs, proven liquidation engine.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Technical A, financial A−, operational B+. Composite A− across 41 indicators.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Rated at market level only: aWETH, aUSDC pools. Protocol-level rating pending.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "87",
+          "verbatim": "Proof-of-Risk attested score 87/100 across 12 validators, dispute window clean.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Live dashboard: market exposure, liquidation depth, collateral-at-risk simulations.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Position health tracking + automation live for v3 markets.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Vault analytics live: risk-adjusted APY percentile 71, exploit history clean.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: 14 alert rules, 2 informational alerts past 30d.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "8 rpt",
+          "verbatim": "8 published reports incl. GHO collateral review and E-mode parameter recommendations.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "balancer",
+      "name": "Balancer",
+      "category": "dex",
+      "families": [
+        "v2",
+        "v3"
+      ],
+      "defillamaSlug": "balancer-v2",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "veBAL governance + ops multisigs",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Vault immutable; periphery via authorizer",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Emergency sub-DAO can pause pools",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "Certora, Trail of Bits — v3",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2025",
+          "summary": "v2 composable-pool rounding exploit — ~$116M drained",
+          "severity": "crit"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#balancer",
+      "defillamaSlugs": [
+        "balancer-v2",
+        "balancer-v3"
+      ],
+      "tvlUsd": 40943993.72611545,
+      "ethereumTvlUsd": 40943993.72611545,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Exit, Open Access, Verifiability. Control partial: emergency sub-DAO scope.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "C+",
+          "verbatim": "Operational C after Nov 2025 exploit; remediation tracked.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Pool grades live; exploit-affected pools flagged historical.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: invariant deviation alerts added post-incident.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "compound",
+      "name": "Compound",
+      "category": "lending",
+      "families": [
+        "v2",
+        "v3"
+      ],
+      "defillamaSlug": "compound-v3",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "COMP Governor Bravo — onchain voting",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Comet upgradeable via governance, timelock 2d",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "Pause guardian multisig",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2023",
+          "summary": "OpenZeppelin — continuous engagement",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2021",
+          "summary": "COMP distribution bug — ~$80M misdirected",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#compound-finance",
+      "defillamaSlugs": [
+        "compound-v3",
+        "compound-v2"
+      ],
+      "tvlUsd": 1415095017.4021285,
+      "ethereumTvlUsd": 1415095017.4021285,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 0",
+          "verbatim": "Stage 0. Compound-v3 is a lending protocol that accepts a base asset as liquidity and allows borrowing this base asset with a variety of other assets as collateral. Multiple base assets are supported such as USDC, WETH, USDT, wstETH, and USDS. Each base asset represents an isolated lending market managed by a separate instance of the protocol. Compound governance is able to update various parameters for each of these markets.",
+          "asOf": "2025-03-18",
+          "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "0",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "review_count",
+              "label": "Reviews matched",
+              "value": "2",
+              "valueType": "count"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "compound-v3",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "H",
+                  "H",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-03-18",
+                "updateDate": null,
+                "path": "src/content/protocols/compound-v3/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "High",
+                  "autonomy": "High",
+                  "exit_window": "High",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              },
+              {
+                "slug": "compound-v2",
+                "chain": "ethereum",
+                "role": "secondary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "H",
+                  "H",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "1970-01-01",
+                "updateDate": null,
+                "path": "src/content/protocols/compound-v2/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/compound-v2/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "High",
+                  "autonomy": "High",
+                  "exit_window": "High",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes four dimensions; Autonomy partial on price-feed admin.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "A",
+          "verbatim": "Credit rating A. Long track record, conservative listings, slow-moving governance.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Composite B+ — technical strong, operational aging.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "81",
+          "verbatim": "Attested 81/100.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Live dashboard: v2 wind-down exposure + v3 market health.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "v2/v3 position management live.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pigi": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "v3 base markets only.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: 8 alert rules.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "2 rpt",
+          "verbatim": "2 reports on v2 deprecation risk.",
+          "asOf": "2026-03",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "cowswap",
+      "name": "CoW Swap",
+      "category": "agg",
+      "families": [
+        "CoW Protocol"
+      ],
+      "defillamaSlug": "cowswap",
+      "volumeMetric": true,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "CoW DAO; solver set permissioned by governance",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Settlement contract non-upgradeable",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "Solver slashing + removal via DAO",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2023",
+          "summary": "G0 Group — settlement",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2023",
+          "summary": "Solver exploit — ~$166K, slashed & patched",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaSlugs": [
+        "cowswap"
+      ],
+      "tvlUsd": null,
+      "ethereumTvlUsd": null,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes Control, Exit, Open Access, Verifiability. Autonomy partial: permissioned solver set.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Technical A−; solver centralization noted.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Settlement anomaly monitoring in beta.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "curve",
+      "name": "Curve",
+      "category": "dex",
+      "families": [
+        "AMM",
+        "crvUSD"
+      ],
+      "defillamaSlug": "curve-dex",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "veCRV DAO — onchain parameter votes",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Pools immutable; new factories via DAO",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "EmergencyDAO can kill gauges ≤2 months old",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "ChainSecurity — crvUSD, twocrypto-ng",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2023",
+          "summary": "Vyper compiler reentrancy — ~$70M across pools, most recovered",
+          "severity": "crit"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#curve-finance",
+      "defillamaSlugs": [
+        "curve-dex"
+      ],
+      "tvlUsd": 1462173122.0940533,
+      "ethereumTvlUsd": 1462173122.0940533,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 0",
+          "verbatim": "Stage 0. Curve Finance is a protocol consisting of a _Decentralized Exchange (DEX)_ focused on stablecoin and correlated-asset swaps, _Isolated Lending Markets (Llamalend)_, and a _Stablecoin (crvUSD)_. Governance of the entire protocol is managed entirely through the _Curve DAO_, using a vote-escrowed token model (veCRV) where voting power is proportional to the amount of `CRV` locked and the remaining lock duration (up to four years).",
+          "asOf": "1970-01-01",
+          "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "0",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "M",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "curve-finance",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "L",
+                  "H",
+                  "M"
+                ],
+                "reasons": [],
+                "publishDate": "1970-01-01",
+                "updateDate": null,
+                "path": "src/content/protocols/curve-finance/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "High",
+                  "autonomy": "Low",
+                  "exit_window": "High",
+                  "accessibility": "Medium"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes four; Verifiability partial on legacy pool zoo.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Composite B+; 2023 incident weighted in operational score.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "74",
+          "verbatim": "Attested 74/100; legacy-pool heterogeneity deduction.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "crvUSD markets dashboard only.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Pool risk grades across 180 Curve pools.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: pool imbalance + oracle alerts.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "12 rpt",
+          "verbatim": "12 reports: crvUSD parameters, gauge risk, collateral onboarding reviews.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "euler",
+      "name": "Euler",
+      "category": "lending",
+      "families": [
+        "v2 / EVK"
+      ],
+      "defillamaSlug": "euler-v2",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Vault-level governors; EUL DAO on periphery",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "EVK vaults immutable once deployed, per-vault config",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "Per-vault pause via governor role",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "10+ firms + $1.25M Cantina competition — v2",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2023",
+          "summary": "v1 flash-loan exploit — $197M taken, fully recovered",
+          "severity": "crit"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#euler",
+      "defillamaSlugs": [
+        "euler-v2"
+      ],
+      "tvlUsd": 66585178.374888696,
+      "ethereumTvlUsd": 66585178.374888696,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes Control, Exit, Open Access, Verifiability. Autonomy partial on per-vault oracle choice.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "BBB+",
+          "verbatim": "Credit rating BBB+. Post-mortem discipline and audit depth notable; v1 history priced in.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Technical A−; operational B on vault-governor variance.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "BBB",
+          "verbatim": "Vault-level ratings across 22 EVK vaults, median BBB.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "c",
+          "label": "7.1",
+          "verbatim": "Median vault score 7.1/10 across scored EVK set.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Live dashboard: vault utilization, collateral chains, liquidation depth.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "EulerEarn strategies tracked via curator lens.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "EVK vaults tracked: exploit history flagged (v1, resolved).",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: 11 alert rules.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "fluid",
+      "name": "Fluid",
+      "category": "lending",
+      "families": [
+        "Lending",
+        "DEX"
+      ],
+      "defillamaSlug": "fluid-lending",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Instadapp/Fluid team multisig + INST governance",
+          "provenance": "docs"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable liquidity layer, timelocked",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Guardian can pause new borrows",
+          "provenance": "selfrep"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "StateMind, MixBytes — liquidity layer",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaParent": "parent#fluid",
+      "defillamaSlugs": [
+        "fluid-lending",
+        "fluid-dex"
+      ],
+      "tvlUsd": 964916814.4785336,
+      "ethereumTvlUsd": 964916814.4785336,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Open Access, Verifiability, Control-partial. Smart-collateral design increases upgrade surface.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "BBB",
+          "verbatim": "Credit rating BBB. Strong engineering; shorter track record and team-key concentration.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B",
+          "verbatim": "Technical B+, operational B−: admin key scope flagged.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Fluid earn vaults 6.4/10; DEX layer unscored.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Vault-level dashboards for USDC/ETH markets only.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Earn vaults tracked: risk-adjusted APY rank 8/50.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: liquidity-layer utilization alerts.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "gearbox",
+      "name": "Gearbox",
+      "category": "lending",
+      "families": [
+        "v3"
+      ],
+      "defillamaSlug": "gearbox",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "GEAR token DAO with technical multisig",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable credit facades, DAO-gated",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Pausable credit managers",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2023",
+          "summary": "ChainSecurity — v3 core",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaSlugs": [
+        "gearbox"
+      ],
+      "tvlUsd": 20494170.173303515,
+      "ethereumTvlUsd": 20494170.173303515,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Exit, Open Access, Verifiability. Leverage architecture concentrates liquidation risk.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B−",
+          "verbatim": "Operational B−: shrinking TVL base raises sustainability flag.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Passive pools tracked; credit accounts out of scope.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "n"
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "lido",
+      "name": "Lido",
+      "category": "lst",
+      "families": [
+        "stETH",
+        "wstETH"
+      ],
+      "defillamaSlug": "lido",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "LDO DAO + dual governance (stETH holder veto)",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable core behind DAO vote + timelock",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "GateSeal emergency pause, expiring committee",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "Statemind, Certora — dual governance",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2025",
+          "summary": "One oracle key compromised — quorum held, no impact",
+          "severity": "ok"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaSlugs": [
+        "lido"
+      ],
+      "tvlUsd": 24006783118.70208,
+      "ethereumTvlUsd": 24006783118.70208,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 0",
+          "verbatim": "Stage 0. _Lido V2_ is a liquid-staking protocol. Liquid staking allows users to deposit `ETH` for staking to a set of _Node Operators_ who run validators with `ETH` staked in Lido. In exchange for depositing `ETH` users get `stETH`, _Liquid staked Ether_, a token issued by Lido which represents the staked `ETH`. This token can then be used throughout DeFi in other protocols, for example, as collateral. Lido takes a 10% fee on the yield, split between the _Lido Treasury_ and _Node Operators_. _Lido V2_ uses a system of _Staking Modules_ as explained in the [Protocol Analysis](#protocol-analysis). Each _Staking Module_ has its own set of _Node Operators_, incentive mechanisms, and potential penalties. Currently three modules exist: the _Curated_, _Simple-DVT_, and _Community_ staking modules. Validators in the first two have to be approved by _Lido Governance_, whereas anyone can become a _Node Operator_ for the _Community Staking Module_ by depositing a bond.",
+          "asOf": "2025-06-19",
+          "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "0",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "lido-v2",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "L",
+                  "H",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-06-19",
+                "updateDate": null,
+                "path": "src/content/protocols/lido-v2/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "High",
+                  "autonomy": "Low",
+                  "exit_window": "High",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes four; Control partial pending full dual-governance rollout metrics.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "AA−",
+          "verbatim": "Credit rating AA−: deepest liquidity in class, operator set diversified.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Composite A−.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "AA",
+          "verbatim": "stETH rated AA — highest in LST cohort.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "91",
+          "verbatim": "Attested 91/100 — top score in registry.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "stETH collateral markets tracked in lending dashboards.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Oracle quorum + withdrawal queue monitoring.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "6 rpt",
+          "verbatim": "6 reports: operator concentration, dual governance review, depeg stress scenarios.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "liquity",
+      "name": "Liquity",
+      "category": "lending",
+      "families": [
+        "v1",
+        "v2"
+      ],
+      "defillamaSlug": "liquity-v1",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "v1 fully immutable, zero governance",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "None — contracts frozen at deploy",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "None by design; recovery mode is algorithmic",
+          "provenance": "onchain"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "ChainSecurity, Coinspect — v2/BOLD",
+          "provenance": "docs"
+        },
+        {
+          "year": "2021",
+          "summary": "Trail of Bits — v1",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2025",
+          "summary": "v2 stability pool bug — funds frozen, migration to v2.1",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#liquity",
+      "defillamaSlugs": [
+        "liquity-v1",
+        "liquity-v2"
+      ],
+      "tvlUsd": 275470311.1054485,
+      "ethereumTvlUsd": 275470311.1054485,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 2",
+          "verbatim": "Stage 2. Liquity is a decentralized borrowing protocol that allows you to draw interest-free loans against Ether used as collateral. Loans are paid out in LUSD (a USD pegged stablecoin) and need to maintain a minimum collateral ratio of 110%. In addition to the collateral, the loans are secured by a Stability Pool containing LUSD and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms under Liquidation.",
+          "asOf": "2024-10-23",
+          "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "2",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "liquity",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 2,
+                "risks": [
+                  "L",
+                  "L",
+                  "L",
+                  "L",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2024-10-23",
+                "updateDate": null,
+                "path": "src/content/protocols/liquity/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "Low",
+                  "autonomy": "Low",
+                  "exit_window": "Low",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "5/5",
+          "verbatim": "Passes all five dimensions. v1 is the registry's canonical maximum-autonomy entry.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "v1 rated A− (immutability premium); v2 unrated pending post-incident review.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "A",
+          "verbatim": "Technical A+, operational A−.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Trove distribution + redemption pressure dashboard.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Trove automation live for v1 and v2.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "v2 monitored post-incident; v1 unmonitored (immutable).",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "2 rpt",
+          "verbatim": "BOLD peg dynamics review; v2.1 migration note.",
+          "asOf": "2026-02",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "mellow",
+      "name": "Mellow",
+      "category": "yield",
+      "families": [
+        "LRT vaults"
+      ],
+      "defillamaSlug": "mellow",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Mellow multisig + curator roles per vault",
+          "provenance": "selfrep"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable vault system, timelocked admin",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Curator emergency withdrawal paths",
+          "provenance": "selfrep"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "ChainSecurity, Statemind — LRT vaults",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaParent": "parent#mellow-protocol",
+      "defillamaSlugs": [
+        "mellow"
+      ],
+      "tvlUsd": 274466499.0163595,
+      "ethereumTvlUsd": 274466499.0163595,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "p",
+          "label": "2/5",
+          "verbatim": "Preliminary: Open Access, Verifiability pass; curator-power dims in review.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "n"
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "BB",
+          "verbatim": "Protocol rating BB — curator concentration and restaking dependency chain.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "c",
+          "label": "6.2",
+          "verbatim": "Median vault 6.2/10; governance-controls vector weakest.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Mellow-on-Morpho allocations visible via curator lens.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "LRT vaults tracked; concentration warnings active.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "n"
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "morpho",
+      "name": "Morpho",
+      "category": "lending",
+      "families": [
+        "Morpho Blue"
+      ],
+      "defillamaSlug": "morpho-blue",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Immutable core; MORPHO governance owns periphery only",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Morpho Blue singleton is non-upgradeable",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "No pause on core; risk pushed to vault/curator layer",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "Spearbit + Cantina — Blue core",
+          "provenance": "docs"
+        },
+        {
+          "year": "2023",
+          "summary": "Multiple firms — 25+ engagements",
+          "provenance": "selfrep"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2025",
+          "summary": "Front-end bug intercepted by whitehat — $2.6M returned",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#morpho",
+      "defillamaSlugs": [
+        "morpho-blue"
+      ],
+      "tvlUsd": 4388178057.267447,
+      "ethereumTvlUsd": 4388178057.267447,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 1",
+          "verbatim": "Stage 1. Morpho is a lending protocol with permissionless market creation. It enables the deployment of minimal and isolated lending markets by specifying: one collateral asset, one loan asset, a Liquidation Loan To Value (LLTV), an Interest Rate Model (IRM), and an oracle. Users may lend funds directly on individual Morpho Markets or through Morpho Vaults. These vaults are created permissionlessly by third parties, or risk curators, and offer managed lending strategies by aggregating different Morpho Markets. Morpho governance operates within a very limited scope and without direct control over the Morpho protocol.",
+          "asOf": "2025-05-21",
+          "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "1",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "M",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "M",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "M",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "morpho",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 1,
+                "risks": [
+                  "L",
+                  "M",
+                  "M",
+                  "M",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-05-21",
+                "updateDate": null,
+                "path": "src/content/protocols/morpho/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "Medium",
+                  "autonomy": "Medium",
+                  "exit_window": "Medium",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "5/5",
+          "verbatim": "Passes all five dimensions. Immutable singleton, permissionless market creation.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Credit rating A−. Isolated-market design limits contagion; curator quality varies.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Technical A. Operational B+ on curator concentration.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Rated via vault layer; core protocol out of rating scope.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "78",
+          "verbatim": "Attested 78/100; deduction for oracle heterogeneity across markets.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Live dashboard: per-market LLTV stress, oracle deviation tracking.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Curator-level coverage; core markets aggregated only.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "defisaver": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Morpho position automation live.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Tracked across 40+ markets.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: oracle + utilization alerts, 1 warning past 30d.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "3 rpt",
+          "verbatim": "3 reports on oracle configuration risk in long-tail markets.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "morphovaults",
+      "name": "Morpho Vaults",
+      "category": "yield",
+      "families": [
+        "MetaMorpho"
+      ],
+      "defillamaSlug": null,
+      "volumeMetric": false,
+      "tvlWithin": "morpho",
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Per-vault curator with public role; timelocked caps",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Vault code immutable; allocations curator-set",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "Guardian veto on curator actions (if set)",
+          "provenance": "onchain"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "Spearbit — MetaMorpho",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2026",
+          "summary": "Curator concentration event — one vault 94% single-market",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaSlugs": [],
+      "tvlUsd": null,
+      "ethereumTvlUsd": null,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes four; Control partial — curator role centralization varies per vault.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "6 flagship vaults rated (A−…BBB−); long tail unrated.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "n"
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Median A− across 48 rated MetaMorpho vaults.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "c",
+          "label": "8.1",
+          "verbatim": "Median 8.1/10 — strongest cohort in the 700-vault set.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Aggregated exposure via Morpho dashboard.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Full curator-behavior coverage: allocation drift, timelock usage, cap discipline.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "48 vaults tracked with curator concentration metrics.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Curator-action alerts live.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Covered within Morpho oracle-risk series.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "oneinch",
+      "name": "1inch",
+      "category": "agg",
+      "families": [
+        "AggRouter v6",
+        "LOP"
+      ],
+      "defillamaSlug": "1inch-swap",
+      "volumeMetric": true,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "1inch DAO + team multisig on router deploys",
+          "provenance": "docs"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Routers immutable; new versions deployed alongside",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "None — users approve per-router",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "OpenZeppelin — AggRouter v6",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2025",
+          "summary": "Fusion resolver compromise — ~$5M, mostly returned",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#1inch",
+      "defillamaSlugs": [
+        "1inch-swap"
+      ],
+      "tvlUsd": 2897423.9723134935,
+      "ethereumTvlUsd": 2897423.9723134935,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Open Access, Verifiability, Exit. Router deploy keys with team.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B",
+          "verbatim": "Composite B; resolver incident weighted.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "n"
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "pendle",
+      "name": "Pendle",
+      "category": "yield",
+      "families": [
+        "v2"
+      ],
+      "defillamaSlug": "pendle-v2",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "vePENDLE governance + team multisig",
+          "provenance": "docs"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable markets behind timelock",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Pausing guardian on new listings",
+          "provenance": "selfrep"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2023",
+          "summary": "ChainSecurity, Spearbit — v2",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaParent": "parent#pendle",
+      "defillamaSlugs": [
+        "pendle-v2"
+      ],
+      "tvlUsd": 667973010.2047427,
+      "ethereumTvlUsd": 667973010.2047427,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 0",
+          "verbatim": "Stage 0. Pendle is a yield-trading protocol that enables users to manage and optimize their yield exposure. By tokenizing yield-bearing assets into standardized yield tokens (SY), Pendle allows these assets to be split into principal tokens (PT) and yield tokens (YT). This separation facilitates various strategies, including earning fixed yields, speculating on future yield changes, and providing liquidity to earn additional rewards. Pendle's Automated Market Maker (AMM) is specifically designed to handle the trading of these assets.",
+          "asOf": "1970-01-01",
+          "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "0",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "pendle",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "L",
+                  "H",
+                  "H"
+                ],
+                "reasons": [],
+                "publishDate": "1970-01-01",
+                "updateDate": null,
+                "path": "src/content/protocols/pendle/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeability": "High",
+                  "autonomy": "Low",
+                  "exit_window": "High",
+                  "accessibility": "High"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Open Access, Verifiability, Exit.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Technical A−: novel mechanism complexity priced.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "BBB+",
+          "verbatim": "PT/YT market ratings across 60+ pools, median BBB+.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "c",
+          "label": "7.8",
+          "verbatim": "LP vault cohort 7.8/10.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "PT strategies tracked; implied-yield risk bands.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Selected pools graded.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Maturity-event and oracle alerts.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "One published note: PT collateral in lending markets.",
+          "asOf": "2026-01",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "rocketpool",
+      "name": "Rocket Pool",
+      "category": "lst",
+      "families": [
+        "rETH"
+      ],
+      "defillamaSlug": "rocket-pool",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "pDAO/oDAO split; RPL votes onchain",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable via oDAO-executed governance",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "oDAO can pause deposits",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "Sigma Prime — Saturn upgrades",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaSlugs": [
+        "rocket-pool"
+      ],
+      "tvlUsd": 1293987706.3148522,
+      "ethereumTvlUsd": 1293987706.3148522,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "4/5",
+          "verbatim": "Passes four; Autonomy partial on oDAO oracle duties.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "rETH under review for institutional coverage.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Composite B+.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "rETH rated A−.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Deposit-pool monitoring in beta.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "category": "lending",
+      "families": [
+        "SparkLend",
+        "sUSDS"
+      ],
+      "defillamaSlug": "sparklend",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "Sky sub-DAO; parameters set via Sky executive votes",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Upgradeable via Sky governance spells, 48h delay",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "Freezer module — emergency shutdown inherited from Sky",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2025",
+          "summary": "ChainSecurity — SparkLend markets",
+          "provenance": "docs"
+        },
+        {
+          "year": "2024",
+          "summary": "Cantina competition — sUSDS",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaParent": "parent#spark",
+      "defillamaSlugs": [
+        "sparklend",
+        "spark-savings",
+        "spark-liquidity-layer"
+      ],
+      "tvlUsd": 7782743083.451712,
+      "ethereumTvlUsd": 7782743083.451712,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "c",
+          "label": "Stage 0",
+          "verbatim": "Stage 0. Spark is a protocol within the Sky ecosystem and consists of two main products: _Savings USDS_ and _SparkLend_. _Savings USDS_ is a savings product offering a fixed return on various stablecoins including `USDS`, `DAI` and `USDC`. _SparkLend_ is a lending protocol that enables users to lend and borrow various crypto assets. It offers deep stablecoin liquidity that is provided to a large part by Sky through Spark's _Liquidity Management Layer_. Spark's _Liquidity Management Layer_ allocates Sky stablecoin liquidity to various DeFi lending markets including _SparkLend_. The focus in this review is thus on its role within _SparkLend_ itself.",
+          "asOf": "2025-06-05",
+          "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "0",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "H",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "spark",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 0,
+                "risks": [
+                  "L",
+                  "H",
+                  "H",
+                  "H",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-06-05",
+                "updateDate": null,
+                "path": "src/content/protocols/spark/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "accesibility": "Low",
+                  "overall": "Stage"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Open Access, Verifiability, Exit. Control and Autonomy inherit Sky governance surface.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "c",
+          "label": "A",
+          "verbatim": "Credit rating A. Sky backstop and PSM depth offset governance concentration.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B+",
+          "verbatim": "Technical A−, operational B: subDAO dependency flagged.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "sUSDS vault rated BB+; SparkLend markets unrated.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "sUSDS scored 6.8/10; lending side out of scope (not a vault).",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Live dashboard: D3M exposure, collateral health, liquidation curves.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "SparkLend position management live.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "sUSDS tracked: risk-adjusted yield rank 12/50.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Monitored: 9 alert rules, quiet 30d.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "c",
+          "label": "4 rpt",
+          "verbatim": "4 reports incl. sUSDS reserve composition review.",
+          "asOf": "2026-04",
+          "sourceUrl": null
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "uniswap",
+      "name": "Uniswap",
+      "category": "dex",
+      "families": [
+        "v3",
+        "v4",
+        "UniswapX"
+      ],
+      "defillamaSlug": "uniswap-v3",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "UNI Governor; core pools permissionless",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "v3/v4 core immutable; hooks are per-pool code",
+          "provenance": "onchain"
+        },
+        {
+          "key": "Emergency",
+          "value": "None on core contracts",
+          "provenance": "onchain"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2024",
+          "summary": "OpenZeppelin, Certora, ABDK + $15.5M competition — v4",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [],
+      "chain": "ethereum",
+      "defillamaParent": "parent#uniswap",
+      "defillamaSlugs": [
+        "uniswap-v3",
+        "uniswap-v4",
+        "uniswap-v2"
+      ],
+      "tvlUsd": 2424138891.4049954,
+      "ethereumTvlUsd": 2424138891.4049954,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "p",
+          "label": "Stage 2",
+          "verbatim": "Stage 2. Uniswap v3 is an AMM that builds upon Uniswap v2 by introducing a concentrated liquidity model, providing liquidity providers with granular control over capital allocation. Unlike v2, where liquidity is distributed uniformly across all price ranges, v3 allows LPs to specify custom price ranges in which their liquidity is active. This approach significantly improves capital efficiency, as LPs can concentrate their assets in high-demand price ranges, earning fees only within those specified ranges. Uniswap v3 also introduces multiple fee tiers (0.01%, 0.05%, 0.3%, and 1%) to support different asset volatility profiles, allowing LPs to adjust their fee preferences based on expected risk and return. Additionally, it incorporates \"range orders,\" which effectively turn liquidity positions into limit orders, further enhancing LP strategy flexibility. The protocol is deployed across multiple chains enabling a wide range of use cases across decentralized finance (DeFi) applications. [Partial: DeFiScan covers Uniswap v2/v3; v4 / UniswapX not reviewed as one family entry]",
+          "asOf": "2025-01-31",
+          "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [
+            {
+              "key": "stage",
+              "label": "Decentralization stage",
+              "value": "2",
+              "valueType": "stage",
+              "scale": "0-2"
+            },
+            {
+              "key": "chain",
+              "label": "Chain",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "upgradeability",
+              "label": "Upgradeability",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "autonomy",
+              "label": "Autonomy",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "exit_window",
+              "label": "Exit Window",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "accessibility",
+              "label": "Accessibility",
+              "value": "L",
+              "valueType": "enum",
+              "scale": "L|M|H"
+            },
+            {
+              "key": "review_count",
+              "label": "Reviews matched",
+              "value": "2",
+              "valueType": "count"
+            }
+          ],
+          "raw": {
+            "reviews": [
+              {
+                "slug": "uniswap-v3",
+                "chain": "ethereum",
+                "role": "primary",
+                "stage": 2,
+                "risks": [
+                  "L",
+                  "L",
+                  "L",
+                  "L",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-01-08",
+                "updateDate": "2025-01-31",
+                "path": "src/content/protocols/uniswap-v3/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeabillity": "Low",
+                  "autonomy": "Low",
+                  "exit": "Low",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              },
+              {
+                "slug": "uniswap-v2",
+                "chain": "ethereum",
+                "role": "secondary",
+                "stage": 2,
+                "risks": [
+                  "L",
+                  "L",
+                  "L",
+                  "L",
+                  "L"
+                ],
+                "reasons": [],
+                "publishDate": "2025-01-22",
+                "updateDate": null,
+                "path": "src/content/protocols/uniswap-v2/ethereum.md",
+                "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v2/ethereum",
+                "scoreLines": {
+                  "chain": "Low",
+                  "upgradeabillity": "Low",
+                  "autonomy": "Low",
+                  "exit": "Low",
+                  "accessibility": "Low",
+                  "overall": "Stage"
+                }
+              }
+            ]
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "5/5",
+          "verbatim": "Passes all five. v4 hooks noted as per-pool risk relocation, not protocol risk.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Technical A; operational A−.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "84",
+          "verbatim": "Attested 84/100.",
+          "asOf": "2026-08",
+          "sourceUrl": null
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "Pool-level security grades for top 200 v3/v4 pools.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pharos": {
+          "status": "c",
+          "label": "24/7",
+          "verbatim": "Hook-deployment anomaly monitoring live.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "yearn",
+      "name": "Yearn",
+      "category": "yield",
+      "families": [
+        "v3"
+      ],
+      "defillamaSlug": "yearn-finance",
+      "volumeMetric": false,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "veYFI + multisig-executed governance",
+          "provenance": "docs"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "v3 vaults immutable, strategies swappable",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Guardian can shutdown vaults",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2023",
+          "summary": "ChainSecurity — v3 core",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2021",
+          "summary": "v1 DAI vault exploit — $11M",
+          "severity": "ser"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#yearn",
+      "defillamaSlugs": [
+        "yearn-finance"
+      ],
+      "tvlUsd": 211321792.47812694,
+      "ethereumTvlUsd": 211321792.47812694,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "c",
+          "label": "3/5",
+          "verbatim": "Passes Exit, Open Access, Verifiability.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B",
+          "verbatim": "Composite B.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "c",
+          "label": "A−",
+          "verbatim": "Protocol-level A−; per-vault range BB…AA across 31 vaults.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "c",
+          "label": "7.4",
+          "verbatim": "Median vault 7.4/10; code maturity vector strongest.",
+          "asOf": "2026-06",
+          "sourceUrl": null
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "c",
+          "label": "live",
+          "verbatim": "31 vaults tracked; risk-adjusted APY leader in 4 categories.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "zyfai": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "LP-facing vaults only.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "pharos": {
+          "status": "p",
+          "label": "◐",
+          "verbatim": "Strategy-change alerts in beta.",
+          "asOf": "live",
+          "sourceUrl": null
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    },
+    {
+      "id": "zerox",
+      "name": "0x / Matcha",
+      "category": "agg",
+      "families": [
+        "0x v4",
+        "Matcha"
+      ],
+      "defillamaSlug": "0x",
+      "volumeMetric": true,
+      "tvlWithin": null,
+      "governance": [
+        {
+          "key": "Control",
+          "value": "0x Labs multisig + ZRX governance (legacy)",
+          "provenance": "docs"
+        },
+        {
+          "key": "Upgradeability",
+          "value": "Exchange proxy upgradeable via 0x governance timelock",
+          "provenance": "docs"
+        },
+        {
+          "key": "Emergency",
+          "value": "Feature-level pause",
+          "provenance": "docs"
+        }
+      ],
+      "audits": [
+        {
+          "year": "2021",
+          "summary": "ConsenSys Diligence — exchange proxy",
+          "provenance": "docs"
+        }
+      ],
+      "incidents": [
+        {
+          "year": "2019",
+          "summary": "v2 signature validator bug — paused, no loss",
+          "severity": "ok"
+        }
+      ],
+      "chain": "ethereum",
+      "defillamaParent": "parent#0x-protocol",
+      "defillamaSlugs": [
+        "0x"
+      ],
+      "tvlUsd": null,
+      "ethereumTvlUsd": null,
+      "volume24hUsd": null,
+      "coverage": {
+        "defiscan": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "collection": {
+            "method": "git",
+            "collectedAt": "2026-09-10T06:12:55.177Z",
+            "collectorId": "defiscan"
+          },
+          "facets": [],
+          "raw": {
+            "reason": "no_defiscan_review_mapped_or_found"
+          }
+        },
+        "defipunkd": {
+          "status": "p",
+          "label": "2/5",
+          "verbatim": "Assessment in progress: Open Access, Verifiability pass; remaining dims pending.",
+          "asOf": "2026-07",
+          "sourceUrl": null
+        },
+        "credora": {
+          "status": "n"
+        },
+        "sphere": {
+          "status": "c",
+          "label": "B−",
+          "verbatim": "Composite B−; legacy governance surface.",
+          "asOf": "2026-05",
+          "sourceUrl": null
+        },
+        "xerberus": {
+          "status": "n"
+        },
+        "risklayer": {
+          "status": "n"
+        },
+        "philidor": {
+          "status": "n"
+        },
+        "blockan": {
+          "status": "n"
+        },
+        "curatorw": {
+          "status": "n"
+        },
+        "defisaver": {
+          "status": "n"
+        },
+        "pigi": {
+          "status": "n"
+        },
+        "zyfai": {
+          "status": "n"
+        },
+        "pharos": {
+          "status": "n"
+        },
+        "llamarisk": {
+          "status": "n"
+        }
+      },
+      "coverageUpdatedAt": "2026-09-10T06:12:55.177Z"
+    }
+  ],
+  "kpis": {
+    "protocolCount": 20,
+    "feedCount": 14,
+    "cellsAssessed": 280,
+    "coveragePct": 50,
+    "fundsAtRiskUsd": 60644386026.96609,
+    "coveredCells": 112,
+    "partialCells": 28
+  }
+}

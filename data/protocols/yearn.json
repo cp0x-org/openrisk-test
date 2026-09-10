@@ -1,0 +1,47 @@
+{
+  "id": "yearn",
+  "name": "Yearn",
+  "category": "yield",
+  "families": [
+    "v3"
+  ],
+  "defillamaSlug": "yearn-finance",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "veYFI + multisig-executed governance",
+      "provenance": "docs"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "v3 vaults immutable, strategies swappable",
+      "provenance": "docs"
+    },
+    {
+      "key": "Emergency",
+      "value": "Guardian can shutdown vaults",
+      "provenance": "docs"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2023",
+      "summary": "ChainSecurity — v3 core",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [
+    {
+      "year": "2021",
+      "summary": "v1 DAI vault exploit — $11M",
+      "severity": "ser"
+    }
+  ],
+  "chain": "ethereum",
+  "defillamaParent": "parent#yearn",
+  "defillamaSlugs": [
+    "yearn-finance"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "project": "openrisk",
+  "chain": "ethereum",
+  "license": "AGPL-3.0",
+  "noCompositeScoring": true,
+  "seededFrom": "openrisk-mockup",
+  "protocolCount": 20,
+  "feedCount": 14
+}

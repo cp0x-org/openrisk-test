@@ -1,0 +1,45 @@
+{
+  "id": "uniswap",
+  "name": "Uniswap",
+  "category": "dex",
+  "families": [
+    "v3",
+    "v4",
+    "UniswapX"
+  ],
+  "defillamaSlug": "uniswap-v3",
+  "volumeMetric": false,
+  "tvlWithin": null,
+  "governance": [
+    {
+      "key": "Control",
+      "value": "UNI Governor; core pools permissionless",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Upgradeability",
+      "value": "v3/v4 core immutable; hooks are per-pool code",
+      "provenance": "onchain"
+    },
+    {
+      "key": "Emergency",
+      "value": "None on core contracts",
+      "provenance": "onchain"
+    }
+  ],
+  "audits": [
+    {
+      "year": "2024",
+      "summary": "OpenZeppelin, Certora, ABDK + $15.5M competition — v4",
+      "provenance": "docs"
+    }
+  ],
+  "incidents": [],
+  "chain": "ethereum",
+  "defillamaParent": "parent#uniswap",
+  "defillamaSlugs": [
+    "uniswap-v3",
+    "uniswap-v4",
+    "uniswap-v2"
+  ]
+}
