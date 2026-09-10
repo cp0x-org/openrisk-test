@@ -1,6 +1,6 @@
 {
   "protocolId": "morphovaults",
-  "updatedAt": "2026-09-10T06:12:55.177Z",
+  "updatedAt": "2026-09-10T06:56:45.255Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T06:12:55.177Z",
+        "collectedAt": "2026-09-10T06:56:45.255Z",
         "collectorId": "defiscan"
       },
       "facets": [],
