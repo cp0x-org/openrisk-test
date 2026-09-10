@@ -95,21 +95,50 @@ CI uses `npm ci`, which **requires** `package-lock.json` in the repo.
 
 ## 3. Enable Actions permissions (needed for bot commits)
 
-Collectors commit updated JSON **from inside GitHub Actions**. That uses the built-in `GITHUB_TOKEN`. You must allow workflows to write to the repo:
+Collectors commit updated JSON **from inside GitHub Actions**.
 
-1. Repo → **Settings → Actions → General**  
-2. Under **Workflow permissions**, choose **Read and write permissions**  
-3. Check **Allow GitHub Actions to create and approve pull requests** (optional; useful later)  
-4. Save  
+### Preferred: built-in `GITHUB_TOKEN`
 
-No Personal Access Token (PAT) is needed for the default setup.
+1. Open the **repository** (not your account):  
+   `https://github.com/<USER>/<REPO>/settings/actions`
+2. Scroll to **Workflow permissions**
+3. Choose **Read and write permissions** → Save
+
+No Personal Access Token is needed.
+
+### If that control is missing / greyed out
+
+Common causes:
+
+| Cause | What to do |
+| --- | --- |
+| You are in **Account** or **Org** settings, not the repo | Use the repo URL above (`…/<REPO>/settings/actions`) |
+| You are not an **Admin** of the repo | Ask the owner for Admin, or use the PAT workaround below |
+| Repo is under an **Organization** that locks the setting | Org owner must allow write tokens, **or** use PAT below |
+| Actions are disabled | Same page → enable Actions for this repository |
+
+Org lock (typical): org → **Settings → Actions → General → Workflow permissions** is set to “Read repository contents and packages permissions” and “Enforce” is on. Only an org owner can change that.
+
+### Workaround: Personal Access Token (when UI is locked)
+
+1. Create a fine-grained PAT (recommended) or classic PAT:
+   - Fine-grained: Resource owner = your user/org, Repository access = this repo only  
+     Permissions → **Contents: Read and write**  
+     (and **Metadata: Read** — automatic)
+   - Classic: scope `repo`
+2. Repo → **Settings → Secrets and variables → Actions → New repository secret**
+   - Name: `DATA_PUSH_TOKEN`
+   - Value: the PAT
+3. Keep `.github/workflows/collect.yml` as in this repo — checkout already uses  
+   `secrets.DATA_PUSH_TOKEN` when set, otherwise `github.token`.
+
+Push the workflow change, then run **Collect data** once.
 
 ### If `main` is branch-protected
 
 If you require PR reviews on `main`, the bot `git push` in `collect.yml` will fail. Options:
 
-- Allow the `github-actions[bot]` to bypass (org/ruleset settings), **or**  
-- Have the collector open a PR instead of pushing (not implemented yet), **or**  
+- Allow the actor (github-actions bot or the PAT user) to bypass in rulesets, **or**  
 - Keep `main` unprotected until Milestone 1 is stable  
 
 ---
