@@ -197,6 +197,9 @@ author: `openrisk-bot` / `github-actions[bot]`.
 
 That push then triggers **Deploy GitHub Pages**, so the site picks up new TVL / DeFiScan cells.
 
+Important: collector commits intentionally do **not** re-trigger Collect (path filters + `[skip collect]` in the commit message). Otherwise timestamp updates in `data/coverage` would loop forever.
+
+
 ---
 
 ## 6. Verify everything once
