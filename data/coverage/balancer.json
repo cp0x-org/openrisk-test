@@ -1,6 +1,6 @@
 {
   "protocolId": "balancer",
-  "updatedAt": "2026-09-10T07:03:26.746Z",
+  "updatedAt": "2026-09-10T07:03:42.075Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],

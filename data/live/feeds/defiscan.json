@@ -1,7 +1,7 @@
 {
   "version": 1,
   "feedId": "defiscan",
-  "collectedAt": "2026-09-10T07:03:26.746Z",
+  "collectedAt": "2026-09-10T07:03:42.075Z",
   "source": {
     "kind": "github",
     "owner": "deficollective",
@@ -19,7 +19,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -104,7 +104,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -120,7 +120,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -238,7 +238,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -254,7 +254,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -339,7 +339,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -355,7 +355,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -371,7 +371,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -387,7 +387,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -473,7 +473,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -559,7 +559,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -575,7 +575,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -661,7 +661,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -677,7 +677,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -693,7 +693,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -778,7 +778,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -794,7 +794,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -877,7 +877,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [
@@ -995,7 +995,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
@@ -1011,7 +1011,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T07:03:26.746Z",
+        "collectedAt": "2026-09-10T07:03:42.075Z",
         "collectorId": "defiscan"
       },
       "facets": [],
