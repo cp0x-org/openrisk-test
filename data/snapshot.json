@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T15:47:43.793Z",
-  "liveUpdatedAt": "2026-09-10T15:47:42.300Z",
+  "generatedAt": "2026-09-10T20:24:04.262Z",
+  "liveUpdatedAt": "2026-09-10T20:24:01.055Z",
   "meta": {
     "version": 1,
     "project": "openrisk",
@@ -75,8 +75,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 15080673434.362507,
-      "ethereumTvlUsd": 15080673434.362507,
+      "tvlUsd": 15197016185.20559,
+      "ethereumTvlUsd": 15197016185.20559,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -87,7 +87,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -165,7 +165,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "balancer",
@@ -187,8 +187,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 40263641.896339476,
-      "ethereumTvlUsd": 40263641.896339476,
+      "tvlUsd": 40595147.78979243,
+      "ethereumTvlUsd": 40595147.78979243,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -199,7 +199,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -208,7 +208,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "compound",
@@ -230,8 +230,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1389130098.7439737,
-      "ethereumTvlUsd": 1389130098.7439737,
+      "tvlUsd": 1417199007.8597817,
+      "ethereumTvlUsd": 1417199007.8597817,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -242,7 +242,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -353,7 +353,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "cowswap",
@@ -385,7 +385,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -394,7 +394,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "curve",
@@ -415,8 +415,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1455631987.6033733,
-      "ethereumTvlUsd": 1455631987.6033733,
+      "tvlUsd": 1458656824.3113558,
+      "ethereumTvlUsd": 1458656824.3113558,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -427,7 +427,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -505,7 +505,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "euler",
@@ -525,8 +525,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 65411324.38813104,
-      "ethereumTvlUsd": 65411324.38813104,
+      "tvlUsd": 65028969.17157021,
+      "ethereumTvlUsd": 65028969.17157021,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -537,7 +537,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -546,7 +546,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "fluid",
@@ -568,8 +568,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 957745474.0146556,
-      "ethereumTvlUsd": 957745474.0146556,
+      "tvlUsd": 963486846.3184032,
+      "ethereumTvlUsd": 963486846.3184032,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -580,7 +580,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -589,7 +589,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "gearbox",
@@ -609,8 +609,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 20188803.554833554,
-      "ethereumTvlUsd": 20188803.554833554,
+      "tvlUsd": 20355729.42017808,
+      "ethereumTvlUsd": 20355729.42017808,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -621,7 +621,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -630,7 +630,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "lido",
@@ -651,8 +651,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 23626026516.291912,
-      "ethereumTvlUsd": 23626026516.291912,
+      "tvlUsd": 23885307116.834343,
+      "ethereumTvlUsd": 23885307116.834343,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -663,7 +663,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -742,7 +742,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "liquity",
@@ -764,8 +764,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 271021076.18014604,
-      "ethereumTvlUsd": 271021076.18014604,
+      "tvlUsd": 273861117.79694736,
+      "ethereumTvlUsd": 273861117.79694736,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -776,7 +776,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -855,7 +855,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "mellow",
@@ -875,8 +875,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 271120497.53957546,
-      "ethereumTvlUsd": 271120497.53957546,
+      "tvlUsd": 273369714.5594713,
+      "ethereumTvlUsd": 273369714.5594713,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -887,7 +887,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -896,7 +896,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "morpho",
@@ -916,8 +916,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 4346247501.786307,
-      "ethereumTvlUsd": 4346247501.786307,
+      "tvlUsd": 4347231833.142293,
+      "ethereumTvlUsd": 4347231833.142293,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -928,7 +928,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -1007,7 +1007,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "morphovaults",
@@ -1037,7 +1037,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -1046,7 +1046,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "oneinch",
@@ -1067,8 +1067,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2851172.408523997,
-      "ethereumTvlUsd": 2851172.408523997,
+      "tvlUsd": 2871863.5212139883,
+      "ethereumTvlUsd": 2871863.5212139883,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1079,7 +1079,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -1088,7 +1088,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "pendle",
@@ -1108,8 +1108,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 663643631.1093218,
-      "ethereumTvlUsd": 663643631.1093218,
+      "tvlUsd": 666801523.8106083,
+      "ethereumTvlUsd": 666801523.8106083,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1120,7 +1120,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -1198,7 +1198,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "rocketpool",
@@ -1218,8 +1218,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1274653388.24997,
-      "ethereumTvlUsd": 1274653388.24997,
+      "tvlUsd": 1288585555.1583936,
+      "ethereumTvlUsd": 1288585555.1583936,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1230,7 +1230,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -1239,7 +1239,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "spark",
@@ -1262,8 +1262,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 7798473133.950118,
-      "ethereumTvlUsd": 7798473133.950118,
+      "tvlUsd": 7846848013.592279,
+      "ethereumTvlUsd": 7846848013.592279,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1274,7 +1274,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/spark/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -1350,7 +1350,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "uniswap",
@@ -1374,8 +1374,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2418801287.8234854,
-      "ethereumTvlUsd": 2418801287.8234854,
+      "tvlUsd": 2430039333.8649387,
+      "ethereumTvlUsd": 2430039333.8649387,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1386,7 +1386,7 @@
           "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [
@@ -1497,7 +1497,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "yearn",
@@ -1517,8 +1517,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 213125224.96366748,
-      "ethereumTvlUsd": 213125224.96366748,
+      "tvlUsd": 212458065.24186498,
+      "ethereumTvlUsd": 212458065.24186498,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1529,7 +1529,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -1538,7 +1538,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     },
     {
       "id": "zerox",
@@ -1571,7 +1571,7 @@
           "sourceUrl": null,
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-10T15:47:42.303Z",
+            "collectedAt": "2026-09-10T20:24:01.058Z",
             "collectorId": "defiscan"
           },
           "facets": [],
@@ -1580,7 +1580,7 @@
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-10T15:47:42.303Z"
+      "coverageUpdatedAt": "2026-09-10T20:24:01.058Z"
     }
   ],
   "kpis": {
@@ -1588,7 +1588,7 @@
     "feedCount": 1,
     "cellsAssessed": 20,
     "coveragePct": 45,
-    "fundsAtRiskUsd": 59892157022.45832,
+    "fundsAtRiskUsd": 60386840984.077805,
     "coveredCells": 8,
     "partialCells": 1
   }

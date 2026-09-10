@@ -1,6 +1,6 @@
 {
   "protocolId": "yearn",
-  "updatedAt": "2026-09-10T15:47:42.303Z",
+  "updatedAt": "2026-09-10T20:24:01.058Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -10,7 +10,7 @@
       "sourceUrl": null,
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T15:47:42.303Z",
+        "collectedAt": "2026-09-10T20:24:01.058Z",
         "collectorId": "defiscan"
       },
       "facets": [],
