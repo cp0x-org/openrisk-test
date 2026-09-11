@@ -9,8 +9,6 @@
     "web"
   ],
   "scripts": {
-    "seed": "node scripts/seed-data.mjs",
-    "strip-mock": "node scripts/strip-mock-data.mjs",
     "collect": "npm run collect -w collectors",
     "build:snapshot": "npm run snapshot -w collectors",
     "dev": "npm run dev -w web",
