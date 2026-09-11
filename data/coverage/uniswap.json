@@ -1,6 +1,6 @@
 {
   "protocolId": "uniswap",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "p",
@@ -94,8 +94,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "4.3 · medium",
+      "verbatim": "overallScore=4.3; riskLevel=medium\n[critical] EOA controls Arbitrum v4 PoolManager ownership\n[high] Same EOA controls Unichain v2 feeToSetter\n[high] UNI governance Timelock unverified on Etherscan\n[high] Four scoped deployments lack verified explorer source\n[high] Arbitrum Admin Controlled by EOA, Not L1 Timelock\n[high] Cross-Chain Governance Asymmetry Across L2s\n[high] v4 Hook Composability Creates Third-Party Integration Risk\n[medium] v4 hooks delegate execution to arbitrary pool-configured contracts",
+      "asOf": "2026-07-02",
+      "sourceUrl": "https://risklayer.online/protocol/uniswap.org",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "4.3",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "medium",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "4.3",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "5.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "5.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "2.4",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "4.3",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "uniswap.org",
+        "overallScore": 4.3,
+        "riskLevel": "medium",
+        "runNumber": 3,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 4.3,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 5.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 5.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 2.4,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 4.3,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "EOA controls Arbitrum v4 PoolManager ownership",
+            "category": "access-control",
+            "severity": "critical",
+            "description": "On-chain owner() of Arbitrum UniswapV4 PoolManager (0x360e68faccca8ca495c1b759fd9eee466db9fb32) resolves to 0x2bad8182c09f50c8318d769245bea52c32be46cd, confirmed EOA (eth_getCode empty). This address can call setProtocolFeeController() and transferOwnership() per verified PoolManager source. Single-key compromise could reassign protocol-fee authority or ownership without timelock/multisig protection."
+          },
+          {
+            "title": "Same EOA controls Unichain v2 feeToSetter",
+            "category": "access-control",
+            "severity": "high",
+            "description": "The same EOA 0x2bad8182c09f50c8318d769245bea52c32be46cd is feeToSetter on Unichain UniswapV2Factory (0x1f9840…002), granting setFeeTo/setFeeToSetter privileges per verified v2 factory source. Cross-chain concentration of privileged roles in one EOA expands blast radius beyond Arbitrum v4."
+          },
+          {
+            "title": "UNI governance Timelock unverified on Etherscan",
+            "category": "verification",
+            "severity": "high",
+            "description": "The UNI Timelock at 0x1a9C8182C09F50C8318d769245beA52c32BE35BC is marked unverified in VERIFICATION_STATUS.md with no downloadable source. On-chain it is a live contract (admin=0x408ed6354d4973f66138c91495f2f2fcbd8724c3) and owns Ethereum v4 PoolManager, is V2 feeToSetter, and is UNI minter. Lack of explorer verification prevents independent audit of the governance execution layer controlling protocol-fee and minting paths."
+          },
+          {
+            "title": "Four scoped deployments lack verified explorer source",
+            "category": "verification",
+            "severity": "high",
+            "description": "Pipeline verification flags four contracts as unverified: Ethereum NonfungiblePositionManager (0xC36442b4…), Ethereum Timelock (0x1a9C8182…), Optimism UniswapV3Factory (0x1F98431c…), and Base Permit2 (0x000000000022D473030F116dDEE9F6B43aC78BA3). Unverified bytecode cannot be source-audited via explorer; NPM and Permit2 hold user NFT positions and token approvals respectively, amplifying impact."
+          },
+          {
+            "title": "Arbitrum Admin Controlled by EOA, Not L1 Timelock",
+            "category": "cross-chain",
+            "severity": "high",
+            "description": "On Arbitrum, UniswapV3Factory owner (0xff7a…0699) and UniswapV4 PoolManager owner (0x2bad…46cd) both resolve to EOA 0x2bad8182c09f50c8318d769245bea52c32be46cd (verified: code length 0, transaction nonce 8). This EOA can call setOwner on the v3 ProtocolFeeController and transferOwnership on v4 PoolManager without the 2-day Ethereum timelock delay or UNI holder vote. Base and Optimism use bridged L2 admin contracts whose storage slot 1 points to the Ethereum timelock — Arbitrum lacks this linkage."
+          },
+          {
+            "title": "Cross-Chain Governance Asymmetry Across L2s",
+            "category": "cross-chain",
+            "severity": "high",
+            "description": "L2 factory/PoolManager admin addresses differ per chain and are not uniformly controlled by the Ethereum timelock. Base/Optimism L2 proxy contracts (1419 bytes) store admin=0x4200…0007 (L2CrossDomainMessenger) and reference L1 timelock 0x1a9C…35BC in storage slot 1, enabling L1-governance relay. Arbitrum uses a standalone EOA. Polygon, BSC, and 35+ other chains listed in discovery have independent deployments with no on-chain linkage to Ethereum governance verified in this analysis."
+          },
+          {
+            "title": "v4 Hook Composability Creates Third-Party Integration Risk",
+            "category": "protocol",
+            "severity": "high",
+            "description": "v4 PoolManager delegates swap, liquidity, and donate lifecycle to arbitrary IHooks contracts chosen per pool. PoolManager correctly passes msg.sender to hook callbacks and prevents hook self-calls, but does not enforce onlyPoolManager on hook entrypoints—third-party hooks must implement access control themselves. Cork Protocol lost ~$12M (May 2025) when CorkHook.beforeSwap lacked PoolManager-only validation, allowing direct invocation with malicious hookData. Uniswap core was not exploited; the integrating protocol was."
+          },
+          {
+            "title": "v4 hooks delegate execution to arbitrary pool-configured contracts",
+            "category": "composability",
+            "severity": "medium",
+            "description": "Verified PoolManager source invokes hook contracts at initialize, modifyLiquidity, swap, and donate via before/after hooks with optional delta returns. Core enforces hook-address bit flags but does not constrain hook logic. Poorly implemented or malicious hooks (e.g., Cork Protocol May 2025) can cause LP/user losses while Uniswap core remains technically correct. LPs must audit per-pool hook behavior."
+          },
+          {
+            "title": "Privileged admin addresses diverge across chains",
+            "category": "cross-chain",
+            "severity": "medium",
+            "description": "Factory/PoolManager owners are not uniform: Ethereum v4 PoolManager owner is UNI Timelock (0x1a9c8182…), Ethereum v3 factory owner is a separate 14.5KB contract (0xf2371551…), while Arbitrum/Base/Optimism v3 owners are chain-local 14.5KB contracts and v4 owners differ (Arbitrum EOA, Base/Optimism 2.8KB contracts). v3/v4 factories also use different addresses on some chains (e.g., Base v3 at 0x33128a8f… vs canonical 0x1F98431c…). Increases risk of integrator misconfiguration and uneven governance protections."
+          },
+          {
+            "title": "Permit2 is immutable and ownerless but aggregates token approvals",
+            "category": "approvals",
+            "severity": "medium",
+            "description": "Verified Permit2 source shows no owner/admin/pause functions — deployment is immutable. Users granting Permit2 max approvals enable signature-based transfers via any integrated router. This is by design but creates a high-value phishing/approval-theft target; Base deployment is additionally unverified on BaseScan despite CREATE2 canonical address."
+          },
+          {
+            "title": "Timelock Contract Source Unverified on Etherscan",
+            "category": "centralization",
+            "severity": "medium",
+            "description": "The UNI timelock at 0x1a9C8182C09F50C8318d769245beA52c32BE35BC has no verified source code on Etherscan. On-chain storage confirms Compound-style layout (admin=Governor Bravo, delay=172800s/2 days), but unverified bytecode prevents independent audit of the full execution logic and queued-transaction handling."
+          },
+          {
+            "title": "UNIfication Restructures Off-Chain Control Under DUNI/Labs",
+            "category": "centralization",
+            "severity": "medium",
+            "description": "The Dec 2025 UNIfication proposal (passed with ~99.9% support) consolidates Uniswap Foundation teams into Uniswap Labs, establishes a Wyoming DUNA (DUNI) legal entity, creates a 20M UNI/year growth budget under a Labs–DUNI service provider agreement, and activates protocol fee switches. On-chain fee parameters remain governable by UNI votes, but operational execution, interface/API fee removal, and legal/regulatory engagement shift toward Labs and DUNI — increasing off-chain centralization relative to pure on-chain DAO control."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

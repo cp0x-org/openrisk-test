@@ -1,6 +1,6 @@
 {
   "protocolId": "lido",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,8 +73,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "4.2 · medium",
+      "verbatim": "overallScore=4.2; riskLevel=medium\n[critical] Aragon Agent (0x3e40D73E) Unverified on Etherscan\n[critical] AccountingOracle Proxy Unverified\n[critical] Burner Contract Unverified\n[critical] Ethereum Beacon Chain Is Foundational Single Point of Failure\n[high] LDO Token Contract Unverified\n[high] Veto Signaling Escrow Unverified\n[high] L1 Base Bridge Unverified\n[high] OpStackTokenRatePusher Unverified",
+      "asOf": "2026-06-09",
+      "sourceUrl": "https://risklayer.online/protocol/lido.fi",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "4.2",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "medium",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "6.0",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "4.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "2.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "lido.fi",
+        "overallScore": 4.2,
+        "riskLevel": "medium",
+        "runNumber": 1,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 6,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 4.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 4.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 2.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 4.8,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "Aragon Agent (0x3e40D73E) Unverified on Etherscan",
+            "category": "verification",
+            "severity": "critical",
+            "description": "The Aragon Agent is the on-chain proxy admin for LidoLocator, StakingRouter, WithdrawalQueue, VaultHub, LazyOracle, AccountingOracle proxy, CSModule, Burner, Accounting, and all L1 bridge gateways. Without verified source, privileged execution paths cannot be independently audited, yet this contract can upgrade core protocol logic."
+          },
+          {
+            "title": "AccountingOracle Proxy Unverified",
+            "category": "verification",
+            "severity": "critical",
+            "description": "AccountingOracle (0x852deD01…) submits consensus reports that drive stETH rebases and withdrawal finalization. Proxy is OssifiableProxy with Agent admin; Etherscan source unavailable for independent audit."
+          },
+          {
+            "title": "Burner Contract Unverified",
+            "category": "verification",
+            "severity": "critical",
+            "description": "Burner (0xE76c5275…) handles stETH share burning for exited validators and coverage fund flows. Unverified bytecode prevents auditing burn authorization and fund routing logic."
+          },
+          {
+            "title": "Ethereum Beacon Chain Is Foundational Single Point of Failure",
+            "category": "consensus",
+            "severity": "critical",
+            "description": "All staked ETH is deposited via the immutable Ethereum deposit contract and validator rewards/penalties are derived from consensus-layer state. A beacon-chain halt, consensus failure, or prolonged CL data unavailability would freeze rebases, withdrawals, and oracle reporting for the entire pool."
+          },
+          {
+            "title": "LDO Token Contract Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "LDO governance token (0x5A98FcBE…) is unverified on Etherscan. While not directly custodial, unverified token logic prevents confirming mint/burn/pause controls."
+          },
+          {
+            "title": "Veto Signaling Escrow Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "Veto Signaling Escrow (0x165813A3…) is part of Dual Governance veto mechanics. Unverified status prevents auditing escrow withdrawal and rage-quit logic."
+          },
+          {
+            "title": "L1 Base Bridge Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "L1ERC20TokenBridge for Base (0x9de443Ad…) is unverified. Controls wstETH bridging to Base; upgrade path cannot be source-audited."
+          },
+          {
+            "title": "OpStackTokenRatePusher Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "OpStackTokenRatePusher (0xd54c1c64…) pushes wstETH/stETH exchange rates to L2 bridges. Unverified contract cannot be audited for rate manipulation or unauthorized pushes."
+          },
+          {
+            "title": "Arbitrum Chainlink Rate Feed Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "Chainlink wstETH/stETH rate feed on Arbitrum (0xB1552C5e…) is unverified. L2 integrations relying on this feed cannot have aggregator logic independently verified."
+          },
+          {
+            "title": "Optimism TokenRateOracle Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "TokenRateOracle on Optimism (0x294ED1f2…) provides rebasing rate data for bridged stETH. Unverified status blocks audit of rate update authorization."
+          },
+          {
+            "title": "Base L2ERC20TokenBridge Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "L2ERC20TokenBridge on Base (0xac9D11cD…) handles wstETH deposits/withdrawals on L2. Unverified bytecode prevents auditing mint/burn and admin upgrade paths."
+          },
+          {
+            "title": "Polygon DataBus Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "DataBus on Polygon (0x37De961D…) is unverified. Cross-chain messaging component cannot be source-audited on this deployment."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

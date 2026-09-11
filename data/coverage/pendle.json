@@ -1,6 +1,6 @@
 {
   "protocolId": "pendle",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,8 +73,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "5.7 · high",
+      "verbatim": "overallScore=5.7; riskLevel=high\n[critical] 18 Unverified Contracts Across Core Infrastructure\n[critical] Optimism PT OFT Factory Controlled by EOA\n[high] Unverified ProxyAdmin Controls Core Upgradeable Proxies\n[high] sPENDLE Token Bytecode Unverified\n[high] YieldContractFactoryV6 Implementation Unverified on Ethereum\n[high] Cross-Chain Bridge and Oracle Stack Unverified on Ethereum\n[high] No Timelock on Proxy Upgrades\n[high] No Timelock on Admin Actions or Upgrades",
+      "asOf": "2026-06-09",
+      "sourceUrl": "https://risklayer.online/protocol/pendle.finance",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "5.7",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "high",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "4.2",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "5.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "3.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "7.0",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "pendle.finance",
+        "overallScore": 5.7,
+        "riskLevel": "high",
+        "runNumber": 1,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 4.2,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 5.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 4.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 3.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 7,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "18 Unverified Contracts Across Core Infrastructure",
+            "category": "verification",
+            "severity": "critical",
+            "description": "45% of discovered contracts (18/40) have no verified source on their respective block explorers, preventing independent bytecode audit. This includes ProxyAdmin (upgrade authority), sPENDLE (~33M supply), YieldContractFactoryV6 implementation on Ethereum, cross-chain bridge/oracle contracts on Ethereum, and all Pendle deployments on Plasma and HyperEVM."
+          },
+          {
+            "title": "Optimism PT OFT Factory Controlled by EOA",
+            "category": "access-control",
+            "severity": "critical",
+            "description": "The Optimism PT OFT Adapter Factory (0x45Dd4aEcc425b01bf98C567407aB4a4fF3C7d349) owner is 0x1FcCC097db89A86Bfc474A1028F93958295b1Fb7 (Core Deployer), confirmed as an EOA via eth_getCode. This single externally-owned account can reconfigure cross-chain PT bridging on Optimism without multisig protection — a critical single point of failure for spoke-chain PT liquidity."
+          },
+          {
+            "title": "Unverified ProxyAdmin Controls Core Upgradeable Proxies",
+            "category": "upgradability",
+            "severity": "high",
+            "description": "ProxyAdmin (0xA28c08f165116587D4F3E708743B4dEe155c5E64) is unverified but on-chain owns the TransparentUpgradeableProxy admin slots for MarketFactoryV6, SYFactory, PYYtLpOracle, LimitRouter, and YieldContractFactoryV6. ProxyAdmin owner is the 3/5 governance multisig (0x8119EC16...), enabling immediate implementation swaps with no observable timelock delay."
+          },
+          {
+            "title": "sPENDLE Token Bytecode Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "sPENDLE (0x999999999991E178D52Cd95AFd4b00d066664144) holds ~33.2M tokens in circulation and is owned by the 3/5 governance multisig, but its source is not verified on Etherscan. Mint, burn, and staking mechanics cannot be independently audited despite sPENDLE being the active governance staking token (vePENDLE deprecated)."
+          },
+          {
+            "title": "YieldContractFactoryV6 Implementation Unverified on Ethereum",
+            "category": "verification",
+            "severity": "high",
+            "description": "YieldContractFactoryV6 proxy (0x3E6EBa46AbC5ab18ED95F6667d8B2fd4020E4637) delegates to implementation 0x21414e68da7658b5b2d9c04b06a1f03055763087 via ProxyAdmin, but neither the factory address nor its implementation is verified on Etherscan. This factory deploys yield contracts (PT/YT) that hold user funds."
+          },
+          {
+            "title": "Cross-Chain Bridge and Oracle Stack Unverified on Ethereum",
+            "category": "verification",
+            "severity": "high",
+            "description": "Three Ethereum contracts in the cross-chain PT pipeline are unverified: SenderEndpoint (0x07b1014c...), PT OFT Adapter Factory (0x905aF80C...), and Cross-Chain Exchange Rate Oracle (0xA914c44E...). PT OFT Factory and CrossChainOracle are owned by the 2/5 Dev Multisig; SenderEndpoint by the 3/5 governance multisig. Bridge configuration (setPeer/setOracle equivalents) cannot be audited from source."
+          },
+          {
+            "title": "No Timelock on Proxy Upgrades",
+            "category": "upgradability",
+            "severity": "high",
+            "description": "Core factories, oracles, and routers use OpenZeppelin TransparentUpgradeableProxy pattern with a central ProxyAdmin. On-chain verification shows upgrades can be executed immediately by the 3/5 governance multisig via ProxyAdmin.upgrade() — no timelock contract is interposed between governance and implementation changes."
+          },
+          {
+            "title": "No Timelock on Admin Actions or Upgrades",
+            "category": "timelock",
+            "severity": "high",
+            "description": "On-chain verification found no TimelockController or delay mechanism on ProxyAdmin, PendleGovernanceProxy (UUPS), or core factory proxies. The 3-of-5 governance multisig can execute upgrades, parameter changes, and batched admin calls via PendleGovernanceProxy.aggregate() immediately. PENDLE token config changes have a 7-day delay, but contract upgrades do not."
+          },
+          {
+            "title": "Cross-Chain Governance Threshold Asymmetry on Optimism",
+            "category": "cross-chain",
+            "severity": "high",
+            "description": "Per-chain Gnosis Safe governance proxies use different signer sets and thresholds. Optimism governance Safe (0xa06C863fcf17cA6f24AA81aeA75E23953193fF6A) is 2-of-4, while Ethereum (0x8119…ee1), Arbitrum/Base (0x7877…75Ac), and BSC (0xA066…a9Ec) are 3-of-5 with overlapping signer sets. Optimism is the weakest governance link for chain-specific actions."
+          },
+          {
+            "title": "Per-Asset SY Adapter Contagion",
+            "category": "protocol",
+            "severity": "high",
+            "description": "Pendle core wraps yield via permissionless Standardized Yield (SY) adapters that call external protocols (Curve, Balancer, Benqi/QiToken, etc.). ChainSecurity and Spearbit audits explicitly exclude derived SY implementations. A compromised or misconfigured SY adapter can poison exchangeRate(), affecting PT/YT pricing, cross-chain oracle feeds, and any integrator relying on Pendle markets."
+          },
+          {
+            "title": "Penpie Third-Party Exploit — Sep 2024 ($27M)",
+            "category": "ecosystem",
+            "severity": "high",
+            "description": "On Sep 3, 2024, Penpie (yield optimizer built on Pendle) lost ~$27M via reentrancy in batchHarvestMarketRewards. Attacker created malicious Pendle markets using permissionless market creation with fake SY contracts. Pendle contracts were not exploited; Pendle detected the attack, paused all contracts within ~1 hour, and reportedly prevented ~$70–105M in additional losses across dependent protocols. Contracts later unpaused. Penpie users were not compensated by Pendle."
+          },
+          {
+            "title": "Cross-Chain Governance Threshold Divergence",
+            "category": "access-control",
+            "severity": "medium",
+            "description": "Governance multisig thresholds differ across chains: Ethereum, Arbitrum, Base, and BSC use 3/5, while Optimism uses 2/4. Weaker quorum on Optimism reduces the number of signers required for governance actions on that chain's deployments."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

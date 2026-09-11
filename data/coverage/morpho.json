@@ -1,6 +1,6 @@
 {
   "protocolId": "morpho",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,8 +73,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "4.8 · medium",
+      "verbatim": "overallScore=4.8; riskLevel=medium\n[high] Unverified Morpho Blue on Base\n[high] Unverified Morpho ChainlinkOracleV2 Factory on Arbitrum\n[high] Unverified MetaMorpho Factory Alt on Ethereum\n[high] Unverified VaultV2Factory on Arbitrum\n[high] Unverified Bundler3 on Base\n[high] Unverified MORPHO LayerZero OFT on Arbitrum\n[high] Unverified Governance Multisig on Base\n[high] No Timelock on Governance Multisig Execution",
+      "asOf": "2026-06-09",
+      "sourceUrl": "https://risklayer.online/protocol/morpho.org",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "medium",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "5.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "3.0",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "morpho.org",
+        "overallScore": 4.8,
+        "riskLevel": "medium",
+        "runNumber": 6,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 4.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 4.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 5.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 3,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 4.8,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "Unverified Morpho Blue on Base",
+            "category": "verification",
+            "severity": "high",
+            "description": "Morpho Blue at 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb on Base is marked unverified in pipeline discovery. On-chain bytecode length (15,623 bytes) matches Ethereum deployment; owner() resolves to 5/9 governance Safe 0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa. Source cannot be independently confirmed on Base explorer despite verified Ethereum sibling — blocks chain-specific audit assurance."
+          },
+          {
+            "title": "Unverified Morpho ChainlinkOracleV2 Factory on Arbitrum",
+            "category": "verification",
+            "severity": "high",
+            "description": "Oracle factory 0x3585E3fD72F8d1b02250E1F6496b706c6e092884 on Arbitrum has no deployed bytecode (eth_getCode returns empty). Listed in discovery but cannot be source-audited; if used for oracle deployment, misconfiguration risk is unmitigated by verification."
+          },
+          {
+            "title": "Unverified MetaMorpho Factory Alt on Ethereum",
+            "category": "verification",
+            "severity": "high",
+            "description": "MetaMorpho Factory V1.1 alt at 0x83A7f60c9fc57cEf1e8001bda98783AA1A53E4b1 on Ethereum has no deployed bytecode. Address appears in discovery but is a ghost entry with no auditable source."
+          },
+          {
+            "title": "Unverified VaultV2Factory on Arbitrum",
+            "category": "verification",
+            "severity": "high",
+            "description": "VaultV2Factory at 0x6b46fa3cc9EBF8aB230aBAc664E37F2966Bf7971 on Arbitrum is unverified per pipeline status. Bytecode is identical to verified Ethereum VaultV2Factory (23,124 bytes), but absence of Arbiscan verification prevents independent source confirmation for the ~$6.5B TVL vault stack."
+          },
+          {
+            "title": "Unverified Bundler3 on Base",
+            "category": "verification",
+            "severity": "high",
+            "description": "Bundler3 periphery at 0x6BFd8137e702540E7A42B74178A4a49Ba43920C4 on Base is unverified. Bytecode matches verified Ethereum Bundler3 exactly (1,547 bytes). Users interacting via Morpho App rely on unverified bytecode; April 2025 frontend incident routed approvals to Bundler3."
+          },
+          {
+            "title": "Unverified MORPHO LayerZero OFT on Arbitrum",
+            "category": "verification",
+            "severity": "high",
+            "description": "MORPHO OFT at 0x40BD670A58238e6E230c430BBb5cE6ec0d40df48 on Arbitrum is unverified (855 bytes deployed). Standard owner() reverts; ERC-1967 implementation slot references Ethereum MorphoOFTAdapter. Cross-chain bridge was proactively suspended following LayerZero infrastructure incident (Apr 2026). Unverified bridge token contract is a critical visibility gap."
+          },
+          {
+            "title": "Unverified Governance Multisig on Base",
+            "category": "verification",
+            "severity": "high",
+            "description": "Morpho governance Gnosis Safe at 0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa on Base is unverified per pipeline status. On-chain it is a standard GnosisSafeProxy (171 bytes) with identical bytecode to verified Ethereum deployment; getThreshold()=5, getOwners()=9 signers. Unverified status blocks independent confirmation of proxy singleton configuration on Base."
+          },
+          {
+            "title": "No Timelock on Governance Multisig Execution",
+            "category": "timelock",
+            "severity": "high",
+            "description": "The primary 5/9 Gnosis Safe can execute privileged actions immediately once threshold signatures are collected. There is no on-chain TimelockController or Safe module enforcing a delay between vote passage and execution. This applies to Morpho Blue owner functions (enableIrm, enableLltv, setFee, setFeeRecipient), MORPHO token upgrades, LayerZero bridge configuration, and MorphoRegistry updates."
+          },
+          {
+            "title": "Upgradeable MORPHO Token Controlled by Governance Multisig",
+            "category": "centralization",
+            "severity": "high",
+            "description": "The MORPHO token on Ethereum (0x58D97B57BB95320F9a05dC918Aef65434969c2B2) is an ERC1967 upgradeable proxy. owner() resolves to the governance multisig, granting the ability to upgrade token logic without a timelock. Base MORPHO (0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842) shares the same owner."
+          },
+          {
+            "title": "Permissionless Oracle Selection With No Protocol-Level Safeguards",
+            "category": "oracle",
+            "severity": "high",
+            "description": "Morpho Blue accepts any IOracle at market creation. The core contract explicitly states it is the user's responsibility to select safe oracles. Misconfigured oracles caused ~$480K in isolated market exploits (Oct 2024 PAXG/USDC SCALE_FACTOR and LeadBlock incidents). This is a systemic dependency risk across all markets, not a core contract bug."
+          },
+          {
+            "title": "June 2023 AaveV3-ETH Optimizer Index Caching Vulnerability",
+            "category": "incident",
+            "severity": "high",
+            "description": "Researcher GothicShanon89238 disclosed via Immunefi a flash-loan index-inflation bug in legacy Morpho Optimizer (not Morpho Blue). Attack required ~$101M capital over 2+ blocks and could have drained user funds. Supply was paused within hours; fix merged Jun 8 and re-reviewed by Spearbit and Runtime Verification. No funds lost; $285,000 bounty paid."
+          },
+          {
+            "title": "October 2024 LeadBlock PAXG/USDC Oracle Misconfiguration",
+            "category": "incident",
+            "severity": "high",
+            "description": "Attacker deposited ~$350 PAXG and borrowed ~$230K USDC after LeadBlock misconfigured oracle SCALE_FACTOR (12-decimal error between PAXG 18-dec and USDC 6-dec), inflating gold price to ~$2.6T. DeFiLlama lists this as 'LeadBlock's Morpho Blue Market' at $250K (Oct 14). Isolated to a permissionless user-deployed market; Morpho core contracts unaffected. LeadBlock published a forum retrospective and reported partial recovery/repayment to vault depositors."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

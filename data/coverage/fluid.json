@@ -1,6 +1,6 @@
 {
   "protocolId": "fluid",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,8 +14,24 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_mapping"
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

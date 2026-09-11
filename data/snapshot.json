@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-11T08:01:44.507Z",
-  "liveUpdatedAt": "2026-09-11T08:01:40.265Z",
+  "generatedAt": "2026-09-11T08:45:19.970Z",
+  "liveUpdatedAt": "2026-09-11T08:45:13.373Z",
   "meta": {
     "version": 1,
     "project": "openrisk",
@@ -52,6 +52,15 @@
       "focus": "Decentralization maturity framework: who controls keys, upgrades, and admin powers",
       "url": "https://www.defiscan.info",
       "methodologyUrl": "https://deficollective.org/blog/introducing-defiscan/"
+    },
+    {
+      "id": "risklayer",
+      "name": "Risklayer",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Beta AI + quantitative protocol risk scores across dependency, governance, tokenomics, audit, and smart-contract dimensions",
+      "url": "https://risklayer.online",
+      "methodologyUrl": "https://risklayer.online/"
     }
   ],
   "protocols": [
@@ -75,8 +84,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 15269721557.530533,
-      "ethereumTvlUsd": 15269721557.530533,
+      "tvlUsd": 15301981670.586746,
+      "ethereumTvlUsd": 15301981670.586746,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -150,12 +159,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "4.8 · medium",
+          "verbatim": "overallScore=4.8; riskLevel=medium\n[critical] Ethereum Executor Level 1 (Short Timelock) Source Not Verified\n[critical] Arbitrum PoolAddressesProvider Source Not Verified\n[critical] Polygon PoolAddressesProvider Source Not Verified\n[critical] April 2026 Kelp rsETH Bridge Contagion\n[high] Ethereum AaveOracle Source Not Verified on Etherscan\n[high] Arbitrum GHO Token (CCIP Bridged) Source Not Verified\n[high] Base AaveOracle Source Not Verified on Etherscan\n[high] Bridged Collateral Accepts Third-Party Bridge Security",
+          "asOf": "2026-06-26",
+          "sourceUrl": "https://risklayer.online/protocol/aave.com",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "medium",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "6.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "3.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "3.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "2.2",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "4.6",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "aave.com",
+            "overallScore": 4.8,
+            "riskLevel": "medium",
+            "runNumber": 4,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 6.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 3.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 3.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 2.2,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 4.6,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "Ethereum Executor Level 1 (Short Timelock) Source Not Verified",
+                "category": "verification",
+                "severity": "critical",
+                "description": "Executor L1 at 0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A on Ethereum is unverified on Etherscan. On-chain owner() calls confirm this contract owns PoolAddressesProvider, Governance V3 Core proxy, CrossChainController, and GHO CCIP Token Pool. It is the effective upgrade authority for Pool, PoolConfigurator, oracle, and ACL routing on Ethereum. Unverified bytecode prevents confirmation of timelock delays and execution constraints."
+              },
+              {
+                "title": "Arbitrum PoolAddressesProvider Source Not Verified",
+                "category": "verification",
+                "severity": "critical",
+                "description": "PoolAddressesProvider at 0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb on Arbitrum lacks Etherscan verification. Verified deployments on Optimism use the same address with verified source; Arbitrum instance cannot be source-audited. On-chain owner() is Executor L1 0xFF1137243698CaA18EE364Cc966CF0e02A4e6327. This contract controls setPoolImpl, setPriceOracle, and setACLManager for the Arbitrum market."
+              },
+              {
+                "title": "Polygon PoolAddressesProvider Source Not Verified",
+                "category": "verification",
+                "severity": "critical",
+                "description": "PoolAddressesProvider at 0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb on Polygon is unverified despite being the canonical address shared across multiple L2s. On-chain owner() is 0xDf7d0e6454DB638881302729F5ba99936EaAB233 (Polygon Executor L1). Upgrade and oracle configuration paths cannot be source-audited for this chain."
+              },
+              {
+                "title": "April 2026 Kelp rsETH Bridge Contagion",
+                "category": "incident",
+                "severity": "critical",
+                "description": "Attacker minted 116,500 unbacked rsETH (~$292M) via Kelp DAO's 1-of-1 LayerZero DVN, deposited 89,567 rsETH on Aave V3, and borrowed ~$191M WETH/wstETH before markets froze. Core contracts functioned as designed; bad debt estimates range $123.7M (uniform socialization) to $230.1M (L2-isolated loss). Triggered an ~$8.45B 48-hour deposit run. Recovery required DeFi United coalition pledges (~$300M including 25,000 ETH from Aave DAO and 5,000 ETH from founder Stani Kulechov); rsETH backing restored by June 2026 but $71M in Arbitrum-frozen ETH remains in federal litigation."
+              },
+              {
+                "title": "Ethereum AaveOracle Source Not Verified on Etherscan",
+                "category": "verification",
+                "severity": "high",
+                "description": "Core price oracle at 0x54586bE62E3c3580375AE3723C145253060Ca0C2 on Ethereum has no verified source code on Etherscan. This contract feeds asset prices for borrows, liquidations, and health factors across the largest Aave V3 deployment. Without verified source, independent auditors cannot confirm Chainlink integration, access control, or absence of malicious logic."
+              },
+              {
+                "title": "Arbitrum GHO Token (CCIP Bridged) Source Not Verified",
+                "category": "verification",
+                "severity": "high",
+                "description": "Bridged GHO token at 0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33 on Arbitrum is unverified. GHO is Aave's native stablecoin with mint/burn semantics tied to cross-chain facilitators. Unverified bytecode prevents confirming mint authority, role configuration, and CCIP bridge integration on this deployment."
+              },
+              {
+                "title": "Base AaveOracle Source Not Verified on Etherscan",
+                "category": "verification",
+                "severity": "high",
+                "description": "AaveOracle at 0x2Cc0Fc26eD4563A5ce5e8bdcfe1A2878676Ae156 on Base has no verified source on BaseScan/Etherscan API. On-chain getPriceOracle() from PoolAddressesProvider confirms this address is the active oracle. Price oracle integrity cannot be independently verified from source for the Base deployment."
+              },
+              {
+                "title": "Bridged Collateral Accepts Third-Party Bridge Security",
+                "category": "bridge",
+                "severity": "high",
+                "description": "Aave V3 lists bridged/wrapped assets (e.g., rsETH) whose canonical backing depends on external bridges outside Aave's control. The Apr 2026 Kelp rsETH LayerZero exploit minted ~116,500 unbacked rsETH (~$292M) that was deposited as collateral and used to borrow real WETH/stables, creating an estimated $196–230M bad-debt exposure. Core Pool logic functioned as designed; the failure was upstream bridge verification (1-of-1 DVN). Protocol Guardian froze rsETH markets within hours, but listing policy remains a single point of contagion for any future bridge compromise."
+              },
+              {
+                "title": "CAPO Oracle Parameter Desync Risk (Demonstrated)",
+                "category": "oracle",
+                "severity": "high",
+                "description": "Correlated Asset Price Oracle (CAPO) wrappers used for LSTs like wstETH enforce rate-limited snapshotRatio updates but previously allowed snapshotTimestamp to advance independently. On 2026-03-10, a Chaos Labs risk-oracle update after >1 year of staleness desynced these parameters, capping wstETH ~2.85% below market and triggering ~$27.8M in wrongful E-Mode liquidations across 34 accounts. CAPO is configured as a per-asset price source via AaveOracle.setAssetSources(), making operational/governance misconfiguration a live dependency failure mode—not merely theoretical."
+              },
+              {
+                "title": "March 2026 CAPO Oracle Misconfiguration",
+                "category": "incident",
+                "severity": "high",
+                "description": "Chaos Labs' automated Edge Risk engine submitted a desynchronized snapshotRatio/snapshotTimestamp update to the wstETH CAPO oracle; AgentHub executed it on-chain one block later with no human review. wstETH was undervalued ~2.85%, triggering ~$27.78M in wrongful liquidations across 34 E-Mode accounts (10,938 wstETH). Independent observers flagged the anomaly before official post-mortem. Similar misconfiguration nearly executed ~1 month earlier. All affected users reimbursed (~513 ETH gross, ~358 ETH net DAO cost after recoveries); no protocol bad debt."
+              },
+              {
+                "title": "Pool and PoolConfigurator Use Immutable-Admin Upgradeable Proxies",
+                "category": "upgradability",
+                "severity": "medium",
+                "description": "Core Pool (0x87870…4E2) and PoolConfigurator (0x64b761…b27) on Ethereum deploy InitializableImmutableAdminUpgradeabilityProxy. The immutable admin is PoolAddressesProvider, which can call upgradeTo/upgradeToAndCall via setPoolImpl and setPoolConfiguratorImpl (onlyOwner). A malicious or compromised governance execution could replace Pool logic to drain funds or alter liquidation behavior."
+              },
+              {
+                "title": "PoolAddressesProvider Owner Can Reconfigure Oracle, ACL, and Core Implementations",
+                "category": "access_control",
+                "severity": "medium",
+                "description": "PoolAddressesProvider.onlyOwner functions include setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, and setPoolDataProvider. On Ethereum the owner is Executor L1 (timelocked governance path). These functions represent concentrated configuration power over lending parameters, price feeds, and role management."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "balancer",
@@ -177,8 +355,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 40220940.7129016,
-      "ethereumTvlUsd": 40220940.7129016,
+      "tvlUsd": 40822610.042126834,
+      "ethereumTvlUsd": 40822610.042126834,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -193,12 +371,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "compound",
@@ -220,8 +414,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1417011055.967725,
-      "ethereumTvlUsd": 1417011055.967725,
+      "tvlUsd": 1420824440.5885704,
+      "ethereumTvlUsd": 1420824440.5885704,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -316,12 +510,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "5.9 · high",
+          "verbatim": "overallScore=5.9; riskLevel=high\n[critical] September 2021 COMP Distribution Bug (~$147M)\n[high] cUSDC Market Contract Unverified\n[high] cWBTC2 Market Contract Unverified\n[high] cAAVE and cMKR Market Contracts Unverified\n[high] Legacy Price Oracle (v1) Unverified but Still Referenced\n[high] GovernorBravoDelegate Listed Address Unverified and Stale\n[high] Demonstrated Governance Capture (Proposal 289)\n[high] Low Quorum Enables Plutocratic Capture",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/compound.finance",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "5.9",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "high",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "4.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "5.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "6.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "6.0",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "compound.finance",
+            "overallScore": 5.9,
+            "riskLevel": "high",
+            "runNumber": 1,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 4.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 5.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 6.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 6,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 4.8,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "September 2021 COMP Distribution Bug (~$147M)",
+                "category": "incident",
+                "severity": "critical",
+                "description": "Proposal 62 upgraded the Comptroller with a single-character bug (> instead of >=) in distributeSupplierComp, causing ~280,000 COMP (~$80–147M at peak) to be over-distributed to users in cTUSD, cMKR, cSUSHI, cYFI, cAAVE, and cSAI markets. User collateral was not drained, but the Reservoir drip() replenished the vulnerable Comptroller, extending exposure. No admin kill-switch existed; fixes required the full 7-day governance cycle. ~163k COMP returned voluntarily; ~200k remained outstanding per Compound Labs post-mortem."
+              },
+              {
+                "title": "cUSDC Market Contract Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "cUSDC (0x39AA39c021dfbaE8faC545936693aC917d5E7563) holds significant V2 TVL but has no verified source on Etherscan. On-chain admin is the Timelock, yet bytecode cannot be independently audited for delegatecall routing, interest accrual, or liquidation hooks."
+              },
+              {
+                "title": "cWBTC2 Market Contract Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "cWBTC2 (0xccF4429DB6322D5C611ee964527D42E5d685DD6a) is an active CErc20Delegator with implementation 0x3363bae2fc44da742df13cd3ee94b6bb868ea376 and Timelock admin, but its delegator bytecode is unverified and cannot be source-audited."
+              },
+              {
+                "title": "cAAVE and cMKR Market Contracts Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "cAAVE (0xe65cdb6479bac1e22340e4e755fae7e509ecd06c) and cMKR (0x95b4eF2869eBD94BEb4eEE400a99824BF5DC325b) are unverified CErc20Delegator instances administered by the Timelock. Users borrowing against these collateral markets rely on bytecode that cannot be reviewed."
+              },
+              {
+                "title": "Legacy Price Oracle (v1) Unverified but Still Referenced",
+                "category": "verification",
+                "severity": "high",
+                "description": "PriceOracleProxy (verified) stores v1PriceOracle at 0x02557a5e05defeffd4cae6d83ea3d173b272c904, which is unverified. The proxy falls back to v1 assetPrices() for several underlying assets. Any corruption or misconfiguration in the legacy oracle could affect collateral pricing for markets still routed through the proxy."
+              },
+              {
+                "title": "GovernorBravoDelegate Listed Address Unverified and Stale",
+                "category": "verification",
+                "severity": "high",
+                "description": "Discovery lists GovernorBravoDelegate at 0x30065B703DE5d473975A2db5bBB790A23FD6EFbD as unverified. On-chain, GovernorBravoDelegator (0xc0da…) currently points to implementation 0x6f6e4785c97885d26466945055d4ae8931be6f7a. The unverified address cannot be audited and may mislead reviewers about active governance logic."
+              },
+              {
+                "title": "Demonstrated Governance Capture (Proposal 289)",
+                "category": "governance-attack",
+                "severity": "high",
+                "description": "In July 2024, the Golden Boys delegate group (whale Humpy) narrowly passed Proposal 289 to allocate 499,000 COMP (~$24M) from the DAO treasury to a goldCOMP vault they controlled. Community and OpenZeppelin characterized it as a governance attack. The proposal was later cancelled in exchange for a COMP staking agreement, but the incident proves that concentrated COMP voting power can extract treasury value through standard governance mechanics."
+              },
+              {
+                "title": "Low Quorum Enables Plutocratic Capture",
+                "category": "voting-power",
+                "severity": "high",
+                "description": "GovernorBravo requires only 400,000 COMP (4% of 10M total supply) for quorum, verified as a constant in GovernorBravoDelegate. With proposal threshold at 25,000 COMP (0.25% of supply, verified on-chain), a well-capitalized actor can propose and pass treasury or parameter changes with a relatively small fraction of total COMP. Flash-loan proposal creation is blocked (votes checked at prior block), but vote buying, delegation concentration, and OTC COMP accumulation remain viable attack paths."
+              },
+              {
+                "title": "High COMP Holder and Governance Power Concentration",
+                "category": "concentration",
+                "severity": "high",
+                "description": "COMP voting power is concentrated among a small number of addresses. Academic analysis found the top-15 accounts hold 43.83% of circulating COMP, with Binance leading at 8.12%. On-chain verification (Jun 2026) confirms Binance hot wallet 0x28C6...1d60 holds 413,259 COMP (4.13%). a16z delegates ~361,000 COMP (~90% of governance quorum) but rarely votes. Whale Humpy accumulated 325k+ COMP to pass Proposal 289 (499k COMP treasury allocation). Low participation means quorum can be reached by ~3 voters on average."
+              },
+              {
+                "title": "2021 COMP Over-Distribution Bug and Partial Recovery",
+                "category": "distribution-bug",
+                "severity": "high",
+                "description": "Proposal 62 (Sept 30, 2021) introduced a critical bug in distributeSupplierComp: the condition `supplierIndex == 0 && supplyIndex > compInitialIndex` used `>` instead of `>=`, causing users in cTUSD, cMKR, cSUSHI, cYFI, cAAVE, and cSAI to accrue COMP from index 1e36 instead of zero. ~280,000 COMP (~$80–147M at peak) was over-distributed. Proposal 65 added a one-off fixBadAccruals() function and compReceivable debt tracking; on-chain verification confirms proposal65FixExecuted = true. ~163k COMP was voluntarily returned; ~200k remained outstanding per Compound Labs post-mortem."
+              },
+              {
+                "title": "Single Oracle Path With Governance-Replaceable Comptroller Oracle",
+                "category": "oracle",
+                "severity": "high",
+                "description": "The Comptroller reads all collateral and borrow prices exclusively from one PriceOracle instance via getUnderlyingPrice(). Admin (Timelock-gated) can atomically swap the entire oracle via _setPriceOracle(), redirecting all market pricing to an arbitrary contract. There is no on-chain secondary oracle or automatic fallback if the active oracle returns stale or malicious prices."
+              },
+              {
+                "title": "Last Third-Party Audit ~6 Years Stale vs Live Deployments",
+                "category": "audit-staleness",
+                "severity": "high",
+                "description": "The most recent OpenZeppelin audit (COMP distribution, May 2020) predates Governor Bravo migration, multiple Comptroller upgrades (including StdComptrollerG5 at 0xbafe01ff...), and numerous market listings. The September 2021 Proposal 62 Comptroller upgrade introduced a critical COMP over-distribution bug (> operator vs >=) that was not caught by any post-2020 audit."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "cowswap",
@@ -357,12 +720,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "curve",
@@ -383,8 +762,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1460044683.1549165,
-      "ethereumTvlUsd": 1460044683.1549165,
+      "tvlUsd": 1460765854.9600737,
+      "ethereumTvlUsd": 1460765854.9600737,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -458,12 +837,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "6.7 · high",
+          "verbatim": "overallScore=6.7; riskLevel=high\n[critical] AddressProvider Registry Controlled by Single EOA Admin\n[critical] FastBridge Pre-Mints L1 crvUSD on LayerZero Messages\n[critical] FastBridge Pre-Mint Trust on LayerZero Messages\n[critical] Vyper Compiler Bug Bypassed All Pool Audits\n[critical] July 2023 Vyper Compiler Reentrancy Exploit\n[high] Nine Scoped Contracts Are Unverified on Etherscan\n[high] GaugeController and Ownership Agent Are Unverified Core Governance Proxies\n[high] crvUSD Controller Factory Unverified — Permissionless Market Creation",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/curve.fi",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "6.7",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "high",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "6.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "6.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "5.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "4.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "6.9",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "curve.fi",
+            "overallScore": 6.7,
+            "riskLevel": "high",
+            "runNumber": 1,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 6.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 6.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 5.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 4.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 6.9,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "AddressProvider Registry Controlled by Single EOA Admin",
+                "category": "access-control",
+                "severity": "critical",
+                "description": "CurveAddressProvider (0x5ffe7FB82894076ECB99A30D6A32e969e6e35E98) admin resolves on-chain to 0x2d12d0907a388811e3aa855a550f959501d303ee, confirmed as an EOA via eth_getCode. Admin can add, update, or remove registry IDs instantly with no DAO vote or timelock. Registry maps Ownership Admin (ID 21), Parameter Admin (ID 22), Emergency Admin (ID 23), factories, and routers—compromise redirects integrators across the ecosystem."
+              },
+              {
+                "title": "FastBridge Pre-Mints L1 crvUSD on LayerZero Messages",
+                "category": "bridge",
+                "severity": "critical",
+                "description": "FastBridgeVault (Vyper 0.4.3) grants MINTER_ROLE to VaultMessengerLZ contracts that call mint() on LayerZero lzReceive before native bridge finality. setPeer() on VaultMessengerLZ is owner-gated (ownable._check_owner). Emergency DAO holds KILLER_ROLE via set_killed(). A misconfigured peer, compromised LayerZero path, or malicious message could credit unbacked vault balances. ChainSecurity audited FastBridge (Oct 2024) but runtime trust depends on LZ infrastructure and peer config."
+              },
+              {
+                "title": "FastBridge Pre-Mint Trust on LayerZero Messages",
+                "category": "bridge",
+                "severity": "critical",
+                "description": "FastBridge uses a dual-path withdrawal: L2 FastBridgeL2 burns/locks crvUSD and sends a LayerZero message to VaultMessengerLZ on Ethereum, which calls FastBridgeVault.mint() to credit the receiver before native bridge finality completes. Compromise of LayerZero DVN/executor trust, misconfigured peers, or a malicious peer redirect could mint unbacked L1 crvUSD accounting balances. ChainSecurity audited FastBridge (Oct 2024) but runtime trust still depends on LayerZero infrastructure and correct peer configuration."
+              },
+              {
+                "title": "Vyper Compiler Bug Bypassed All Pool Audits",
+                "category": "audit-gap",
+                "severity": "critical",
+                "description": "The July 2023 reentrancy exploit ($61.7M) was caused by a Vyper compiler defect (v0.2.15–0.3.0), not application-layer bugs. Trail of Bits, Quantstamp, and ChainSecurity pool audits reviewed correct source with @nonreentrant decorators but did not verify compiled bytecode. Standard commercial audits cannot detect compiler toolchain failures."
+              },
+              {
+                "title": "July 2023 Vyper Compiler Reentrancy Exploit",
+                "category": "incident",
+                "severity": "critical",
+                "description": "On 2023-07-30, ETH-paired pools compiled with Vyper 0.2.15/0.2.16/0.3.0 were drained via cross-function reentrancy due to a latent compiler bug (broken @nonreentrant guards). Affected Curve pools included CRV/ETH (~$24M). Independent sources (rekt.news, CertiK, Chainalysis) report ~$52–69M ecosystem-wide losses; DeFiLlama records $61.7M for Curve DEX. White-hat MEV bot 0xc0ffeebabe returned ~$5.4M same day. Curve offered 10% return bounty, coordinated with Alchemix/Metronome, and the DAO voted 94% in Dec 2023 to reimburse LPs ~$49.2M (including $7.2M recovered ETH + $42M vested CRV). Root cause was upstream compiler supply chain, not Curve application logic alone."
+              },
+              {
+                "title": "Nine Scoped Contracts Are Unverified on Etherscan",
+                "category": "verification",
+                "severity": "high",
+                "description": "Of 36 contracts in discovery scope, 9 lack verified source on their respective chains: scrvUSD (ethereum), GaugeController (ethereum), Ownership Agent (ethereum), crvUSD Controller Factory (ethereum), AddressProvider (arbitrum, optimism, polygon), FastBridgeL2 (arbitrum), and crvUSD native bridge (fraxtal). Unverified bytecode cannot be independently audited; several are core governance, savings, lending factory, or cross-chain bridge components."
+              },
+              {
+                "title": "GaugeController and Ownership Agent Are Unverified Core Governance Proxies",
+                "category": "verification",
+                "severity": "high",
+                "description": "GaugeController (0x2F50D538D60856CF27039851d725A46949860Fc8) allocates veCRV emissions and is unverified. Ownership Agent (0x40907540d8a6C65c637785e8f8B742ae6b0b9968) is the on-chain admin for CRV and veCRV (admin() verified as this address) and routes DAO ownership changes—also unverified. Without source, emission logic and agent execute paths cannot be validated."
+              },
+              {
+                "title": "crvUSD Controller Factory Unverified — Permissionless Market Creation",
+                "category": "verification",
+                "severity": "high",
+                "description": "LLAMMA/crvUSD Controller Factory (0xC9332fdCB1C491Dcc683bAe86Fe3cb70360738BC) is unverified on Etherscan. It is the crvUSD minter (minter() on crvUSD token returns this address) and deploys LlamaLend markets with configurable collateral oracles. The March 2026 sDOLA donation attack exploited a permissionless market's oracle configuration; unverified factory bytecode increases audit uncertainty for new market deployments."
+              },
+              {
+                "title": "scrvUSD Savings Vault Is Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "scrvUSD (0x0655977FEb2f289A4aB78af67BAB0d17aAb84367), the ERC-4626 savings wrapper for crvUSD, has no verified source on Etherscan. Users deposit crvUSD into this vault for yield; unverified bytecode prevents review of share accounting, admin mint/burn paths, and reentrancy protections."
+              },
+              {
+                "title": "L2 AddressProvider and FastBridgeL2 Unverified on Multiple Chains",
+                "category": "verification",
+                "severity": "high",
+                "description": "AddressProvider at the same CREATE2 address (0x5ffe7FB82894076ECB99A30D6A32e969e6e35E98) is unverified on Arbitrum, Optimism, and Polygon despite verified source on Ethereum and Base. FastBridgeL2 on Arbitrum (0x1f2af270029d028400265ce1dd0919ba8780dae1) is also unverified; on-chain owner() resolves to xGov Ownership Agent. Cross-chain registry and fast-bridge burn/mint paths on these chains cannot be source-audited."
+              },
+              {
+                "title": "Legacy Vyper 0.2.4 Pools Amid Historical Compiler Exploit",
+                "category": "compiler",
+                "severity": "high",
+                "description": "Core legacy contracts compile on Vyper 0.2.4: 3pool (0xbEbc44782C7Db0a1A60Cb6fe97d0b483032FF1C7), CRV token, and veCRV. The July 2023 exploit broke reentrancy guards in Vyper 0.2.15, 0.2.16, and 0.3.0 on ETH-paired pools (~$61.7M loss). 3pool source shows @nonreentrant('lock') on swap/add/remove paths and is_killed kill-switch, but the broader legacy pool inventory across 1200+ deployments remains a supply-chain monitoring burden."
+              },
+              {
+                "title": "LlamaLend Controllers Depend on AMM-Band Oracles, Not Chainlink",
+                "category": "oracle",
+                "severity": "high",
+                "description": "Verified crvUSD Controller (0xaD444663c6C92B497225c6cE65feE2E7F78BFb86) uses LLAMMA price_oracle(), p_oracle_up/down for collateralization and liquidation. Permissionless markets can pair thin collateral with manipulable internal oracles. March 2026 sDOLA donation attack inflated oracle ~14%, liquidating 27 positions (~$240K). Controller source has @nonreentrant('lock') on user-facing paths but oracle manipulation remains a market-config risk."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "euler",
@@ -483,8 +1031,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 65488941.38654979,
-      "ethereumTvlUsd": 65488941.38654979,
+      "tvlUsd": 65652233.63687636,
+      "ethereumTvlUsd": 65652233.63687636,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -499,12 +1047,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "fluid",
@@ -526,8 +1090,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 966175154.3896999,
-      "ethereumTvlUsd": 966175154.3896999,
+      "tvlUsd": 966595342.2323117,
+      "ethereumTvlUsd": 966595342.2323117,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -542,12 +1106,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "gearbox",
@@ -567,8 +1147,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 20374064.40414733,
-      "ethereumTvlUsd": 20374064.40414733,
+      "tvlUsd": 20423925.675455317,
+      "ethereumTvlUsd": 20423925.675455317,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -583,12 +1163,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "lido",
@@ -609,8 +1205,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 23880015167.85627,
-      "ethereumTvlUsd": 23880015167.85627,
+      "tvlUsd": 23925750847.27013,
+      "ethereumTvlUsd": 23925750847.27013,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -684,12 +1280,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "4.2 · medium",
+          "verbatim": "overallScore=4.2; riskLevel=medium\n[critical] Aragon Agent (0x3e40D73E) Unverified on Etherscan\n[critical] AccountingOracle Proxy Unverified\n[critical] Burner Contract Unverified\n[critical] Ethereum Beacon Chain Is Foundational Single Point of Failure\n[high] LDO Token Contract Unverified\n[high] Veto Signaling Escrow Unverified\n[high] L1 Base Bridge Unverified\n[high] OpStackTokenRatePusher Unverified",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/lido.fi",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "4.2",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "medium",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "6.0",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "4.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "2.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "lido.fi",
+            "overallScore": 4.2,
+            "riskLevel": "medium",
+            "runNumber": 1,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 6,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 4.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 4.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 2.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 4.8,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "Aragon Agent (0x3e40D73E) Unverified on Etherscan",
+                "category": "verification",
+                "severity": "critical",
+                "description": "The Aragon Agent is the on-chain proxy admin for LidoLocator, StakingRouter, WithdrawalQueue, VaultHub, LazyOracle, AccountingOracle proxy, CSModule, Burner, Accounting, and all L1 bridge gateways. Without verified source, privileged execution paths cannot be independently audited, yet this contract can upgrade core protocol logic."
+              },
+              {
+                "title": "AccountingOracle Proxy Unverified",
+                "category": "verification",
+                "severity": "critical",
+                "description": "AccountingOracle (0x852deD01…) submits consensus reports that drive stETH rebases and withdrawal finalization. Proxy is OssifiableProxy with Agent admin; Etherscan source unavailable for independent audit."
+              },
+              {
+                "title": "Burner Contract Unverified",
+                "category": "verification",
+                "severity": "critical",
+                "description": "Burner (0xE76c5275…) handles stETH share burning for exited validators and coverage fund flows. Unverified bytecode prevents auditing burn authorization and fund routing logic."
+              },
+              {
+                "title": "Ethereum Beacon Chain Is Foundational Single Point of Failure",
+                "category": "consensus",
+                "severity": "critical",
+                "description": "All staked ETH is deposited via the immutable Ethereum deposit contract and validator rewards/penalties are derived from consensus-layer state. A beacon-chain halt, consensus failure, or prolonged CL data unavailability would freeze rebases, withdrawals, and oracle reporting for the entire pool."
+              },
+              {
+                "title": "LDO Token Contract Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "LDO governance token (0x5A98FcBE…) is unverified on Etherscan. While not directly custodial, unverified token logic prevents confirming mint/burn/pause controls."
+              },
+              {
+                "title": "Veto Signaling Escrow Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "Veto Signaling Escrow (0x165813A3…) is part of Dual Governance veto mechanics. Unverified status prevents auditing escrow withdrawal and rage-quit logic."
+              },
+              {
+                "title": "L1 Base Bridge Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "L1ERC20TokenBridge for Base (0x9de443Ad…) is unverified. Controls wstETH bridging to Base; upgrade path cannot be source-audited."
+              },
+              {
+                "title": "OpStackTokenRatePusher Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "OpStackTokenRatePusher (0xd54c1c64…) pushes wstETH/stETH exchange rates to L2 bridges. Unverified contract cannot be audited for rate manipulation or unauthorized pushes."
+              },
+              {
+                "title": "Arbitrum Chainlink Rate Feed Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "Chainlink wstETH/stETH rate feed on Arbitrum (0xB1552C5e…) is unverified. L2 integrations relying on this feed cannot have aggregator logic independently verified."
+              },
+              {
+                "title": "Optimism TokenRateOracle Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "TokenRateOracle on Optimism (0x294ED1f2…) provides rebasing rate data for bridged stETH. Unverified status blocks audit of rate update authorization."
+              },
+              {
+                "title": "Base L2ERC20TokenBridge Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "L2ERC20TokenBridge on Base (0xac9D11cD…) handles wstETH deposits/withdrawals on L2. Unverified bytecode prevents auditing mint/burn and admin upgrade paths."
+              },
+              {
+                "title": "Polygon DataBus Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "DataBus on Polygon (0x37De961D…) is unverified. Cross-chain messaging component cannot be source-audited on this deployment."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "liquity",
@@ -711,8 +1476,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 273931888.19939387,
-      "ethereumTvlUsd": 273931888.19939387,
+      "tvlUsd": 274633667.27062386,
+      "ethereumTvlUsd": 274633667.27062386,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -786,12 +1551,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "mellow",
@@ -811,8 +1592,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 273406736.42527425,
-      "ethereumTvlUsd": 273406736.42527425,
+      "tvlUsd": 274096874.1009591,
+      "ethereumTvlUsd": 274096874.1009591,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -827,12 +1608,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "morpho",
@@ -852,8 +1649,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 4357952771.143117,
-      "ethereumTvlUsd": 4357952771.143117,
+      "tvlUsd": 4363090826.138218,
+      "ethereumTvlUsd": 4363090826.138218,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -927,12 +1724,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "4.8 · medium",
+          "verbatim": "overallScore=4.8; riskLevel=medium\n[high] Unverified Morpho Blue on Base\n[high] Unverified Morpho ChainlinkOracleV2 Factory on Arbitrum\n[high] Unverified MetaMorpho Factory Alt on Ethereum\n[high] Unverified VaultV2Factory on Arbitrum\n[high] Unverified Bundler3 on Base\n[high] Unverified MORPHO LayerZero OFT on Arbitrum\n[high] Unverified Governance Multisig on Base\n[high] No Timelock on Governance Multisig Execution",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/morpho.org",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "medium",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "5.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "3.0",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "morpho.org",
+            "overallScore": 4.8,
+            "riskLevel": "medium",
+            "runNumber": 6,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 4.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 4.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 5.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 3,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 4.8,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "Unverified Morpho Blue on Base",
+                "category": "verification",
+                "severity": "high",
+                "description": "Morpho Blue at 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb on Base is marked unverified in pipeline discovery. On-chain bytecode length (15,623 bytes) matches Ethereum deployment; owner() resolves to 5/9 governance Safe 0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa. Source cannot be independently confirmed on Base explorer despite verified Ethereum sibling — blocks chain-specific audit assurance."
+              },
+              {
+                "title": "Unverified Morpho ChainlinkOracleV2 Factory on Arbitrum",
+                "category": "verification",
+                "severity": "high",
+                "description": "Oracle factory 0x3585E3fD72F8d1b02250E1F6496b706c6e092884 on Arbitrum has no deployed bytecode (eth_getCode returns empty). Listed in discovery but cannot be source-audited; if used for oracle deployment, misconfiguration risk is unmitigated by verification."
+              },
+              {
+                "title": "Unverified MetaMorpho Factory Alt on Ethereum",
+                "category": "verification",
+                "severity": "high",
+                "description": "MetaMorpho Factory V1.1 alt at 0x83A7f60c9fc57cEf1e8001bda98783AA1A53E4b1 on Ethereum has no deployed bytecode. Address appears in discovery but is a ghost entry with no auditable source."
+              },
+              {
+                "title": "Unverified VaultV2Factory on Arbitrum",
+                "category": "verification",
+                "severity": "high",
+                "description": "VaultV2Factory at 0x6b46fa3cc9EBF8aB230aBAc664E37F2966Bf7971 on Arbitrum is unverified per pipeline status. Bytecode is identical to verified Ethereum VaultV2Factory (23,124 bytes), but absence of Arbiscan verification prevents independent source confirmation for the ~$6.5B TVL vault stack."
+              },
+              {
+                "title": "Unverified Bundler3 on Base",
+                "category": "verification",
+                "severity": "high",
+                "description": "Bundler3 periphery at 0x6BFd8137e702540E7A42B74178A4a49Ba43920C4 on Base is unverified. Bytecode matches verified Ethereum Bundler3 exactly (1,547 bytes). Users interacting via Morpho App rely on unverified bytecode; April 2025 frontend incident routed approvals to Bundler3."
+              },
+              {
+                "title": "Unverified MORPHO LayerZero OFT on Arbitrum",
+                "category": "verification",
+                "severity": "high",
+                "description": "MORPHO OFT at 0x40BD670A58238e6E230c430BBb5cE6ec0d40df48 on Arbitrum is unverified (855 bytes deployed). Standard owner() reverts; ERC-1967 implementation slot references Ethereum MorphoOFTAdapter. Cross-chain bridge was proactively suspended following LayerZero infrastructure incident (Apr 2026). Unverified bridge token contract is a critical visibility gap."
+              },
+              {
+                "title": "Unverified Governance Multisig on Base",
+                "category": "verification",
+                "severity": "high",
+                "description": "Morpho governance Gnosis Safe at 0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa on Base is unverified per pipeline status. On-chain it is a standard GnosisSafeProxy (171 bytes) with identical bytecode to verified Ethereum deployment; getThreshold()=5, getOwners()=9 signers. Unverified status blocks independent confirmation of proxy singleton configuration on Base."
+              },
+              {
+                "title": "No Timelock on Governance Multisig Execution",
+                "category": "timelock",
+                "severity": "high",
+                "description": "The primary 5/9 Gnosis Safe can execute privileged actions immediately once threshold signatures are collected. There is no on-chain TimelockController or Safe module enforcing a delay between vote passage and execution. This applies to Morpho Blue owner functions (enableIrm, enableLltv, setFee, setFeeRecipient), MORPHO token upgrades, LayerZero bridge configuration, and MorphoRegistry updates."
+              },
+              {
+                "title": "Upgradeable MORPHO Token Controlled by Governance Multisig",
+                "category": "centralization",
+                "severity": "high",
+                "description": "The MORPHO token on Ethereum (0x58D97B57BB95320F9a05dC918Aef65434969c2B2) is an ERC1967 upgradeable proxy. owner() resolves to the governance multisig, granting the ability to upgrade token logic without a timelock. Base MORPHO (0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842) shares the same owner."
+              },
+              {
+                "title": "Permissionless Oracle Selection With No Protocol-Level Safeguards",
+                "category": "oracle",
+                "severity": "high",
+                "description": "Morpho Blue accepts any IOracle at market creation. The core contract explicitly states it is the user's responsibility to select safe oracles. Misconfigured oracles caused ~$480K in isolated market exploits (Oct 2024 PAXG/USDC SCALE_FACTOR and LeadBlock incidents). This is a systemic dependency risk across all markets, not a core contract bug."
+              },
+              {
+                "title": "June 2023 AaveV3-ETH Optimizer Index Caching Vulnerability",
+                "category": "incident",
+                "severity": "high",
+                "description": "Researcher GothicShanon89238 disclosed via Immunefi a flash-loan index-inflation bug in legacy Morpho Optimizer (not Morpho Blue). Attack required ~$101M capital over 2+ blocks and could have drained user funds. Supply was paused within hours; fix merged Jun 8 and re-reviewed by Spearbit and Runtime Verification. No funds lost; $285,000 bounty paid."
+              },
+              {
+                "title": "October 2024 LeadBlock PAXG/USDC Oracle Misconfiguration",
+                "category": "incident",
+                "severity": "high",
+                "description": "Attacker deposited ~$350 PAXG and borrowed ~$230K USDC after LeadBlock misconfigured oracle SCALE_FACTOR (12-decimal error between PAXG 18-dec and USDC 6-dec), inflating gold price to ~$2.6T. DeFiLlama lists this as 'LeadBlock's Morpho Blue Market' at $250K (Oct 14). Isolated to a permissionless user-deployed market; Morpho core contracts unaffected. LeadBlock published a forum retrospective and reported partial recovery/repayment to vault depositors."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "morphovaults",
@@ -966,12 +1932,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "oneinch",
@@ -992,8 +1974,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2869876.2325746426,
-      "ethereumTvlUsd": 2869876.2325746426,
+      "tvlUsd": 2874996.700126,
+      "ethereumTvlUsd": 2874996.700126,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1008,12 +1990,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "pendle",
@@ -1033,8 +2031,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 671524307.4969459,
-      "ethereumTvlUsd": 671524307.4969459,
+      "tvlUsd": 669648185.403862,
+      "ethereumTvlUsd": 669648185.403862,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1108,12 +2106,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "5.7 · high",
+          "verbatim": "overallScore=5.7; riskLevel=high\n[critical] 18 Unverified Contracts Across Core Infrastructure\n[critical] Optimism PT OFT Factory Controlled by EOA\n[high] Unverified ProxyAdmin Controls Core Upgradeable Proxies\n[high] sPENDLE Token Bytecode Unverified\n[high] YieldContractFactoryV6 Implementation Unverified on Ethereum\n[high] Cross-Chain Bridge and Oracle Stack Unverified on Ethereum\n[high] No Timelock on Proxy Upgrades\n[high] No Timelock on Admin Actions or Upgrades",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/pendle.finance",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "5.7",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "high",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "4.2",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "5.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "3.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "7.0",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "pendle.finance",
+            "overallScore": 5.7,
+            "riskLevel": "high",
+            "runNumber": 1,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 4.2,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 5.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 4.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 3.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 7,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "18 Unverified Contracts Across Core Infrastructure",
+                "category": "verification",
+                "severity": "critical",
+                "description": "45% of discovered contracts (18/40) have no verified source on their respective block explorers, preventing independent bytecode audit. This includes ProxyAdmin (upgrade authority), sPENDLE (~33M supply), YieldContractFactoryV6 implementation on Ethereum, cross-chain bridge/oracle contracts on Ethereum, and all Pendle deployments on Plasma and HyperEVM."
+              },
+              {
+                "title": "Optimism PT OFT Factory Controlled by EOA",
+                "category": "access-control",
+                "severity": "critical",
+                "description": "The Optimism PT OFT Adapter Factory (0x45Dd4aEcc425b01bf98C567407aB4a4fF3C7d349) owner is 0x1FcCC097db89A86Bfc474A1028F93958295b1Fb7 (Core Deployer), confirmed as an EOA via eth_getCode. This single externally-owned account can reconfigure cross-chain PT bridging on Optimism without multisig protection — a critical single point of failure for spoke-chain PT liquidity."
+              },
+              {
+                "title": "Unverified ProxyAdmin Controls Core Upgradeable Proxies",
+                "category": "upgradability",
+                "severity": "high",
+                "description": "ProxyAdmin (0xA28c08f165116587D4F3E708743B4dEe155c5E64) is unverified but on-chain owns the TransparentUpgradeableProxy admin slots for MarketFactoryV6, SYFactory, PYYtLpOracle, LimitRouter, and YieldContractFactoryV6. ProxyAdmin owner is the 3/5 governance multisig (0x8119EC16...), enabling immediate implementation swaps with no observable timelock delay."
+              },
+              {
+                "title": "sPENDLE Token Bytecode Unverified",
+                "category": "verification",
+                "severity": "high",
+                "description": "sPENDLE (0x999999999991E178D52Cd95AFd4b00d066664144) holds ~33.2M tokens in circulation and is owned by the 3/5 governance multisig, but its source is not verified on Etherscan. Mint, burn, and staking mechanics cannot be independently audited despite sPENDLE being the active governance staking token (vePENDLE deprecated)."
+              },
+              {
+                "title": "YieldContractFactoryV6 Implementation Unverified on Ethereum",
+                "category": "verification",
+                "severity": "high",
+                "description": "YieldContractFactoryV6 proxy (0x3E6EBa46AbC5ab18ED95F6667d8B2fd4020E4637) delegates to implementation 0x21414e68da7658b5b2d9c04b06a1f03055763087 via ProxyAdmin, but neither the factory address nor its implementation is verified on Etherscan. This factory deploys yield contracts (PT/YT) that hold user funds."
+              },
+              {
+                "title": "Cross-Chain Bridge and Oracle Stack Unverified on Ethereum",
+                "category": "verification",
+                "severity": "high",
+                "description": "Three Ethereum contracts in the cross-chain PT pipeline are unverified: SenderEndpoint (0x07b1014c...), PT OFT Adapter Factory (0x905aF80C...), and Cross-Chain Exchange Rate Oracle (0xA914c44E...). PT OFT Factory and CrossChainOracle are owned by the 2/5 Dev Multisig; SenderEndpoint by the 3/5 governance multisig. Bridge configuration (setPeer/setOracle equivalents) cannot be audited from source."
+              },
+              {
+                "title": "No Timelock on Proxy Upgrades",
+                "category": "upgradability",
+                "severity": "high",
+                "description": "Core factories, oracles, and routers use OpenZeppelin TransparentUpgradeableProxy pattern with a central ProxyAdmin. On-chain verification shows upgrades can be executed immediately by the 3/5 governance multisig via ProxyAdmin.upgrade() — no timelock contract is interposed between governance and implementation changes."
+              },
+              {
+                "title": "No Timelock on Admin Actions or Upgrades",
+                "category": "timelock",
+                "severity": "high",
+                "description": "On-chain verification found no TimelockController or delay mechanism on ProxyAdmin, PendleGovernanceProxy (UUPS), or core factory proxies. The 3-of-5 governance multisig can execute upgrades, parameter changes, and batched admin calls via PendleGovernanceProxy.aggregate() immediately. PENDLE token config changes have a 7-day delay, but contract upgrades do not."
+              },
+              {
+                "title": "Cross-Chain Governance Threshold Asymmetry on Optimism",
+                "category": "cross-chain",
+                "severity": "high",
+                "description": "Per-chain Gnosis Safe governance proxies use different signer sets and thresholds. Optimism governance Safe (0xa06C863fcf17cA6f24AA81aeA75E23953193fF6A) is 2-of-4, while Ethereum (0x8119…ee1), Arbitrum/Base (0x7877…75Ac), and BSC (0xA066…a9Ec) are 3-of-5 with overlapping signer sets. Optimism is the weakest governance link for chain-specific actions."
+              },
+              {
+                "title": "Per-Asset SY Adapter Contagion",
+                "category": "protocol",
+                "severity": "high",
+                "description": "Pendle core wraps yield via permissionless Standardized Yield (SY) adapters that call external protocols (Curve, Balancer, Benqi/QiToken, etc.). ChainSecurity and Spearbit audits explicitly exclude derived SY implementations. A compromised or misconfigured SY adapter can poison exchangeRate(), affecting PT/YT pricing, cross-chain oracle feeds, and any integrator relying on Pendle markets."
+              },
+              {
+                "title": "Penpie Third-Party Exploit — Sep 2024 ($27M)",
+                "category": "ecosystem",
+                "severity": "high",
+                "description": "On Sep 3, 2024, Penpie (yield optimizer built on Pendle) lost ~$27M via reentrancy in batchHarvestMarketRewards. Attacker created malicious Pendle markets using permissionless market creation with fake SY contracts. Pendle contracts were not exploited; Pendle detected the attack, paused all contracts within ~1 hour, and reportedly prevented ~$70–105M in additional losses across dependent protocols. Contracts later unpaused. Penpie users were not compensated by Pendle."
+              },
+              {
+                "title": "Cross-Chain Governance Threshold Divergence",
+                "category": "access-control",
+                "severity": "medium",
+                "description": "Governance multisig thresholds differ across chains: Ethereum, Arbitrum, Base, and BSC use 3/5, while Optimism uses 2/4. Weaker quorum on Optimism reduces the number of signers required for governance actions on that chain's deployments."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "rocketpool",
@@ -1133,8 +2300,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1287940180.4361222,
-      "ethereumTvlUsd": 1287940180.4361222,
+      "tvlUsd": 1290363483.925731,
+      "ethereumTvlUsd": 1290363483.925731,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1149,12 +2316,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "4.8 · medium",
+          "verbatim": "overallScore=4.8; riskLevel=medium\n[critical] Ethereum Beacon Chain Is a Non-Substitutable Foundation\n[high] 11 Unverified Core Contracts on Etherscan\n[high] Protocol Guardian Is an EOA\n[high] Saturn One MegapoolManager Unverified Despite Live TVL\n[high] Guardian Is Deployer EOA, Not Multisig\n[high] Security Council Has Single On-Chain Member\n[high] rETH Token Contract Source Is Unverified\n[high] oDAO Internal Oracle — No External Price Feed Fallback",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/rocketpool.net",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "medium",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "6.2",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "5.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "5.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "4.2",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "4.8",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "rocketpool.net",
+            "overallScore": 4.8,
+            "riskLevel": "medium",
+            "runNumber": 1,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 6.2,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 5.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 5.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 4.2,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 4.8,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "Ethereum Beacon Chain Is a Non-Substitutable Foundation",
+                "category": "consensus",
+                "severity": "critical",
+                "description": "All validator capital flows through the Ethereum deposit contract (casperDeposit). Megapool and minipool contracts call DepositInterface.deposit() to stake 32 ETH validators; rewards, exits, and withdrawals are entirely determined by consensus-layer behavior. A Beacon Chain halt, consensus failure, or deposit-contract bug would directly impair staking yield and withdrawal flows for all ~$900M TVL with no protocol-level fallback."
+              },
+              {
+                "title": "11 Unverified Core Contracts on Etherscan",
+                "category": "verification",
+                "severity": "high",
+                "description": "Eleven discovered contracts lack verified source on Etherscan, preventing independent bytecode-to-source auditing. This includes the rETH token (0xae78736Cd615f374D3085123A210448E74Fc6393), RocketMegapoolManager (Saturn One), RocketDAONodeTrusted (oDAO), RocketSwapRouter, RocketNetworkRevenues, RocketRewardsPool, RocketMinipoolFactory, RocketDAOProtocolVerifier, RocketDAOProtocolSettingsMegapool, the historical RocketStorage deployer/guardian EOA address, and Arbitrum RocketBalancerRateProvider. Source may exist in GitHub and audit reports but cannot be cryptographically matched to deployed bytecode without verification."
+              },
+              {
+                "title": "Protocol Guardian Is an EOA",
+                "category": "access-control",
+                "severity": "high",
+                "description": "RocketStorage guardian (0x0cCF14983364A7735d369879603930Afe10df21e) is an externally owned account with no multisig or timelock protection. While bootstrap mode is disabled on-chain and guardian powers are reduced post-deployment, the guardian can still initiate a two-step guardianship transfer via setGuardian/confirmGuardian. Compromise of this private key remains a single point of failure for emergency guardian rotation."
+              },
+              {
+                "title": "Saturn One MegapoolManager Unverified Despite Live TVL",
+                "category": "verification",
+                "severity": "high",
+                "description": "RocketMegapoolManager (0xf2CCd522Ba5fFEda28fe0389963845D61F342034) orchestrates Saturn One megapool lifecycle but is unverified on Etherscan. Related RocketMegapoolFactory and RocketMegapoolDelegate are verified, but the manager contract that coordinates validator creation, bonding, and queueing cannot be independently audited at bytecode level."
+              },
+              {
+                "title": "Guardian Is Deployer EOA, Not Multisig",
+                "category": "centralization",
+                "severity": "high",
+                "description": "On-chain getGuardian() on RocketStorage (0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46) returns 0x0ccf14983364a7735d369879603930afe10df21e, classified as the RocketStorage Deployer. Verified as an EOA (no contract code, getOwners/getThreshold revert empty). This contradicts RPIP-14's documented 8/14 oDAO multisig guardian. While bootstrap mode is disabled (limiting unilateral setting changes), the guardian retains setGuardian()/confirmGuardian() power to transfer guardianship in a two-step process without timelock."
+              },
+              {
+                "title": "Security Council Has Single On-Chain Member",
+                "category": "centralization",
+                "severity": "high",
+                "description": "RocketDAOSecurity (0x84ae6d61df5c6ba7196b5c76bcb112b8a689ad37) reports getMemberCount()=1 with sole member 0x6c565af34f15de064b56afedf7b0f59c15bb20fe. Houston design intended a multisig-style council for rapid incident response with member quorum. A single-member council effectively grants one address fast-path authority to propose and execute security setting changes, undermining the intended distributed emergency control."
+              },
+              {
+                "title": "rETH Token Contract Source Is Unverified",
+                "category": "transparency",
+                "severity": "high",
+                "description": "RocketTokenRETH (0xae78736Cd615f374D3085123A210448E74Fc6393) — the contract users hold — has no verified source on Etherscan, preventing independent audit of mint/burn/getEthValue logic. Deposit pool references mint() and depositExcess() on this contract; behavior is inferred from surrounding verified contracts only."
+              },
+              {
+                "title": "oDAO Internal Oracle — No External Price Feed Fallback",
+                "category": "oracle",
+                "severity": "high",
+                "description": "rETH exchange rate (RocketNetworkBalances) and RPL price (RocketNetworkPrices) are set exclusively by oDAO trusted nodes via multi-sig-style quorum voting. On-chain: 10 oDAO members, 51% consensus threshold, 24h minimum update frequency, 2% max rETH rate delta per update (RPIP-61). There is no Chainlink, Pyth, or other third-party oracle fallback. If ≥6 of 10 oDAO nodes collude, censor updates, or go offline, oracle updates stall—delaying rETH mint/burn pricing and RPL-denominated logic. A 2022 incident compromised two oDAO operator hot wallets (node funds, not protocol TVL)."
+              },
+              {
+                "title": "L2 rETH Relies on Canonical Rollup Bridges",
+                "category": "bridge",
+                "severity": "high",
+                "description": "rETH on Arbitrum and Optimism is bridged via each chain's canonical token bridge—not a Rocket Pool–controlled bridge. Optimism L2 rETH (0x9Bcef72be871E61ed4fbbc7630889Bee758Eb81d) mints/burns only through the L2StandardBridge predeploy (0x4200…0010), pegged to mainnet rETH (0xae78736Cd615f374D3085123A210448E74Fc6393). A canonical bridge exploit or governance failure on Arbitrum/Optimism could create unbacked L2 rETH or freeze bridging; Rocket Pool has no independent circuit breaker on L2."
+              },
+              {
+                "title": "11 Unverified Contracts Block Source-to-Bytecode Audit Confirmation",
+                "category": "verification-gap",
+                "severity": "high",
+                "description": "Per VERIFICATION_STATUS.md, 11 of 37 tracked contracts lack Etherscan/Arbiscan source verification. These include RocketMegapoolManager, RocketMinipoolFactory, RocketRewardsPool, RocketNetworkRevenues, RocketTokenRETH (rETH), RocketDAONodeTrusted (oDAO), RocketDAOProtocolVerifier, RocketDAOProtocolSettingsMegapool, RocketSwapRouter, RocketStorage Deployer, and RocketBalancerRateProvider (Arbitrum). Without verified source, independent analysts cannot confirm deployed bytecode matches audited repositories — a major gap for adversarial review even when audits exist."
+              },
+              {
+                "title": "Saturn One Post-Audit Deployment Uncertainty",
+                "category": "audit-gap",
+                "severity": "high",
+                "description": "Bailsec Saturn One follow-up reviews (Nov 2025–Jan 2026) noted that post-audit code changes introduced new fund-theft and DoS vectors, reducing confidence in vulnerability-free deployment. The Jan 2026 follow-up explicitly excluded two contracts. Governance discussion (dao.rocketpool.net/t/verifying-1-4-contract-upgrade/3890) acknowledges more uncertainty than prior upgrades between last auditor touchpoint and mainnet deployment tag."
+              },
+              {
+                "title": "Oct 2021 Withdrawal-Credentials Frontrunning Vulnerability",
+                "category": "incident",
+                "severity": "high",
+                "description": "Whitehat Dmitri Tsumak (StakeWise) reported via Immunefi a critical industry-wide exploit allowing malicious node operators to front-run deposits and set validator withdrawal credentials to attacker-controlled addresses, potentially stealing pooled ETH. Rocket Pool delayed its planned Oct 6 launch, implemented oDAO minipool scrubbing verification, and paid the $100k maximum bounty. Independent sources (CoinDesk, Immunefi, Lido) confirm the vulnerability was never exploited in production and affected multiple staking protocols."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "spark",
@@ -1177,8 +2513,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 7876167469.28908,
-      "ethereumTvlUsd": 7876167469.28908,
+      "tvlUsd": 7876147025.152284,
+      "ethereumTvlUsd": 7876147025.152284,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1252,12 +2588,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "4.9 · medium",
+          "verbatim": "overallScore=4.9; riskLevel=medium\n[critical] 13 Unverified Core Contracts Block Source Auditing\n[high] Unverified PoolConfigurator Controls SparkLend Reserve Parameters\n[high] Unverified L2 ALM Controllers Hold Cross-Chain Capital\n[high] Unverified Cross-Chain Executors and Gov Relays\n[high] SparkLend Core Uses Immutable-Admin Proxies Upgradable by SubProxy\n[high] SubProxy Delegatecall Enables Arbitrary Target Execution\n[high] ALM Proxy Grants Controller Arbitrary External and Delegate Calls\n[high] Executive Control via Sky Parent, Not SPK Holders",
+          "asOf": "2026-06-09",
+          "sourceUrl": "https://risklayer.online/protocol/spark.fi",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "4.9",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "medium",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "4.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "5.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "6.0",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "3.0",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "6.0",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "spark.fi",
+            "overallScore": 4.9,
+            "riskLevel": "medium",
+            "runNumber": 1,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 4.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 5.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 6,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 3,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 6,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "13 Unverified Core Contracts Block Source Auditing",
+                "category": "verification",
+                "severity": "critical",
+                "description": "22% of discovered contracts lack verified source on block explorers. Unverified targets include SparkLend PoolConfigurator (reserve/oracle config), KillSwitchOracle, spETH vault proxy, Spark Savings Intents, Optimism Token Bridge proxy, SparkLend Freezer multisig shell, and all L2 Spark Executors / ALM Controllers on Arbitrum, Base, Optimism, and Unichain plus Gnosis Pool. Without verified bytecode-to-source mapping, privileged upgrade paths, oracle logic, and cross-chain execution cannot be independently confirmed despite GitHub references and prior audits."
+              },
+              {
+                "title": "Unverified PoolConfigurator Controls SparkLend Reserve Parameters",
+                "category": "verification",
+                "severity": "high",
+                "description": "PoolConfigurator proxy at 0x542DBa469bdE58FAeE189ffB60C6b49CE60E0738 is a core SparkLend contract responsible for reserve initialization, collateral parameters, interest rate strategies, and pause/freeze flags. It is deployed behind an Aave-style proxy with upgrade authority flowing through PoolAddressesProvider (owned by SubProxy), but the implementation source is not Etherscan-verified, preventing confirmation that deployed bytecode matches audited Aave v3 fork patches."
+              },
+              {
+                "title": "Unverified L2 ALM Controllers Hold Cross-Chain Capital",
+                "category": "verification",
+                "severity": "high",
+                "description": "ForeignController ALM instances on Arbitrum (0x689502…06f7 on Optimism, 0xF16DE7…D5bA on Unichain, plus Arbitrum/Base entries in registry) are unverified despite controlling rate-limited DeFi deployments via ALM Proxy. Verified ForeignController source on Arbitrum (0xC40611…) shows RELAYER/FREEZER AccessControl and nonReentrant guards, but unverified deployments cannot be confirmed to match audited bytecode."
+              },
+              {
+                "title": "Unverified Cross-Chain Executors and Gov Relays",
+                "category": "verification",
+                "severity": "high",
+                "description": "Spark Executor on Arbitrum (0x65d946…f7a1), Base (0xF93B71…F579), and Sky Gov Relay on Base (0xdD0BCc…C255) lack verified source. These contracts receive L1 governance messages and delegatecall into L2 targets. Arbitrum PSM3 (0x2B05F8…7266) is also unverified. Cross-chain spell execution is a high-privilege path; unverified executors create governance asymmetry versus fully verified mainnet SubProxy stack."
+              },
+              {
+                "title": "SparkLend Core Uses Immutable-Admin Proxies Upgradable by SubProxy",
+                "category": "upgradability",
+                "severity": "high",
+                "description": "Pool (0xC13e21…) and PoolConfigurator deploy as InitializableImmutableAdminUpgradeabilityProxy instances whose admin is PoolAddressesProvider. On-chain, PoolAddressesProvider.owner()=SubProxy (0x3300f198…8c4). SubProxy can upgrade Pool/Configurator implementations, set oracles, ACLManager, and sentinel addresses via onlyOwner functions—concentrating upgrade authority in Maker-style governance rather than SPK token voting."
+              },
+              {
+                "title": "SubProxy Delegatecall Enables Arbitrary Target Execution",
+                "category": "access-control",
+                "severity": "high",
+                "description": "SubProxy.exec(target, args) performs delegatecall into any target for addresses with wards. Verified on-chain wards are held by Sky Pause Proxy (0xBE8E3e36…) and Spark StarGuard (0x6605aa12…). While StarGuard enforces a 7-day maxDelay for whitelisted spells, SubProxy itself has no on-chain timelock—compromise of a ward holder enables immediate execution of arbitrary delegatecall payloads against any authorized target."
+              },
+              {
+                "title": "ALM Proxy Grants Controller Arbitrary External and Delegate Calls",
+                "category": "access-control",
+                "severity": "high",
+                "description": "ALMProxy (verified) exposes doCall, doCallWithValue, and doDelegateCall restricted to CONTROLLER role. MainnetController holds this role and can route capital through Aave, Curve, CCTP, LayerZero, PSM, and other integrations. ALMProxyFreezable adds FREEZER role to revoke controllers. Compromise of a RELAYER key or governance spell error could move funds across integrated protocols within rate-limit bounds."
+              },
+              {
+                "title": "Executive Control via Sky Parent, Not SPK Holders",
+                "category": "centralization",
+                "severity": "high",
+                "description": "On-chain verification shows SubProxy wards are held by Sky Pause Proxy (0xBE8E3e36…) and Spark StarGuard (0x6605aa12…), not SPK token holders. SubProxy owns PoolAddressesProvider, is ACL admin, holds POOL_ADMIN and EMERGENCY_ADMIN on ACLManager, and DEFAULT_ADMIN on ALM MainnetController. SPK governance is off-chain Snapshot signaling; execution requires Sky Atlas updates and executive spells."
+              },
+              {
+                "title": "No Timelock on SubProxy Direct Execution",
+                "category": "centralization",
+                "severity": "high",
+                "description": "SubProxy.exec() performs immediate delegatecall execution for any address with wards. While StarGuard enforces a 7-day maxDelay for whitelisted proxy spells, the SubProxy contract itself has no built-in timelock. Sky Pause Proxy can authorize and execute changes without an on-chain delay at the SubProxy layer."
+              },
+              {
+                "title": "Unverified Arbitrum Spark Executor",
+                "category": "cross-chain",
+                "severity": "high",
+                "description": "Cross-chain governance on Arbitrum routes L1 SubProxy messages through ArbitrumReceiver (l1Authority=SubProxy) to Spark Executor 0x65d946…f7a1, which is unverified on-chain. This creates a governance asymmetry: mainnet contracts are verified and auditable, but the primary Arbitrum execution target cannot be source-audited."
+              },
+              {
+                "title": "Extreme Supply Concentration in Protocol-Controlled Wallets",
+                "category": "concentration",
+                "severity": "high",
+                "description": "On-chain balanceOf queries (June 2026) show top protocol addresses hold ~78% of total supply: Sky Pause Proxy 5.13B (51.4%), team/subDAO proxy 1.24B (12.4%), long-term treasury 600M (6.0%), stSPK vault 570M (5.7%), mid-term treasury 185M (1.9%), airdrops-legacy 61M (0.6%). Top-10 holder analysis (CoinLore/Etherscan) confirms ~89% held by top 10 addresses, overwhelmingly treasuries and vesting contracts—not retail distribution despite '65% to users' marketing framing."
+              },
+              {
+                "title": "Aggressive Year 1–2 Farming Emissions",
+                "category": "emission",
+                "severity": "high",
+                "description": "Sky Atlas farming schedule releases 1.625B SPK/year in years 1–2 (32.5% of total supply over 2 years), halving in subsequent biennial periods. On-chain farming reserve dropped from 6.5B to 5.13B, confirming ~1.37B already distributed. Against ~2.5B circulating supply, annualized farming inflation is ~65% in year 2—well above typical DeFi governance tokens and a sustained sell-pressure source unless demand absorbs emissions."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "uniswap",
@@ -1281,8 +2786,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2322467169.7572856,
-      "ethereumTvlUsd": 2322467169.7572856,
+      "tvlUsd": 2322473206.6926165,
+      "ethereumTvlUsd": 2322473206.6926165,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1377,12 +2882,181 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "c",
+          "label": "4.3 · medium",
+          "verbatim": "overallScore=4.3; riskLevel=medium\n[critical] EOA controls Arbitrum v4 PoolManager ownership\n[high] Same EOA controls Unichain v2 feeToSetter\n[high] UNI governance Timelock unverified on Etherscan\n[high] Four scoped deployments lack verified explorer source\n[high] Arbitrum Admin Controlled by EOA, Not L1 Timelock\n[high] Cross-Chain Governance Asymmetry Across L2s\n[high] v4 Hook Composability Creates Third-Party Integration Risk\n[medium] v4 hooks delegate execution to arbitrary pool-configured contracts",
+          "asOf": "2026-07-02",
+          "sourceUrl": "https://risklayer.online/protocol/uniswap.org",
+          "facets": [
+            {
+              "key": "overall_score",
+              "label": "Overall score",
+              "value": "4.3",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "risk_level",
+              "label": "Risk level",
+              "value": "medium",
+              "valueType": "enum"
+            },
+            {
+              "key": "dependency_risk",
+              "label": "Dependency Risk",
+              "value": "4.3",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "governance_risk",
+              "label": "Governance Risk",
+              "value": "5.8",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "tokenomics_risk",
+              "label": "Tokenomics Risk",
+              "value": "5.5",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "audit_coverage_risk",
+              "label": "Audit Coverage Risk",
+              "value": "2.4",
+              "valueType": "score",
+              "scale": "0-10"
+            },
+            {
+              "key": "smart_contract_risk",
+              "label": "Smart Contract Risk",
+              "value": "4.3",
+              "valueType": "score",
+              "scale": "0-10"
+            }
+          ],
+          "raw": {
+            "domain": "uniswap.org",
+            "overallScore": 4.3,
+            "riskLevel": "medium",
+            "runNumber": 3,
+            "dimensions": [
+              {
+                "name": "Dependency Risk",
+                "score": 4.3,
+                "weight": 0.25
+              },
+              {
+                "name": "Governance Risk",
+                "score": 5.8,
+                "weight": 0.25
+              },
+              {
+                "name": "Tokenomics Risk",
+                "score": 5.5,
+                "weight": 0.25
+              },
+              {
+                "name": "Audit Coverage Risk",
+                "score": 2.4,
+                "weight": 0.25
+              },
+              {
+                "name": "Smart Contract Risk",
+                "score": 4.3,
+                "weight": 0.25
+              }
+            ],
+            "keyFindings": [
+              {
+                "title": "EOA controls Arbitrum v4 PoolManager ownership",
+                "category": "access-control",
+                "severity": "critical",
+                "description": "On-chain owner() of Arbitrum UniswapV4 PoolManager (0x360e68faccca8ca495c1b759fd9eee466db9fb32) resolves to 0x2bad8182c09f50c8318d769245bea52c32be46cd, confirmed EOA (eth_getCode empty). This address can call setProtocolFeeController() and transferOwnership() per verified PoolManager source. Single-key compromise could reassign protocol-fee authority or ownership without timelock/multisig protection."
+              },
+              {
+                "title": "Same EOA controls Unichain v2 feeToSetter",
+                "category": "access-control",
+                "severity": "high",
+                "description": "The same EOA 0x2bad8182c09f50c8318d769245bea52c32be46cd is feeToSetter on Unichain UniswapV2Factory (0x1f9840…002), granting setFeeTo/setFeeToSetter privileges per verified v2 factory source. Cross-chain concentration of privileged roles in one EOA expands blast radius beyond Arbitrum v4."
+              },
+              {
+                "title": "UNI governance Timelock unverified on Etherscan",
+                "category": "verification",
+                "severity": "high",
+                "description": "The UNI Timelock at 0x1a9C8182C09F50C8318d769245beA52c32BE35BC is marked unverified in VERIFICATION_STATUS.md with no downloadable source. On-chain it is a live contract (admin=0x408ed6354d4973f66138c91495f2f2fcbd8724c3) and owns Ethereum v4 PoolManager, is V2 feeToSetter, and is UNI minter. Lack of explorer verification prevents independent audit of the governance execution layer controlling protocol-fee and minting paths."
+              },
+              {
+                "title": "Four scoped deployments lack verified explorer source",
+                "category": "verification",
+                "severity": "high",
+                "description": "Pipeline verification flags four contracts as unverified: Ethereum NonfungiblePositionManager (0xC36442b4…), Ethereum Timelock (0x1a9C8182…), Optimism UniswapV3Factory (0x1F98431c…), and Base Permit2 (0x000000000022D473030F116dDEE9F6B43aC78BA3). Unverified bytecode cannot be source-audited via explorer; NPM and Permit2 hold user NFT positions and token approvals respectively, amplifying impact."
+              },
+              {
+                "title": "Arbitrum Admin Controlled by EOA, Not L1 Timelock",
+                "category": "cross-chain",
+                "severity": "high",
+                "description": "On Arbitrum, UniswapV3Factory owner (0xff7a…0699) and UniswapV4 PoolManager owner (0x2bad…46cd) both resolve to EOA 0x2bad8182c09f50c8318d769245bea52c32be46cd (verified: code length 0, transaction nonce 8). This EOA can call setOwner on the v3 ProtocolFeeController and transferOwnership on v4 PoolManager without the 2-day Ethereum timelock delay or UNI holder vote. Base and Optimism use bridged L2 admin contracts whose storage slot 1 points to the Ethereum timelock — Arbitrum lacks this linkage."
+              },
+              {
+                "title": "Cross-Chain Governance Asymmetry Across L2s",
+                "category": "cross-chain",
+                "severity": "high",
+                "description": "L2 factory/PoolManager admin addresses differ per chain and are not uniformly controlled by the Ethereum timelock. Base/Optimism L2 proxy contracts (1419 bytes) store admin=0x4200…0007 (L2CrossDomainMessenger) and reference L1 timelock 0x1a9C…35BC in storage slot 1, enabling L1-governance relay. Arbitrum uses a standalone EOA. Polygon, BSC, and 35+ other chains listed in discovery have independent deployments with no on-chain linkage to Ethereum governance verified in this analysis."
+              },
+              {
+                "title": "v4 Hook Composability Creates Third-Party Integration Risk",
+                "category": "protocol",
+                "severity": "high",
+                "description": "v4 PoolManager delegates swap, liquidity, and donate lifecycle to arbitrary IHooks contracts chosen per pool. PoolManager correctly passes msg.sender to hook callbacks and prevents hook self-calls, but does not enforce onlyPoolManager on hook entrypoints—third-party hooks must implement access control themselves. Cork Protocol lost ~$12M (May 2025) when CorkHook.beforeSwap lacked PoolManager-only validation, allowing direct invocation with malicious hookData. Uniswap core was not exploited; the integrating protocol was."
+              },
+              {
+                "title": "v4 hooks delegate execution to arbitrary pool-configured contracts",
+                "category": "composability",
+                "severity": "medium",
+                "description": "Verified PoolManager source invokes hook contracts at initialize, modifyLiquidity, swap, and donate via before/after hooks with optional delta returns. Core enforces hook-address bit flags but does not constrain hook logic. Poorly implemented or malicious hooks (e.g., Cork Protocol May 2025) can cause LP/user losses while Uniswap core remains technically correct. LPs must audit per-pool hook behavior."
+              },
+              {
+                "title": "Privileged admin addresses diverge across chains",
+                "category": "cross-chain",
+                "severity": "medium",
+                "description": "Factory/PoolManager owners are not uniform: Ethereum v4 PoolManager owner is UNI Timelock (0x1a9c8182…), Ethereum v3 factory owner is a separate 14.5KB contract (0xf2371551…), while Arbitrum/Base/Optimism v3 owners are chain-local 14.5KB contracts and v4 owners differ (Arbitrum EOA, Base/Optimism 2.8KB contracts). v3/v4 factories also use different addresses on some chains (e.g., Base v3 at 0x33128a8f… vs canonical 0x1F98431c…). Increases risk of integrator misconfiguration and uneven governance protections."
+              },
+              {
+                "title": "Permit2 is immutable and ownerless but aggregates token approvals",
+                "category": "approvals",
+                "severity": "medium",
+                "description": "Verified Permit2 source shows no owner/admin/pause functions — deployment is immutable. Users granting Permit2 max approvals enable signature-based transfers via any integrated router. This is by design but creates a high-value phishing/approval-theft target; Base deployment is additionally unverified on BaseScan despite CREATE2 canonical address."
+              },
+              {
+                "title": "Timelock Contract Source Unverified on Etherscan",
+                "category": "centralization",
+                "severity": "medium",
+                "description": "The UNI timelock at 0x1a9C8182C09F50C8318d769245beA52c32BE35BC has no verified source code on Etherscan. On-chain storage confirms Compound-style layout (admin=Governor Bravo, delay=172800s/2 days), but unverified bytecode prevents independent audit of the full execution logic and queued-transaction handling."
+              },
+              {
+                "title": "UNIfication Restructures Off-Chain Control Under DUNI/Labs",
+                "category": "centralization",
+                "severity": "medium",
+                "description": "The Dec 2025 UNIfication proposal (passed with ~99.9% support) consolidates Uniswap Foundation teams into Uniswap Labs, establishes a Wyoming DUNA (DUNI) legal entity, creates a 20M UNI/year growth budget under a Labs–DUNI service provider agreement, and activates protocol fee switches. On-chain fee parameters remain governable by UNI votes, but operational execution, interface/API fee removal, and legal/regulatory engagement shift toward Labs and DUNI — increasing off-chain centralization relative to pure on-chain DAO control."
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "yearn",
@@ -1402,8 +3076,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 211738856.2838924,
-      "ethereumTvlUsd": 211738856.2838924,
+      "tvlUsd": 211938318.97859353,
+      "ethereumTvlUsd": 211938318.97859353,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1418,12 +3092,28 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     },
     {
       "id": "zerox",
@@ -1460,21 +3150,37 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-11T08:01:40.277Z",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
             "collectorId": "defiscan"
+          }
+        },
+        "risklayer": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-11T08:45:13.390Z",
+            "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-11T08:01:40.277Z"
+      "coverageUpdatedAt": "2026-09-11T08:45:13.390Z"
     }
   ],
   "kpis": {
     "protocolCount": 20,
-    "feedCount": 1,
-    "cellsAssessed": 20,
+    "feedCount": 2,
+    "cellsAssessed": 40,
     "coveragePct": 45,
-    "fundsAtRiskUsd": 60394180944.43385,
-    "coveredCells": 8,
+    "fundsAtRiskUsd": 60485208512.655174,
+    "coveredCells": 17,
     "partialCells": 1
   }
 }

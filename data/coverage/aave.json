@@ -1,6 +1,6 @@
 {
   "protocolId": "aave",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,8 +73,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "4.8 · medium",
+      "verbatim": "overallScore=4.8; riskLevel=medium\n[critical] Ethereum Executor Level 1 (Short Timelock) Source Not Verified\n[critical] Arbitrum PoolAddressesProvider Source Not Verified\n[critical] Polygon PoolAddressesProvider Source Not Verified\n[critical] April 2026 Kelp rsETH Bridge Contagion\n[high] Ethereum AaveOracle Source Not Verified on Etherscan\n[high] Arbitrum GHO Token (CCIP Bridged) Source Not Verified\n[high] Base AaveOracle Source Not Verified on Etherscan\n[high] Bridged Collateral Accepts Third-Party Bridge Security",
+      "asOf": "2026-06-26",
+      "sourceUrl": "https://risklayer.online/protocol/aave.com",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "medium",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "6.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "3.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "3.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "2.2",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "4.6",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "aave.com",
+        "overallScore": 4.8,
+        "riskLevel": "medium",
+        "runNumber": 4,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 6.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 3.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 3.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 2.2,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 4.6,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "Ethereum Executor Level 1 (Short Timelock) Source Not Verified",
+            "category": "verification",
+            "severity": "critical",
+            "description": "Executor L1 at 0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A on Ethereum is unverified on Etherscan. On-chain owner() calls confirm this contract owns PoolAddressesProvider, Governance V3 Core proxy, CrossChainController, and GHO CCIP Token Pool. It is the effective upgrade authority for Pool, PoolConfigurator, oracle, and ACL routing on Ethereum. Unverified bytecode prevents confirmation of timelock delays and execution constraints."
+          },
+          {
+            "title": "Arbitrum PoolAddressesProvider Source Not Verified",
+            "category": "verification",
+            "severity": "critical",
+            "description": "PoolAddressesProvider at 0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb on Arbitrum lacks Etherscan verification. Verified deployments on Optimism use the same address with verified source; Arbitrum instance cannot be source-audited. On-chain owner() is Executor L1 0xFF1137243698CaA18EE364Cc966CF0e02A4e6327. This contract controls setPoolImpl, setPriceOracle, and setACLManager for the Arbitrum market."
+          },
+          {
+            "title": "Polygon PoolAddressesProvider Source Not Verified",
+            "category": "verification",
+            "severity": "critical",
+            "description": "PoolAddressesProvider at 0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb on Polygon is unverified despite being the canonical address shared across multiple L2s. On-chain owner() is 0xDf7d0e6454DB638881302729F5ba99936EaAB233 (Polygon Executor L1). Upgrade and oracle configuration paths cannot be source-audited for this chain."
+          },
+          {
+            "title": "April 2026 Kelp rsETH Bridge Contagion",
+            "category": "incident",
+            "severity": "critical",
+            "description": "Attacker minted 116,500 unbacked rsETH (~$292M) via Kelp DAO's 1-of-1 LayerZero DVN, deposited 89,567 rsETH on Aave V3, and borrowed ~$191M WETH/wstETH before markets froze. Core contracts functioned as designed; bad debt estimates range $123.7M (uniform socialization) to $230.1M (L2-isolated loss). Triggered an ~$8.45B 48-hour deposit run. Recovery required DeFi United coalition pledges (~$300M including 25,000 ETH from Aave DAO and 5,000 ETH from founder Stani Kulechov); rsETH backing restored by June 2026 but $71M in Arbitrum-frozen ETH remains in federal litigation."
+          },
+          {
+            "title": "Ethereum AaveOracle Source Not Verified on Etherscan",
+            "category": "verification",
+            "severity": "high",
+            "description": "Core price oracle at 0x54586bE62E3c3580375AE3723C145253060Ca0C2 on Ethereum has no verified source code on Etherscan. This contract feeds asset prices for borrows, liquidations, and health factors across the largest Aave V3 deployment. Without verified source, independent auditors cannot confirm Chainlink integration, access control, or absence of malicious logic."
+          },
+          {
+            "title": "Arbitrum GHO Token (CCIP Bridged) Source Not Verified",
+            "category": "verification",
+            "severity": "high",
+            "description": "Bridged GHO token at 0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33 on Arbitrum is unverified. GHO is Aave's native stablecoin with mint/burn semantics tied to cross-chain facilitators. Unverified bytecode prevents confirming mint authority, role configuration, and CCIP bridge integration on this deployment."
+          },
+          {
+            "title": "Base AaveOracle Source Not Verified on Etherscan",
+            "category": "verification",
+            "severity": "high",
+            "description": "AaveOracle at 0x2Cc0Fc26eD4563A5ce5e8bdcfe1A2878676Ae156 on Base has no verified source on BaseScan/Etherscan API. On-chain getPriceOracle() from PoolAddressesProvider confirms this address is the active oracle. Price oracle integrity cannot be independently verified from source for the Base deployment."
+          },
+          {
+            "title": "Bridged Collateral Accepts Third-Party Bridge Security",
+            "category": "bridge",
+            "severity": "high",
+            "description": "Aave V3 lists bridged/wrapped assets (e.g., rsETH) whose canonical backing depends on external bridges outside Aave's control. The Apr 2026 Kelp rsETH LayerZero exploit minted ~116,500 unbacked rsETH (~$292M) that was deposited as collateral and used to borrow real WETH/stables, creating an estimated $196–230M bad-debt exposure. Core Pool logic functioned as designed; the failure was upstream bridge verification (1-of-1 DVN). Protocol Guardian froze rsETH markets within hours, but listing policy remains a single point of contagion for any future bridge compromise."
+          },
+          {
+            "title": "CAPO Oracle Parameter Desync Risk (Demonstrated)",
+            "category": "oracle",
+            "severity": "high",
+            "description": "Correlated Asset Price Oracle (CAPO) wrappers used for LSTs like wstETH enforce rate-limited snapshotRatio updates but previously allowed snapshotTimestamp to advance independently. On 2026-03-10, a Chaos Labs risk-oracle update after >1 year of staleness desynced these parameters, capping wstETH ~2.85% below market and triggering ~$27.8M in wrongful E-Mode liquidations across 34 accounts. CAPO is configured as a per-asset price source via AaveOracle.setAssetSources(), making operational/governance misconfiguration a live dependency failure mode—not merely theoretical."
+          },
+          {
+            "title": "March 2026 CAPO Oracle Misconfiguration",
+            "category": "incident",
+            "severity": "high",
+            "description": "Chaos Labs' automated Edge Risk engine submitted a desynchronized snapshotRatio/snapshotTimestamp update to the wstETH CAPO oracle; AgentHub executed it on-chain one block later with no human review. wstETH was undervalued ~2.85%, triggering ~$27.78M in wrongful liquidations across 34 E-Mode accounts (10,938 wstETH). Independent observers flagged the anomaly before official post-mortem. Similar misconfiguration nearly executed ~1 month earlier. All affected users reimbursed (~513 ETH gross, ~358 ETH net DAO cost after recoveries); no protocol bad debt."
+          },
+          {
+            "title": "Pool and PoolConfigurator Use Immutable-Admin Upgradeable Proxies",
+            "category": "upgradability",
+            "severity": "medium",
+            "description": "Core Pool (0x87870…4E2) and PoolConfigurator (0x64b761…b27) on Ethereum deploy InitializableImmutableAdminUpgradeabilityProxy. The immutable admin is PoolAddressesProvider, which can call upgradeTo/upgradeToAndCall via setPoolImpl and setPoolConfiguratorImpl (onlyOwner). A malicious or compromised governance execution could replace Pool logic to drain funds or alter liquidation behavior."
+          },
+          {
+            "title": "PoolAddressesProvider Owner Can Reconfigure Oracle, ACL, and Core Implementations",
+            "category": "access_control",
+            "severity": "medium",
+            "description": "PoolAddressesProvider.onlyOwner functions include setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, and setPoolDataProvider. On Ethereum the owner is Executor L1 (timelocked governance path). These functions represent concentrated configuration power over lending parameters, price feeds, and role management."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

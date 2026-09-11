@@ -1,6 +1,6 @@
 {
   "protocolId": "spark",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,8 +73,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "4.9 · medium",
+      "verbatim": "overallScore=4.9; riskLevel=medium\n[critical] 13 Unverified Core Contracts Block Source Auditing\n[high] Unverified PoolConfigurator Controls SparkLend Reserve Parameters\n[high] Unverified L2 ALM Controllers Hold Cross-Chain Capital\n[high] Unverified Cross-Chain Executors and Gov Relays\n[high] SparkLend Core Uses Immutable-Admin Proxies Upgradable by SubProxy\n[high] SubProxy Delegatecall Enables Arbitrary Target Execution\n[high] ALM Proxy Grants Controller Arbitrary External and Delegate Calls\n[high] Executive Control via Sky Parent, Not SPK Holders",
+      "asOf": "2026-06-09",
+      "sourceUrl": "https://risklayer.online/protocol/spark.fi",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "4.9",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "medium",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "4.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "5.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "6.0",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "3.0",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "6.0",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "spark.fi",
+        "overallScore": 4.9,
+        "riskLevel": "medium",
+        "runNumber": 1,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 4.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 5.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 6,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 3,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 6,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "13 Unverified Core Contracts Block Source Auditing",
+            "category": "verification",
+            "severity": "critical",
+            "description": "22% of discovered contracts lack verified source on block explorers. Unverified targets include SparkLend PoolConfigurator (reserve/oracle config), KillSwitchOracle, spETH vault proxy, Spark Savings Intents, Optimism Token Bridge proxy, SparkLend Freezer multisig shell, and all L2 Spark Executors / ALM Controllers on Arbitrum, Base, Optimism, and Unichain plus Gnosis Pool. Without verified bytecode-to-source mapping, privileged upgrade paths, oracle logic, and cross-chain execution cannot be independently confirmed despite GitHub references and prior audits."
+          },
+          {
+            "title": "Unverified PoolConfigurator Controls SparkLend Reserve Parameters",
+            "category": "verification",
+            "severity": "high",
+            "description": "PoolConfigurator proxy at 0x542DBa469bdE58FAeE189ffB60C6b49CE60E0738 is a core SparkLend contract responsible for reserve initialization, collateral parameters, interest rate strategies, and pause/freeze flags. It is deployed behind an Aave-style proxy with upgrade authority flowing through PoolAddressesProvider (owned by SubProxy), but the implementation source is not Etherscan-verified, preventing confirmation that deployed bytecode matches audited Aave v3 fork patches."
+          },
+          {
+            "title": "Unverified L2 ALM Controllers Hold Cross-Chain Capital",
+            "category": "verification",
+            "severity": "high",
+            "description": "ForeignController ALM instances on Arbitrum (0x689502…06f7 on Optimism, 0xF16DE7…D5bA on Unichain, plus Arbitrum/Base entries in registry) are unverified despite controlling rate-limited DeFi deployments via ALM Proxy. Verified ForeignController source on Arbitrum (0xC40611…) shows RELAYER/FREEZER AccessControl and nonReentrant guards, but unverified deployments cannot be confirmed to match audited bytecode."
+          },
+          {
+            "title": "Unverified Cross-Chain Executors and Gov Relays",
+            "category": "verification",
+            "severity": "high",
+            "description": "Spark Executor on Arbitrum (0x65d946…f7a1), Base (0xF93B71…F579), and Sky Gov Relay on Base (0xdD0BCc…C255) lack verified source. These contracts receive L1 governance messages and delegatecall into L2 targets. Arbitrum PSM3 (0x2B05F8…7266) is also unverified. Cross-chain spell execution is a high-privilege path; unverified executors create governance asymmetry versus fully verified mainnet SubProxy stack."
+          },
+          {
+            "title": "SparkLend Core Uses Immutable-Admin Proxies Upgradable by SubProxy",
+            "category": "upgradability",
+            "severity": "high",
+            "description": "Pool (0xC13e21…) and PoolConfigurator deploy as InitializableImmutableAdminUpgradeabilityProxy instances whose admin is PoolAddressesProvider. On-chain, PoolAddressesProvider.owner()=SubProxy (0x3300f198…8c4). SubProxy can upgrade Pool/Configurator implementations, set oracles, ACLManager, and sentinel addresses via onlyOwner functions—concentrating upgrade authority in Maker-style governance rather than SPK token voting."
+          },
+          {
+            "title": "SubProxy Delegatecall Enables Arbitrary Target Execution",
+            "category": "access-control",
+            "severity": "high",
+            "description": "SubProxy.exec(target, args) performs delegatecall into any target for addresses with wards. Verified on-chain wards are held by Sky Pause Proxy (0xBE8E3e36…) and Spark StarGuard (0x6605aa12…). While StarGuard enforces a 7-day maxDelay for whitelisted spells, SubProxy itself has no on-chain timelock—compromise of a ward holder enables immediate execution of arbitrary delegatecall payloads against any authorized target."
+          },
+          {
+            "title": "ALM Proxy Grants Controller Arbitrary External and Delegate Calls",
+            "category": "access-control",
+            "severity": "high",
+            "description": "ALMProxy (verified) exposes doCall, doCallWithValue, and doDelegateCall restricted to CONTROLLER role. MainnetController holds this role and can route capital through Aave, Curve, CCTP, LayerZero, PSM, and other integrations. ALMProxyFreezable adds FREEZER role to revoke controllers. Compromise of a RELAYER key or governance spell error could move funds across integrated protocols within rate-limit bounds."
+          },
+          {
+            "title": "Executive Control via Sky Parent, Not SPK Holders",
+            "category": "centralization",
+            "severity": "high",
+            "description": "On-chain verification shows SubProxy wards are held by Sky Pause Proxy (0xBE8E3e36…) and Spark StarGuard (0x6605aa12…), not SPK token holders. SubProxy owns PoolAddressesProvider, is ACL admin, holds POOL_ADMIN and EMERGENCY_ADMIN on ACLManager, and DEFAULT_ADMIN on ALM MainnetController. SPK governance is off-chain Snapshot signaling; execution requires Sky Atlas updates and executive spells."
+          },
+          {
+            "title": "No Timelock on SubProxy Direct Execution",
+            "category": "centralization",
+            "severity": "high",
+            "description": "SubProxy.exec() performs immediate delegatecall execution for any address with wards. While StarGuard enforces a 7-day maxDelay for whitelisted proxy spells, the SubProxy contract itself has no built-in timelock. Sky Pause Proxy can authorize and execute changes without an on-chain delay at the SubProxy layer."
+          },
+          {
+            "title": "Unverified Arbitrum Spark Executor",
+            "category": "cross-chain",
+            "severity": "high",
+            "description": "Cross-chain governance on Arbitrum routes L1 SubProxy messages through ArbitrumReceiver (l1Authority=SubProxy) to Spark Executor 0x65d946…f7a1, which is unverified on-chain. This creates a governance asymmetry: mainnet contracts are verified and auditable, but the primary Arbitrum execution target cannot be source-audited."
+          },
+          {
+            "title": "Extreme Supply Concentration in Protocol-Controlled Wallets",
+            "category": "concentration",
+            "severity": "high",
+            "description": "On-chain balanceOf queries (June 2026) show top protocol addresses hold ~78% of total supply: Sky Pause Proxy 5.13B (51.4%), team/subDAO proxy 1.24B (12.4%), long-term treasury 600M (6.0%), stSPK vault 570M (5.7%), mid-term treasury 185M (1.9%), airdrops-legacy 61M (0.6%). Top-10 holder analysis (CoinLore/Etherscan) confirms ~89% held by top 10 addresses, overwhelmingly treasuries and vesting contracts—not retail distribution despite '65% to users' marketing framing."
+          },
+          {
+            "title": "Aggressive Year 1–2 Farming Emissions",
+            "category": "emission",
+            "severity": "high",
+            "description": "Sky Atlas farming schedule releases 1.625B SPK/year in years 1–2 (32.5% of total supply over 2 years), halving in subsequent biennial periods. On-chain farming reserve dropped from 6.5B to 5.13B, confirming ~1.37B already distributed. Against ~2.5B circulating supply, annualized farming inflation is ~65% in year 2—well above typical DeFi governance tokens and a sustained sell-pressure source unless demand absorbs emissions."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

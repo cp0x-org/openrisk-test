@@ -1,6 +1,6 @@
 {
   "protocolId": "compound",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -94,8 +94,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "5.9 · high",
+      "verbatim": "overallScore=5.9; riskLevel=high\n[critical] September 2021 COMP Distribution Bug (~$147M)\n[high] cUSDC Market Contract Unverified\n[high] cWBTC2 Market Contract Unverified\n[high] cAAVE and cMKR Market Contracts Unverified\n[high] Legacy Price Oracle (v1) Unverified but Still Referenced\n[high] GovernorBravoDelegate Listed Address Unverified and Stale\n[high] Demonstrated Governance Capture (Proposal 289)\n[high] Low Quorum Enables Plutocratic Capture",
+      "asOf": "2026-06-09",
+      "sourceUrl": "https://risklayer.online/protocol/compound.finance",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "5.9",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "high",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "4.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "5.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "6.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "6.0",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "compound.finance",
+        "overallScore": 5.9,
+        "riskLevel": "high",
+        "runNumber": 1,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 4.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 5.8,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 6.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 6,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 4.8,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "September 2021 COMP Distribution Bug (~$147M)",
+            "category": "incident",
+            "severity": "critical",
+            "description": "Proposal 62 upgraded the Comptroller with a single-character bug (> instead of >=) in distributeSupplierComp, causing ~280,000 COMP (~$80–147M at peak) to be over-distributed to users in cTUSD, cMKR, cSUSHI, cYFI, cAAVE, and cSAI markets. User collateral was not drained, but the Reservoir drip() replenished the vulnerable Comptroller, extending exposure. No admin kill-switch existed; fixes required the full 7-day governance cycle. ~163k COMP returned voluntarily; ~200k remained outstanding per Compound Labs post-mortem."
+          },
+          {
+            "title": "cUSDC Market Contract Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "cUSDC (0x39AA39c021dfbaE8faC545936693aC917d5E7563) holds significant V2 TVL but has no verified source on Etherscan. On-chain admin is the Timelock, yet bytecode cannot be independently audited for delegatecall routing, interest accrual, or liquidation hooks."
+          },
+          {
+            "title": "cWBTC2 Market Contract Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "cWBTC2 (0xccF4429DB6322D5C611ee964527D42E5d685DD6a) is an active CErc20Delegator with implementation 0x3363bae2fc44da742df13cd3ee94b6bb868ea376 and Timelock admin, but its delegator bytecode is unverified and cannot be source-audited."
+          },
+          {
+            "title": "cAAVE and cMKR Market Contracts Unverified",
+            "category": "verification",
+            "severity": "high",
+            "description": "cAAVE (0xe65cdb6479bac1e22340e4e755fae7e509ecd06c) and cMKR (0x95b4eF2869eBD94BEb4eEE400a99824BF5DC325b) are unverified CErc20Delegator instances administered by the Timelock. Users borrowing against these collateral markets rely on bytecode that cannot be reviewed."
+          },
+          {
+            "title": "Legacy Price Oracle (v1) Unverified but Still Referenced",
+            "category": "verification",
+            "severity": "high",
+            "description": "PriceOracleProxy (verified) stores v1PriceOracle at 0x02557a5e05defeffd4cae6d83ea3d173b272c904, which is unverified. The proxy falls back to v1 assetPrices() for several underlying assets. Any corruption or misconfiguration in the legacy oracle could affect collateral pricing for markets still routed through the proxy."
+          },
+          {
+            "title": "GovernorBravoDelegate Listed Address Unverified and Stale",
+            "category": "verification",
+            "severity": "high",
+            "description": "Discovery lists GovernorBravoDelegate at 0x30065B703DE5d473975A2db5bBB790A23FD6EFbD as unverified. On-chain, GovernorBravoDelegator (0xc0da…) currently points to implementation 0x6f6e4785c97885d26466945055d4ae8931be6f7a. The unverified address cannot be audited and may mislead reviewers about active governance logic."
+          },
+          {
+            "title": "Demonstrated Governance Capture (Proposal 289)",
+            "category": "governance-attack",
+            "severity": "high",
+            "description": "In July 2024, the Golden Boys delegate group (whale Humpy) narrowly passed Proposal 289 to allocate 499,000 COMP (~$24M) from the DAO treasury to a goldCOMP vault they controlled. Community and OpenZeppelin characterized it as a governance attack. The proposal was later cancelled in exchange for a COMP staking agreement, but the incident proves that concentrated COMP voting power can extract treasury value through standard governance mechanics."
+          },
+          {
+            "title": "Low Quorum Enables Plutocratic Capture",
+            "category": "voting-power",
+            "severity": "high",
+            "description": "GovernorBravo requires only 400,000 COMP (4% of 10M total supply) for quorum, verified as a constant in GovernorBravoDelegate. With proposal threshold at 25,000 COMP (0.25% of supply, verified on-chain), a well-capitalized actor can propose and pass treasury or parameter changes with a relatively small fraction of total COMP. Flash-loan proposal creation is blocked (votes checked at prior block), but vote buying, delegation concentration, and OTC COMP accumulation remain viable attack paths."
+          },
+          {
+            "title": "High COMP Holder and Governance Power Concentration",
+            "category": "concentration",
+            "severity": "high",
+            "description": "COMP voting power is concentrated among a small number of addresses. Academic analysis found the top-15 accounts hold 43.83% of circulating COMP, with Binance leading at 8.12%. On-chain verification (Jun 2026) confirms Binance hot wallet 0x28C6...1d60 holds 413,259 COMP (4.13%). a16z delegates ~361,000 COMP (~90% of governance quorum) but rarely votes. Whale Humpy accumulated 325k+ COMP to pass Proposal 289 (499k COMP treasury allocation). Low participation means quorum can be reached by ~3 voters on average."
+          },
+          {
+            "title": "2021 COMP Over-Distribution Bug and Partial Recovery",
+            "category": "distribution-bug",
+            "severity": "high",
+            "description": "Proposal 62 (Sept 30, 2021) introduced a critical bug in distributeSupplierComp: the condition `supplierIndex == 0 && supplyIndex > compInitialIndex` used `>` instead of `>=`, causing users in cTUSD, cMKR, cSUSHI, cYFI, cAAVE, and cSAI to accrue COMP from index 1e36 instead of zero. ~280,000 COMP (~$80–147M at peak) was over-distributed. Proposal 65 added a one-off fixBadAccruals() function and compReceivable debt tracking; on-chain verification confirms proposal65FixExecuted = true. ~163k COMP was voluntarily returned; ~200k remained outstanding per Compound Labs post-mortem."
+          },
+          {
+            "title": "Single Oracle Path With Governance-Replaceable Comptroller Oracle",
+            "category": "oracle",
+            "severity": "high",
+            "description": "The Comptroller reads all collateral and borrow prices exclusively from one PriceOracle instance via getUnderlyingPrice(). Admin (Timelock-gated) can atomically swap the entire oracle via _setPriceOracle(), redirecting all market pricing to an arbitrary contract. There is no on-chain secondary oracle or automatic fallback if the active oracle returns stale or malicious prices."
+          },
+          {
+            "title": "Last Third-Party Audit ~6 Years Stale vs Live Deployments",
+            "category": "audit-staleness",
+            "severity": "high",
+            "description": "The most recent OpenZeppelin audit (COMP distribution, May 2020) predates Governor Bravo migration, multiple Comptroller upgrades (including StdComptrollerG5 at 0xbafe01ff...), and numerous market listings. The September 2021 Proposal 62 Comptroller upgrade introduced a critical COMP over-distribution bug (> operator vs >=) that was not caught by any post-2020 audit."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "protocolId": "rocketpool",
-  "updatedAt": "2026-09-11T08:01:40.277Z",
+  "updatedAt": "2026-09-11T08:45:13.390Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,8 +14,177 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:01:40.277Z",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
         "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "c",
+      "label": "4.8 · medium",
+      "verbatim": "overallScore=4.8; riskLevel=medium\n[critical] Ethereum Beacon Chain Is a Non-Substitutable Foundation\n[high] 11 Unverified Core Contracts on Etherscan\n[high] Protocol Guardian Is an EOA\n[high] Saturn One MegapoolManager Unverified Despite Live TVL\n[high] Guardian Is Deployer EOA, Not Multisig\n[high] Security Council Has Single On-Chain Member\n[high] rETH Token Contract Source Is Unverified\n[high] oDAO Internal Oracle — No External Price Feed Fallback",
+      "asOf": "2026-06-09",
+      "sourceUrl": "https://risklayer.online/protocol/rocketpool.net",
+      "facets": [
+        {
+          "key": "overall_score",
+          "label": "Overall score",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "risk_level",
+          "label": "Risk level",
+          "value": "medium",
+          "valueType": "enum"
+        },
+        {
+          "key": "dependency_risk",
+          "label": "Dependency Risk",
+          "value": "6.2",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "governance_risk",
+          "label": "Governance Risk",
+          "value": "5.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "tokenomics_risk",
+          "label": "Tokenomics Risk",
+          "value": "5.5",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "audit_coverage_risk",
+          "label": "Audit Coverage Risk",
+          "value": "4.2",
+          "valueType": "score",
+          "scale": "0-10"
+        },
+        {
+          "key": "smart_contract_risk",
+          "label": "Smart Contract Risk",
+          "value": "4.8",
+          "valueType": "score",
+          "scale": "0-10"
+        }
+      ],
+      "raw": {
+        "domain": "rocketpool.net",
+        "overallScore": 4.8,
+        "riskLevel": "medium",
+        "runNumber": 1,
+        "dimensions": [
+          {
+            "name": "Dependency Risk",
+            "score": 6.2,
+            "weight": 0.25
+          },
+          {
+            "name": "Governance Risk",
+            "score": 5.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Tokenomics Risk",
+            "score": 5.5,
+            "weight": 0.25
+          },
+          {
+            "name": "Audit Coverage Risk",
+            "score": 4.2,
+            "weight": 0.25
+          },
+          {
+            "name": "Smart Contract Risk",
+            "score": 4.8,
+            "weight": 0.25
+          }
+        ],
+        "keyFindings": [
+          {
+            "title": "Ethereum Beacon Chain Is a Non-Substitutable Foundation",
+            "category": "consensus",
+            "severity": "critical",
+            "description": "All validator capital flows through the Ethereum deposit contract (casperDeposit). Megapool and minipool contracts call DepositInterface.deposit() to stake 32 ETH validators; rewards, exits, and withdrawals are entirely determined by consensus-layer behavior. A Beacon Chain halt, consensus failure, or deposit-contract bug would directly impair staking yield and withdrawal flows for all ~$900M TVL with no protocol-level fallback."
+          },
+          {
+            "title": "11 Unverified Core Contracts on Etherscan",
+            "category": "verification",
+            "severity": "high",
+            "description": "Eleven discovered contracts lack verified source on Etherscan, preventing independent bytecode-to-source auditing. This includes the rETH token (0xae78736Cd615f374D3085123A210448E74Fc6393), RocketMegapoolManager (Saturn One), RocketDAONodeTrusted (oDAO), RocketSwapRouter, RocketNetworkRevenues, RocketRewardsPool, RocketMinipoolFactory, RocketDAOProtocolVerifier, RocketDAOProtocolSettingsMegapool, the historical RocketStorage deployer/guardian EOA address, and Arbitrum RocketBalancerRateProvider. Source may exist in GitHub and audit reports but cannot be cryptographically matched to deployed bytecode without verification."
+          },
+          {
+            "title": "Protocol Guardian Is an EOA",
+            "category": "access-control",
+            "severity": "high",
+            "description": "RocketStorage guardian (0x0cCF14983364A7735d369879603930Afe10df21e) is an externally owned account with no multisig or timelock protection. While bootstrap mode is disabled on-chain and guardian powers are reduced post-deployment, the guardian can still initiate a two-step guardianship transfer via setGuardian/confirmGuardian. Compromise of this private key remains a single point of failure for emergency guardian rotation."
+          },
+          {
+            "title": "Saturn One MegapoolManager Unverified Despite Live TVL",
+            "category": "verification",
+            "severity": "high",
+            "description": "RocketMegapoolManager (0xf2CCd522Ba5fFEda28fe0389963845D61F342034) orchestrates Saturn One megapool lifecycle but is unverified on Etherscan. Related RocketMegapoolFactory and RocketMegapoolDelegate are verified, but the manager contract that coordinates validator creation, bonding, and queueing cannot be independently audited at bytecode level."
+          },
+          {
+            "title": "Guardian Is Deployer EOA, Not Multisig",
+            "category": "centralization",
+            "severity": "high",
+            "description": "On-chain getGuardian() on RocketStorage (0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46) returns 0x0ccf14983364a7735d369879603930afe10df21e, classified as the RocketStorage Deployer. Verified as an EOA (no contract code, getOwners/getThreshold revert empty). This contradicts RPIP-14's documented 8/14 oDAO multisig guardian. While bootstrap mode is disabled (limiting unilateral setting changes), the guardian retains setGuardian()/confirmGuardian() power to transfer guardianship in a two-step process without timelock."
+          },
+          {
+            "title": "Security Council Has Single On-Chain Member",
+            "category": "centralization",
+            "severity": "high",
+            "description": "RocketDAOSecurity (0x84ae6d61df5c6ba7196b5c76bcb112b8a689ad37) reports getMemberCount()=1 with sole member 0x6c565af34f15de064b56afedf7b0f59c15bb20fe. Houston design intended a multisig-style council for rapid incident response with member quorum. A single-member council effectively grants one address fast-path authority to propose and execute security setting changes, undermining the intended distributed emergency control."
+          },
+          {
+            "title": "rETH Token Contract Source Is Unverified",
+            "category": "transparency",
+            "severity": "high",
+            "description": "RocketTokenRETH (0xae78736Cd615f374D3085123A210448E74Fc6393) — the contract users hold — has no verified source on Etherscan, preventing independent audit of mint/burn/getEthValue logic. Deposit pool references mint() and depositExcess() on this contract; behavior is inferred from surrounding verified contracts only."
+          },
+          {
+            "title": "oDAO Internal Oracle — No External Price Feed Fallback",
+            "category": "oracle",
+            "severity": "high",
+            "description": "rETH exchange rate (RocketNetworkBalances) and RPL price (RocketNetworkPrices) are set exclusively by oDAO trusted nodes via multi-sig-style quorum voting. On-chain: 10 oDAO members, 51% consensus threshold, 24h minimum update frequency, 2% max rETH rate delta per update (RPIP-61). There is no Chainlink, Pyth, or other third-party oracle fallback. If ≥6 of 10 oDAO nodes collude, censor updates, or go offline, oracle updates stall—delaying rETH mint/burn pricing and RPL-denominated logic. A 2022 incident compromised two oDAO operator hot wallets (node funds, not protocol TVL)."
+          },
+          {
+            "title": "L2 rETH Relies on Canonical Rollup Bridges",
+            "category": "bridge",
+            "severity": "high",
+            "description": "rETH on Arbitrum and Optimism is bridged via each chain's canonical token bridge—not a Rocket Pool–controlled bridge. Optimism L2 rETH (0x9Bcef72be871E61ed4fbbc7630889Bee758Eb81d) mints/burns only through the L2StandardBridge predeploy (0x4200…0010), pegged to mainnet rETH (0xae78736Cd615f374D3085123A210448E74Fc6393). A canonical bridge exploit or governance failure on Arbitrum/Optimism could create unbacked L2 rETH or freeze bridging; Rocket Pool has no independent circuit breaker on L2."
+          },
+          {
+            "title": "11 Unverified Contracts Block Source-to-Bytecode Audit Confirmation",
+            "category": "verification-gap",
+            "severity": "high",
+            "description": "Per VERIFICATION_STATUS.md, 11 of 37 tracked contracts lack Etherscan/Arbiscan source verification. These include RocketMegapoolManager, RocketMinipoolFactory, RocketRewardsPool, RocketNetworkRevenues, RocketTokenRETH (rETH), RocketDAONodeTrusted (oDAO), RocketDAOProtocolVerifier, RocketDAOProtocolSettingsMegapool, RocketSwapRouter, RocketStorage Deployer, and RocketBalancerRateProvider (Arbitrum). Without verified source, independent analysts cannot confirm deployed bytecode matches audited repositories — a major gap for adversarial review even when audits exist."
+          },
+          {
+            "title": "Saturn One Post-Audit Deployment Uncertainty",
+            "category": "audit-gap",
+            "severity": "high",
+            "description": "Bailsec Saturn One follow-up reviews (Nov 2025–Jan 2026) noted that post-audit code changes introduced new fund-theft and DoS vectors, reducing confidence in vulnerability-free deployment. The Jan 2026 follow-up explicitly excluded two contracts. Governance discussion (dao.rocketpool.net/t/verifying-1-4-contract-upgrade/3890) acknowledges more uncertainty than prior upgrades between last auditor touchpoint and mainnet deployment tag."
+          },
+          {
+            "title": "Oct 2021 Withdrawal-Credentials Frontrunning Vulnerability",
+            "category": "incident",
+            "severity": "high",
+            "description": "Whitehat Dmitri Tsumak (StakeWise) reported via Immunefi a critical industry-wide exploit allowing malicious node operators to front-run deposits and set validator withdrawal credentials to attacker-controlled addresses, potentially stealing pooled ETH. Rocket Pool delayed its planned Oct 6 launch, implemented oDAO minipool scrubbing verification, and paid the $100k maximum bounty. Independent sources (CoinDesk, Immunefi, Lido) confirm the vulnerability was never exploited in production and affected multiple staking protocols."
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectorId": "risklayer"
       }
     }
   }
