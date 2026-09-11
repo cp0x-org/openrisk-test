@@ -1,6 +1,6 @@
 {
   "protocolId": "curve",
-  "updatedAt": "2026-09-11T07:46:10.201Z",
+  "updatedAt": "2026-09-11T08:01:40.277Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectedAt": "2026-09-11T08:01:40.277Z",
         "collectorId": "defiscan"
       }
     }
