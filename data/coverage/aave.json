@@ -1,6 +1,6 @@
 {
   "protocolId": "aave",
-  "updatedAt": "2026-09-10T20:24:01.058Z",
+  "updatedAt": "2026-09-11T02:54:25.363Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -10,7 +10,7 @@
       "sourceUrl": "https://www.defiscan.info/protocols/aave/ethereum",
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-10T20:24:01.058Z",
+        "collectedAt": "2026-09-11T02:54:25.363Z",
         "collectorId": "defiscan"
       },
       "facets": [
