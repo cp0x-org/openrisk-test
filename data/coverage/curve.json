@@ -1,6 +1,6 @@
 {
   "protocolId": "curve",
-  "updatedAt": "2026-09-11T08:45:13.390Z",
+  "updatedAt": "2026-09-11T15:19:51.274Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectedAt": "2026-09-11T15:19:51.274Z",
         "collectorId": "defiscan"
       }
     },
@@ -242,7 +242,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T08:45:13.390Z",
+        "collectedAt": "2026-09-11T15:19:51.274Z",
         "collectorId": "risklayer"
       }
     }
