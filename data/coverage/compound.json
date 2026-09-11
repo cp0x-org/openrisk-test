@@ -1,6 +1,6 @@
 {
   "protocolId": "compound",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 0. Compound-v3 is a lending protocol that accepts a base asset as liquidity and allows borrowing this base asset with a variety of other assets as collateral. Multiple base assets are supported such as USDC, WETH, USDT, wstETH, and USDS. Each base asset represents an isolated lending market managed by a separate instance of the protocol. Compound governance is able to update various parameters for each of these markets.",
       "asOf": "2025-03-18",
       "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -77,19 +72,8 @@
               "H",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "2025-03-18",
-            "updateDate": null,
             "path": "src/content/protocols/compound-v3/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "High",
-              "autonomy": "High",
-              "exit_window": "High",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/compound-v3/ethereum"
           },
           {
             "slug": "compound-v2",
@@ -103,21 +87,15 @@
               "H",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "1970-01-01",
-            "updateDate": null,
             "path": "src/content/protocols/compound-v2/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/compound-v2/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "High",
-              "autonomy": "High",
-              "exit_window": "High",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/compound-v2/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

@@ -15,10 +15,9 @@ No paid infra is required. No custom API keys are required for DefiLlama or DeFi
 Every 6 hours (UTC) ──► workflow "Collect data"
                               │
                               ├─ npm run collect
-                              │     DefiLlama → data/live/tvl.json
-                              │     DeFiScan  → data/coverage/*/assessments.defiscan
-                              │                 + data/live/feeds/defiscan.json
-                              │     snapshot  → data/snapshot.json
+                              ├─ 1. DefiLlama → data/live/tvl.json
+                              ├─ 2. feeds     → data/coverage + data/live/feeds/
+                              └─ 3. snapshot  → data/snapshot.json
                               │
                               └─ git commit + push (if anything changed)
                                         │
@@ -233,9 +232,10 @@ npm run dev
 | --- | --- |
 | Force a data refresh | Actions → Collect data → Run workflow |
 | Change collect interval | Edit cron in `.github/workflows/collect.yml` |
-| Add a DeFiScan mapping | Edit `collectors/config/feeds/defiscan.json`, push |
+| Add a risk feed | PR with only `collectors/src/feeds/<id>.ts` (see CONTRIBUTING) |
 | Fix coverage by hand | PR against `data/coverage/<protocol>.json` (see `docs/CONTRIBUTING.md`) |
-| Disable a collector | Set `"enabled": false` in `collectors/config/collectors.json` |
+| Disable DefiLlama / snapshot | Edit `enabled` in `collectors/config/collectors.json` |
+| Disable one feed | Set `enabled: false` inside that feed’s `.ts` module |
 | Rename the GitHub repo | Update nothing in code if you keep using `VITE_BASE: /${{ github.event.repository.name }}/` — it follows the new name on next Pages build |
 
 ---

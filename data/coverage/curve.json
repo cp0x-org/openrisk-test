@@ -1,6 +1,6 @@
 {
   "protocolId": "curve",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 0. Curve Finance is a protocol consisting of a _Decentralized Exchange (DEX)_ focused on stablecoin and correlated-asset swaps, _Isolated Lending Markets (Llamalend)_, and a _Stablecoin (crvUSD)_. Governance of the entire protocol is managed entirely through the _Curve DAO_, using a vote-escrowed token model (veCRV) where voting power is proportional to the amount of `CRV` locked and the remaining lock duration (up to four years).",
       "asOf": "1970-01-01",
       "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -71,20 +66,15 @@
               "H",
               "M"
             ],
-            "reasons": [],
-            "publishDate": "1970-01-01",
-            "updateDate": null,
             "path": "src/content/protocols/curve-finance/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "High",
-              "autonomy": "Low",
-              "exit_window": "High",
-              "accessibility": "Medium"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/curve-finance/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

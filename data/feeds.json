@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-10T07:14:22.851Z",
+  "updatedAt": "2026-09-11T07:46:10.200Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -12,5 +12,5 @@
       "methodologyUrl": "https://deficollective.org/blog/introducing-defiscan/"
     }
   ],
-  "note": "Only feeds with an automated collector. Add entries when a new collector ships."
+  "note": "Generated from collectors/src/feeds/*.ts during collect. Do not edit by hand."
 }

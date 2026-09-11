@@ -1,6 +1,6 @@
 {
   "protocolId": "liquity",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 2. Liquity is a decentralized borrowing protocol that allows you to draw interest-free loans against Ether used as collateral. Loans are paid out in LUSD (a USD pegged stablecoin) and need to maintain a minimum collateral ratio of 110%. In addition to the collateral, the loans are secured by a Stability Pool containing LUSD and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms under Liquidation.",
       "asOf": "2024-10-23",
       "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -71,21 +66,15 @@
               "L",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "2024-10-23",
-            "updateDate": null,
             "path": "src/content/protocols/liquity/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "Low",
-              "autonomy": "Low",
-              "exit_window": "Low",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

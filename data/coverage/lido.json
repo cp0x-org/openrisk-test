@@ -1,6 +1,6 @@
 {
   "protocolId": "lido",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 0. _Lido V2_ is a liquid-staking protocol. Liquid staking allows users to deposit `ETH` for staking to a set of _Node Operators_ who run validators with `ETH` staked in Lido. In exchange for depositing `ETH` users get `stETH`, _Liquid staked Ether_, a token issued by Lido which represents the staked `ETH`. This token can then be used throughout DeFi in other protocols, for example, as collateral. Lido takes a 10% fee on the yield, split between the _Lido Treasury_ and _Node Operators_. _Lido V2_ uses a system of _Staking Modules_ as explained in the [Protocol Analysis](#protocol-analysis). Each _Staking Module_ has its own set of _Node Operators_, incentive mechanisms, and potential penalties. Currently three modules exist: the _Curated_, _Simple-DVT_, and _Community_ staking modules. Validators in the first two have to be approved by _Lido Governance_, whereas anyone can become a _Node Operator_ for the _Community Staking Module_ by depositing a bond.",
       "asOf": "2025-06-19",
       "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -71,21 +66,15 @@
               "H",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "2025-06-19",
-            "updateDate": null,
             "path": "src/content/protocols/lido-v2/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "High",
-              "autonomy": "Low",
-              "exit_window": "High",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/lido-v2/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

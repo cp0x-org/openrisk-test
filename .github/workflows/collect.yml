@@ -3,11 +3,9 @@ name: Collect data
 on:
   schedule:
     # Every 6 hours
-    - cron: "0 */6 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
-    # Do NOT watch data/coverage or data/live — collectors write those and
-    # would re-trigger themselves forever (timestamp churn every run).
     paths:
       - "data/protocols/**"
       - "data/feeds.json"

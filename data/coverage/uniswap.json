@@ -1,6 +1,6 @@
 {
   "protocolId": "uniswap",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "p",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 2. Uniswap v3 is an AMM that builds upon Uniswap v2 by introducing a concentrated liquidity model, providing liquidity providers with granular control over capital allocation. Unlike v2, where liquidity is distributed uniformly across all price ranges, v3 allows LPs to specify custom price ranges in which their liquidity is active. This approach significantly improves capital efficiency, as LPs can concentrate their assets in high-demand price ranges, earning fees only within those specified ranges. Uniswap v3 also introduces multiple fee tiers (0.01%, 0.05%, 0.3%, and 1%) to support different asset volatility profiles, allowing LPs to adjust their fee preferences based on expected risk and return. Additionally, it incorporates \"range orders,\" which effectively turn liquidity positions into limit orders, further enhancing LP strategy flexibility. The protocol is deployed across multiple chains enabling a wide range of use cases across decentralized finance (DeFi) applications. [Partial: DeFiScan covers Uniswap v2/v3; v4 / UniswapX not reviewed as one family entry]",
       "asOf": "2025-01-31",
       "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -77,19 +72,8 @@
               "L",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "2025-01-08",
-            "updateDate": "2025-01-31",
             "path": "src/content/protocols/uniswap-v3/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeabillity": "Low",
-              "autonomy": "Low",
-              "exit": "Low",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v3/ethereum"
           },
           {
             "slug": "uniswap-v2",
@@ -103,21 +87,15 @@
               "L",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "2025-01-22",
-            "updateDate": null,
             "path": "src/content/protocols/uniswap-v2/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v2/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeabillity": "Low",
-              "autonomy": "Low",
-              "exit": "Low",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/uniswap-v2/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "protocolId": "pendle",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 0. Pendle is a yield-trading protocol that enables users to manage and optimize their yield exposure. By tokenizing yield-bearing assets into standardized yield tokens (SY), Pendle allows these assets to be split into principal tokens (PT) and yield tokens (YT). This separation facilitates various strategies, including earning fixed yields, speculating on future yield changes, and providing liquidity to earn additional rewards. Pendle's Automated Market Maker (AMM) is specifically designed to handle the trading of these assets.",
       "asOf": "1970-01-01",
       "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -71,20 +66,15 @@
               "H",
               "H"
             ],
-            "reasons": [],
-            "publishDate": "1970-01-01",
-            "updateDate": null,
             "path": "src/content/protocols/pendle/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "High",
-              "autonomy": "Low",
-              "exit_window": "High",
-              "accessibility": "High"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/pendle/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

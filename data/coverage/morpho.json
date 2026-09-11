@@ -1,6 +1,6 @@
 {
   "protocolId": "morpho",
-  "updatedAt": "2026-09-11T02:54:25.363Z",
+  "updatedAt": "2026-09-11T07:46:10.201Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -8,11 +8,6 @@
       "verbatim": "Stage 1. Morpho is a lending protocol with permissionless market creation. It enables the deployment of minimal and isolated lending markets by specifying: one collateral asset, one loan asset, a Liquidation Loan To Value (LLTV), an Interest Rate Model (IRM), and an oracle. Users may lend funds directly on individual Morpho Markets or through Morpho Vaults. These vaults are created permissionlessly by third parties, or risk curators, and offer managed lending strategies by aggregating different Morpho Markets. Morpho governance operates within a very limited scope and without direct control over the Morpho protocol.",
       "asOf": "2025-05-21",
       "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
-      "collection": {
-        "method": "git",
-        "collectedAt": "2026-09-11T02:54:25.363Z",
-        "collectorId": "defiscan"
-      },
       "facets": [
         {
           "key": "stage",
@@ -71,21 +66,15 @@
               "M",
               "L"
             ],
-            "reasons": [],
-            "publishDate": "2025-05-21",
-            "updateDate": null,
             "path": "src/content/protocols/morpho/ethereum.md",
-            "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum",
-            "scoreLines": {
-              "chain": "Low",
-              "upgradeability": "Medium",
-              "autonomy": "Medium",
-              "exit_window": "Medium",
-              "accessibility": "Low",
-              "overall": "Stage"
-            }
+            "sourceUrl": "https://www.defiscan.info/protocols/morpho/ethereum"
           }
         ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-11T07:46:10.201Z",
+        "collectorId": "defiscan"
       }
     }
   }

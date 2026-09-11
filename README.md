@@ -27,10 +27,11 @@ web/                  # React + TypeScript UI (GitHub Pages)
 GitHub Actions (cron)
         │
         ▼
- collectors (read collectors/config + data/protocols)
+ npm run collect — 3 stages
         │
-        ├── DefiLlama → data/live/tvl.json
-        └── snapshot  → data/snapshot.json
+        ├── 1. DefiLlama  → data/live/tvl.json
+        ├── 2. feeds[]    → data/coverage + data/live/feeds/<id>.json
+        └── 3. snapshot   → data/snapshot.json
         │
         ▼
   commit + push to GitHub
@@ -44,24 +45,26 @@ GitHub Actions (cron)
 
 ```bash
 npm install
-npm run collect          # live TVL + snapshot
+npm run collect          # DefiLlama → feeds → snapshot
 npm run dev              # Vite UI at http://localhost:5173
 ```
 
 Useful scripts:
 
-- `npm run collect` — DefiLlama TVL + DeFiScan coverage + snapshot
-- `npm run build:snapshot` — rebuild `data/snapshot.json` without hitting DefiLlama
+- `npm run collect` — full 3-stage collect
+- `npm run build:snapshot` — rebuild `data/snapshot.json` only
 - `npm run build` — snapshot + production web build
 
-### Feed collectors
+### Collect stages
 
-| Collector | Source | Writes |
+| Stage | What | Writes |
 | --- | --- | --- |
-| `defillama` | DefiLlama API | `data/live/tvl.json` |
-| `defiscan` | GitHub `deficollective/defiscan` reviews | `data/live/feeds/defiscan.json` + `data/coverage/*/assessments.defiscan` |
+| 1. DefiLlama | TVL metrics (not a risk feed) | `data/live/tvl.json` |
+| 2. Feeds | Auto-discover `collectors/src/feeds/*.ts` → validate → `run()` → persist | `data/coverage/*`, `data/live/feeds/`, `data/feeds.json` |
+| 3. Snapshot | UI assembly | `data/snapshot.json` |
 
-Universal assessment shape: [`docs/DATA_SCHEMA.md`](./docs/DATA_SCHEMA.md).
+Toggle DefiLlama / snapshot in `collectors/config/collectors.json`.  
+New risk feeds = one file under `collectors/src/feeds/` (see [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md)).
 
 ## GitHub Pages
 

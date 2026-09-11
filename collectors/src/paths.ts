@@ -86,6 +86,14 @@ export type CoverageFile = {
 };
 
 export type CollectorsConfig = {
-  collectors: Array<{ id: string; enabled: boolean; description: string }>;
-  defillama: { baseUrl: string; preferEthereumTvl: boolean };
+  defillama: {
+    enabled: boolean;
+    baseUrl: string;
+    preferEthereumTvl: boolean;
+    description?: string;
+  };
+  snapshot: {
+    enabled: boolean;
+    description?: string;
+  };
 };

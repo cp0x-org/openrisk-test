@@ -1,23 +1,12 @@
 {
-  "collectors": [
-    {
-      "id": "defillama",
-      "enabled": true,
-      "description": "Live TVL / volume from DefiLlama for configured protocol slugs"
-    },
-    {
-      "id": "defiscan",
-      "enabled": true,
-      "description": "DeFiScan decentralization stages + risk radar from GitHub reviews (ethereum)"
-    },
-    {
-      "id": "snapshot",
-      "enabled": true,
-      "description": "Assemble data/snapshot.json for the GitHub Pages frontend"
-    }
-  ],
   "defillama": {
+    "enabled": true,
     "baseUrl": "https://api.llama.fi",
-    "preferEthereumTvl": true
+    "preferEthereumTvl": true,
+    "description": "Stage 1 — live TVL / volume metrics (not a risk feed)"
+  },
+  "snapshot": {
+    "enabled": true,
+    "description": "Stage 3 — assemble data/snapshot.json for the GitHub Pages UI"
   }
 }
