@@ -1,6 +1,6 @@
 {
   "protocolId": "spark",
-  "updatedAt": "2026-09-11T15:19:51.274Z",
+  "updatedAt": "2026-09-12T01:44:34.091Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -242,7 +242,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     }

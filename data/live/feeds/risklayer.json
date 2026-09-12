@@ -2,7 +2,7 @@
   "version": 1,
   "feedId": "risklayer",
   "name": "Risklayer",
-  "collectedAt": "2026-09-11T15:19:51.274Z",
+  "collectedAt": "2026-09-12T01:44:34.091Z",
   "protocols": {
     "aave": {
       "status": "c",
@@ -169,7 +169,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -185,7 +185,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -354,7 +354,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -370,7 +370,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -539,7 +539,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -555,7 +555,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -571,7 +571,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -587,7 +587,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -756,7 +756,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -772,7 +772,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -788,7 +788,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -957,7 +957,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -973,7 +973,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -989,7 +989,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -1158,7 +1158,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -1327,7 +1327,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -1496,7 +1496,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -1665,7 +1665,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -1681,7 +1681,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     },
@@ -1697,7 +1697,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "risklayer"
       }
     }

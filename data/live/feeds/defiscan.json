@@ -2,7 +2,7 @@
   "version": 1,
   "feedId": "defiscan",
   "name": "DeFiScan",
-  "collectedAt": "2026-09-11T15:19:51.274Z",
+  "collectedAt": "2026-09-12T01:44:34.091Z",
   "protocols": {
     "aave": {
       "status": "c",
@@ -75,7 +75,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -91,7 +91,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -187,7 +187,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -203,7 +203,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -278,7 +278,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -294,7 +294,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -310,7 +310,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -326,7 +326,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -401,7 +401,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -476,7 +476,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -492,7 +492,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -567,7 +567,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -583,7 +583,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -599,7 +599,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -674,7 +674,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -690,7 +690,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -765,7 +765,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -861,7 +861,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -877,7 +877,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     },
@@ -893,7 +893,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-11T15:19:51.274Z",
+        "collectedAt": "2026-09-12T01:44:34.091Z",
         "collectorId": "defiscan"
       }
     }
