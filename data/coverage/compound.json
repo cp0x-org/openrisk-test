@@ -1,6 +1,6 @@
 {
   "protocolId": "compound",
-  "updatedAt": "2026-09-12T14:27:46.237Z",
+  "updatedAt": "2026-09-13T01:34:57.361Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -94,7 +94,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-12T14:27:46.237Z",
+        "collectedAt": "2026-09-13T01:34:57.361Z",
         "collectorId": "defiscan"
       }
     },
@@ -263,7 +263,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-12T14:27:46.237Z",
+        "collectedAt": "2026-09-13T01:34:57.361Z",
         "collectorId": "risklayer"
       }
     }
