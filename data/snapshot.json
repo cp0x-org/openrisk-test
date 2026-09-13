@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T01:35:01.785Z",
-  "liveUpdatedAt": "2026-09-13T01:34:57.345Z",
+  "generatedAt": "2026-09-13T15:09:00.966Z",
+  "liveUpdatedAt": "2026-09-13T15:08:52.523Z",
   "meta": {
     "version": 1,
     "project": "openrisk",
@@ -84,8 +84,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 15512007885.101906,
-      "ethereumTvlUsd": 15512007885.101906,
+      "tvlUsd": 15326394343.345413,
+      "ethereumTvlUsd": 15326394343.345413,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -159,7 +159,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -328,12 +328,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "balancer",
@@ -355,8 +355,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 41464953.53369233,
-      "ethereumTvlUsd": 41464953.53369233,
+      "tvlUsd": 41103121.221180096,
+      "ethereumTvlUsd": 41103121.221180096,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -371,7 +371,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -387,12 +387,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "compound",
@@ -414,8 +414,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1438379912.6990798,
-      "ethereumTvlUsd": 1438379912.6990798,
+      "tvlUsd": 1418602214.4758077,
+      "ethereumTvlUsd": 1418602214.4758077,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -510,7 +510,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -679,12 +679,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "cowswap",
@@ -720,7 +720,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -736,12 +736,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "curve",
@@ -762,8 +762,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1476577448.1041913,
-      "ethereumTvlUsd": 1476577448.1041913,
+      "tvlUsd": 1469485447.5231137,
+      "ethereumTvlUsd": 1469485447.5231137,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -837,7 +837,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1006,12 +1006,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "euler",
@@ -1031,8 +1031,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 65124305.70857893,
-      "ethereumTvlUsd": 65124305.70857893,
+      "tvlUsd": 64951251.092175394,
+      "ethereumTvlUsd": 64951251.092175394,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1047,7 +1047,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1063,12 +1063,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "fluid",
@@ -1090,8 +1090,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 989253567.3199899,
-      "ethereumTvlUsd": 989253567.3199899,
+      "tvlUsd": 972737409.419935,
+      "ethereumTvlUsd": 972737409.419935,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1106,7 +1106,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1122,12 +1122,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "gearbox",
@@ -1147,8 +1147,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 20705954.682936884,
-      "ethereumTvlUsd": 20705954.682936884,
+      "tvlUsd": 20299040.579565406,
+      "ethereumTvlUsd": 20299040.579565406,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1163,7 +1163,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1179,12 +1179,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "lido",
@@ -1205,8 +1205,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 24443148954.684216,
-      "ethereumTvlUsd": 24443148954.684216,
+      "tvlUsd": 23926795772.18964,
+      "ethereumTvlUsd": 23926795772.18964,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1280,7 +1280,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1449,12 +1449,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "liquity",
@@ -1476,8 +1476,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 280511410.76098526,
-      "ethereumTvlUsd": 280511410.76098526,
+      "tvlUsd": 274985853.3809021,
+      "ethereumTvlUsd": 274985853.3809021,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1551,7 +1551,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1567,12 +1567,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "mellow",
@@ -1592,8 +1592,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 278849712.88371515,
-      "ethereumTvlUsd": 278849712.88371515,
+      "tvlUsd": 274106796.3569981,
+      "ethereumTvlUsd": 274106796.3569981,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1608,7 +1608,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1624,12 +1624,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "morpho",
@@ -1649,8 +1649,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 4470662186.26726,
-      "ethereumTvlUsd": 4470662186.26726,
+      "tvlUsd": 4463535345.505,
+      "ethereumTvlUsd": 4463535345.505,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1724,7 +1724,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1893,12 +1893,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "morphovaults",
@@ -1932,7 +1932,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -1948,12 +1948,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "oneinch",
@@ -1974,8 +1974,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2916738.9768542834,
-      "ethereumTvlUsd": 2916738.9768542834,
+      "tvlUsd": 2872852.507373954,
+      "ethereumTvlUsd": 2872852.507373954,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1990,7 +1990,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -2006,12 +2006,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "pendle",
@@ -2031,8 +2031,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 681299812.6521308,
-      "ethereumTvlUsd": 681299812.6521308,
+      "tvlUsd": 685349041.7405192,
+      "ethereumTvlUsd": 685349041.7405192,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2106,7 +2106,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -2275,12 +2275,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "rocketpool",
@@ -2300,8 +2300,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1317750196.5987144,
-      "ethereumTvlUsd": 1317750196.5987144,
+      "tvlUsd": 1291379403.0616326,
+      "ethereumTvlUsd": 1291379403.0616326,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2316,7 +2316,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -2485,12 +2485,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "spark",
@@ -2513,8 +2513,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 8050448915.726066,
-      "ethereumTvlUsd": 8050448915.726066,
+      "tvlUsd": 7971547534.930262,
+      "ethereumTvlUsd": 7971547534.930262,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2588,7 +2588,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -2757,12 +2757,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "uniswap",
@@ -2786,8 +2786,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2399783281.933838,
-      "ethereumTvlUsd": 2399783281.933838,
+      "tvlUsd": 2386463902.9602747,
+      "ethereumTvlUsd": 2386463902.9602747,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2882,7 +2882,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -3051,12 +3051,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "yearn",
@@ -3076,8 +3076,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 206567711.81349638,
-      "ethereumTvlUsd": 206567711.81349638,
+      "tvlUsd": 212407368.46138337,
+      "ethereumTvlUsd": 212407368.46138337,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -3092,7 +3092,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -3108,12 +3108,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     },
     {
       "id": "zerox",
@@ -3150,7 +3150,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "defiscan"
           }
         },
@@ -3166,12 +3166,12 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-13T01:34:57.361Z",
+            "collectedAt": "2026-09-13T15:08:52.541Z",
             "collectorId": "risklayer"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-13T01:34:57.361Z"
+      "coverageUpdatedAt": "2026-09-13T15:08:52.541Z"
     }
   ],
   "kpis": {
@@ -3179,7 +3179,7 @@
     "feedCount": 2,
     "cellsAssessed": 40,
     "coveragePct": 45,
-    "fundsAtRiskUsd": 61672536210.4708,
+    "fundsAtRiskUsd": 60800143846.24379,
     "coveredCells": 17,
     "partialCells": 1
   }
