@@ -1,6 +1,6 @@
 {
   "protocolId": "pendle",
-  "updatedAt": "2026-09-13T15:08:52.541Z",
+  "updatedAt": "2026-09-14T01:53:25.910Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-13T15:08:52.541Z",
+        "collectedAt": "2026-09-14T01:53:25.910Z",
         "collectorId": "defiscan"
       }
     },
@@ -242,7 +242,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-13T15:08:52.541Z",
+        "collectedAt": "2026-09-14T01:53:25.910Z",
         "collectorId": "risklayer"
       }
     }
