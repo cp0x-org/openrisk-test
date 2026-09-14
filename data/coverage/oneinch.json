@@ -1,6 +1,6 @@
 {
   "protocolId": "oneinch",
-  "updatedAt": "2026-09-14T01:53:25.910Z",
+  "updatedAt": "2026-09-14T17:06:04.021Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-14T01:53:25.910Z",
+        "collectedAt": "2026-09-14T17:06:04.021Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,7 +30,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-14T01:53:25.910Z",
+        "collectedAt": "2026-09-14T17:06:04.021Z",
         "collectorId": "risklayer"
       }
     }

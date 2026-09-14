@@ -1,11 +1,11 @@
 {
   "version": 1,
   "source": "defillama",
-  "updatedAt": "2026-09-14T01:53:25.896Z",
+  "updatedAt": "2026-09-14T17:06:04.005Z",
   "protocols": {
     "aave": {
-      "tvlUsd": 15298743543.001938,
-      "ethereumTvlUsd": 15298743543.001938,
+      "tvlUsd": 15452544640.849398,
+      "ethereumTvlUsd": 15452544640.849398,
       "volume24hUsd": null,
       "defillamaSlug": "aave-v3",
       "defillamaSlugs": [
@@ -25,8 +25,8 @@
       ]
     },
     "balancer": {
-      "tvlUsd": 39609498.44963624,
-      "ethereumTvlUsd": 39609498.44963624,
+      "tvlUsd": 41375781.31935125,
+      "ethereumTvlUsd": 41375781.31935125,
       "volume24hUsd": null,
       "defillamaSlug": "balancer-v2",
       "defillamaSlugs": [
@@ -43,8 +43,8 @@
       ]
     },
     "compound": {
-      "tvlUsd": 1422755730.8166225,
-      "ethereumTvlUsd": 1422755730.8166225,
+      "tvlUsd": 1446663611.275835,
+      "ethereumTvlUsd": 1446663611.275835,
       "volume24hUsd": null,
       "defillamaSlug": "compound-v3",
       "defillamaSlugs": [
@@ -74,8 +74,8 @@
       ]
     },
     "curve": {
-      "tvlUsd": 1470116544.6443734,
-      "ethereumTvlUsd": 1470116544.6443734,
+      "tvlUsd": 1480982042.9938576,
+      "ethereumTvlUsd": 1480982042.9938576,
       "volume24hUsd": null,
       "defillamaSlug": "curve-dex",
       "defillamaSlugs": [
@@ -91,8 +91,8 @@
       ]
     },
     "euler": {
-      "tvlUsd": 49159335.95790103,
-      "ethereumTvlUsd": 49159335.95790103,
+      "tvlUsd": 65020058.67854608,
+      "ethereumTvlUsd": 65020058.67854608,
       "volume24hUsd": null,
       "defillamaSlug": "euler-v2",
       "defillamaSlugs": [
@@ -106,8 +106,8 @@
       ]
     },
     "fluid": {
-      "tvlUsd": 972763602.6089075,
-      "ethereumTvlUsd": 972763602.6089075,
+      "tvlUsd": 980222533.1880028,
+      "ethereumTvlUsd": 980222533.1880028,
       "volume24hUsd": null,
       "defillamaSlug": "fluid-lending",
       "defillamaSlugs": [
@@ -124,8 +124,8 @@
       ]
     },
     "gearbox": {
-      "tvlUsd": 20389981.810587995,
-      "ethereumTvlUsd": 20389981.810587995,
+      "tvlUsd": 20593039.555446688,
+      "ethereumTvlUsd": 20593039.555446688,
       "volume24hUsd": null,
       "defillamaSlug": "gearbox",
       "defillamaSlugs": [
@@ -138,8 +138,8 @@
       ]
     },
     "lido": {
-      "tvlUsd": 24068491166.669037,
-      "ethereumTvlUsd": 24068491166.669037,
+      "tvlUsd": 24286839433.04084,
+      "ethereumTvlUsd": 24286839433.04084,
       "volume24hUsd": null,
       "defillamaSlug": "lido",
       "defillamaSlugs": [
@@ -152,8 +152,8 @@
       ]
     },
     "liquity": {
-      "tvlUsd": 276105649.1696977,
-      "ethereumTvlUsd": 276105649.1696977,
+      "tvlUsd": 278707651.7708973,
+      "ethereumTvlUsd": 278707651.7708973,
       "volume24hUsd": null,
       "defillamaSlug": "liquity-v1",
       "defillamaSlugs": [
@@ -168,8 +168,8 @@
       ]
     },
     "mellow": {
-      "tvlUsd": 274688450.84795445,
-      "ethereumTvlUsd": 274688450.84795445,
+      "tvlUsd": 276932990.21598786,
+      "ethereumTvlUsd": 276932990.21598786,
       "volume24hUsd": null,
       "defillamaSlug": "mellow",
       "defillamaSlugs": [
@@ -184,8 +184,8 @@
       ]
     },
     "morpho": {
-      "tvlUsd": 4498966632.251068,
-      "ethereumTvlUsd": 4498966632.251068,
+      "tvlUsd": 4572888140.216726,
+      "ethereumTvlUsd": 4572888140.216726,
       "volume24hUsd": null,
       "defillamaSlug": "morpho-blue",
       "defillamaSlugs": [
@@ -212,8 +212,8 @@
       "matchedSlugs": []
     },
     "oneinch": {
-      "tvlUsd": 2882832.134213849,
-      "ethereumTvlUsd": 2882832.134213849,
+      "tvlUsd": 2917925.3526612017,
+      "ethereumTvlUsd": 2917925.3526612017,
       "volume24hUsd": null,
       "defillamaSlug": "1inch-swap",
       "defillamaSlugs": [
@@ -227,8 +227,8 @@
       ]
     },
     "pendle": {
-      "tvlUsd": 684072273.2094178,
-      "ethereumTvlUsd": 684072273.2094178,
+      "tvlUsd": 690014867.0461695,
+      "ethereumTvlUsd": 690014867.0461695,
       "volume24hUsd": null,
       "defillamaSlug": "pendle-v2",
       "defillamaSlugs": [
@@ -242,8 +242,8 @@
       ]
     },
     "rocketpool": {
-      "tvlUsd": 1298576428.143729,
-      "ethereumTvlUsd": 1298576428.143729,
+      "tvlUsd": 1307626307.972355,
+      "ethereumTvlUsd": 1307626307.972355,
       "volume24hUsd": null,
       "defillamaSlug": "rocket-pool",
       "defillamaSlugs": [
@@ -256,8 +256,8 @@
       ]
     },
     "spark": {
-      "tvlUsd": 8026500449.56774,
-      "ethereumTvlUsd": 8026500449.56774,
+      "tvlUsd": 8231704057.024263,
+      "ethereumTvlUsd": 8231704057.024263,
       "volume24hUsd": null,
       "defillamaSlug": "sparklend",
       "defillamaSlugs": [
@@ -274,8 +274,8 @@
       ]
     },
     "uniswap": {
-      "tvlUsd": 2317156783.2367644,
-      "ethereumTvlUsd": 2317156783.2367644,
+      "tvlUsd": 2313557893.280616,
+      "ethereumTvlUsd": 2313557893.280616,
       "volume24hUsd": null,
       "defillamaSlug": "uniswap-v3",
       "defillamaSlugs": [
@@ -294,8 +294,8 @@
       ]
     },
     "yearn": {
-      "tvlUsd": 212589402.3368953,
-      "ethereumTvlUsd": 212589402.3368953,
+      "tvlUsd": 218182384.67694485,
+      "ethereumTvlUsd": 218182384.67694485,
       "volume24hUsd": null,
       "defillamaSlug": "yearn-finance",
       "defillamaSlugs": [
