@@ -1,6 +1,6 @@
 {
   "protocolId": "euler",
-  "updatedAt": "2026-09-14T17:06:04.021Z",
+  "updatedAt": "2026-09-15T02:02:13.713Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-14T17:06:04.021Z",
+        "collectedAt": "2026-09-15T02:02:13.713Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,7 +30,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-14T17:06:04.021Z",
+        "collectedAt": "2026-09-15T02:02:13.713Z",
         "collectorId": "risklayer"
       }
     }
