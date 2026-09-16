@@ -1,0 +1,5 @@
+# Collector outputs: on merge into the target branch, keep the target's copy
+# (usually main, refreshed by openrisk-bot) instead of conflicting with PR stubs.
+data/live/** merge=ours
+data/coverage/** merge=ours
+data/snapshot.json merge=ours
