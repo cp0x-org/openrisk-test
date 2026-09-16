@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { dateInfo, safeUrl } from "../lib/data";
-import { IconClock, IconExternal, IconInfo } from "./Icons";
+import { IconArrow, IconChevron, IconClock, IconExternal, IconInfo } from "./Icons";
 
 export const ExternalLink = ({ href, children, className = "text-link" }: { href?: string | null; children: ReactNode; className?: string }) => {
   const url = safeUrl(href);
@@ -31,6 +32,31 @@ export const Info = ({ label, children }: { label: string; children: ReactNode }
     <button className="info-button" type="button" aria-label={label} aria-expanded={open} aria-controls={id} onClick={() => setOpen(!open)}><IconInfo/></button>
     {open && <span className="info-popover" id={id} role="note" style={position}><strong>{label}</strong>{children}</span>}
   </span>;
+};
+export type MultiOption = { id: string; label: string; hint?: string; mark?: ReactNode; href?: string };
+/** Checkbox dropdown. Keeps its own open state; the selection itself lives with the caller. */
+export const MultiSelect = ({ label, options, selected, onChange, summary }: { label: string; options: MultiOption[]; selected: string[]; onChange: (ids: string[]) => void; summary: (selected: string[], options: MultiOption[]) => string }) => {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const id = useId();
+  useEffect(() => {
+    if (!open) return;
+    const close = (event: PointerEvent) => { if (!ref.current?.contains(event.target as Node)) setOpen(false); };
+    const escape = (event: KeyboardEvent) => { if (event.key === "Escape") { setOpen(false); ref.current?.querySelector("button")?.focus(); } };
+    document.addEventListener("pointerdown", close); document.addEventListener("keydown", escape);
+    return () => { document.removeEventListener("pointerdown", close); document.removeEventListener("keydown", escape); };
+  }, [open]);
+  const toggle = (optionId: string) => onChange(selected.includes(optionId) ? selected.filter((v) => v !== optionId) : options.filter((o) => o.id === optionId || selected.includes(o.id)).map((o) => o.id));
+  return <div className="multiselect" ref={ref} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}>
+    <button type="button" className="multiselect-toggle" aria-expanded={open} aria-haspopup="true" aria-controls={id} onClick={() => setOpen(!open)}><span className="sr-only">{label}: </span><span className="multiselect-label">{summary(selected, options)}</span><span className="multiselect-count">{selected.length}/{options.length}</span><IconChevron/></button>
+    {open && <div className="multiselect-panel" id={id} role="group" aria-label={label}>
+      <div className="multiselect-head"><span>{label}</span><span className="multiselect-actions"><button type="button" className="text-button" onClick={() => onChange(options.map((o) => o.id))} disabled={selected.length === options.length}>All</button><button type="button" className="text-button" onClick={() => onChange([])} disabled={selected.length === 0}>None</button></span></div>
+      {options.map((o) => <div className="multiselect-option" key={o.id}>
+        <label><input type="checkbox" checked={selected.includes(o.id)} onChange={() => toggle(o.id)}/>{o.mark}<span>{o.label}{o.hint && <small>{o.hint}</small>}</span></label>
+        {o.href && <Link className="multiselect-link" to={o.href} aria-label={`About ${o.label}`}><IconArrow/></Link>}
+      </div>)}
+    </div>}
+  </div>;
 };
 export const ProtocolAvatar = ({ name, id, large = false }: { name: string; id: string; large?: boolean }) => {
   const color = [...id].reduce((n, char) => n + char.charCodeAt(0), 0) % 5;
