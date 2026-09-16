@@ -99,6 +99,30 @@ code { overflow-wrap: anywhere; background: var(--subtle); padding: 2px 5px; bor
 .toolbar-selects { display: flex; flex-wrap: wrap; gap: 8px; }
 .toolbar-selects select { min-height: 42px; border: 1px solid var(--line); background: var(--surface); font-size: 12px; padding: 0 10px; max-width: 100%; }
 .toolbar-selects select:hover { border-color: var(--line-strong); }
+.toolbar-selects select:disabled { color: var(--faint); background: var(--subtle); cursor: default; }
+.toolbar-selects .sort-select { display: none; }
+.multiselect { position: relative; display: flex; max-width: 268px; }
+.multiselect-toggle { display: inline-flex; align-items: center; gap: 8px; width: 100%; min-height: 42px; padding: 0 8px 0 12px; border: 1px solid var(--line); background: var(--surface); font-size: 12px; font-weight: 500; color: var(--ink); }
+.multiselect-toggle:hover { border-color: var(--line-strong); }
+.multiselect-toggle[aria-expanded="true"] { border-color: var(--accent-line); background: var(--accent-tint); color: var(--accent); }
+.multiselect-toggle > svg { width: 15px; height: 15px; margin-left: auto; color: var(--muted); }
+.multiselect-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.multiselect-count { flex-shrink: 0; font-family: var(--mono); font-size: 10px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 4px; }
+.multiselect-panel { position: absolute; z-index: 40; top: calc(100% + 6px); right: 0; min-width: 262px; padding: 7px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 10px; box-shadow: 0 8px 32px #0002; }
+.multiselect-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 4px 8px 8px; margin-bottom: 4px; border-bottom: 1px solid var(--line); }
+.multiselect-head > span:first-child { font-size: 10px; font-weight: 750; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+.multiselect-actions { display: inline-flex; gap: 13px; }
+.multiselect-actions .text-button:disabled { color: var(--faint); cursor: default; }
+.multiselect-actions .text-button:disabled:hover { text-decoration: none; }
+.multiselect-option { display: flex; align-items: center; gap: 2px; padding-right: 4px; border-radius: 7px; }
+.multiselect-option:hover { background: var(--subtle); }
+.multiselect-option > label { flex: 1; min-width: 0; display: flex; align-items: center; gap: 9px; padding: 7px 8px; font-size: 12px; font-weight: 650; cursor: pointer; }
+.multiselect-option input { width: 15px; height: 15px; margin: 0; flex-shrink: 0; accent-color: var(--accent); }
+.multiselect-option .source-mark { width: 23px; height: 23px; border-radius: 6px; font-size: 11px; }
+.multiselect-option small { display: block; color: var(--muted); font-size: 10px; font-weight: 500; }
+.multiselect-link { display: inline-flex; align-items: center; justify-content: center; width: 27px; height: 27px; flex-shrink: 0; border-radius: 6px; color: var(--faint); }
+.multiselect-link:hover { background: var(--accent-tint); color: var(--accent); }
+.multiselect-link svg { width: 14px; height: 14px; }
 .category-bar { display: flex; gap: 5px; padding: 0 20px 17px; overflow-x: auto; scrollbar-width: thin; }
 .category-bar button { padding: 6px 12px; border: 1px solid transparent; background: transparent; font-size: 12px; font-weight: 600; color: var(--muted); white-space: nowrap; }
 .category-bar button:hover { background: var(--subtle); color: var(--ink); }
@@ -129,9 +153,14 @@ code { overflow-wrap: anywhere; background: var(--subtle); padding: 2px 5px; bor
 .source-defiscan { color: var(--source-ink-0); background: var(--source-0); border-color: transparent; }
 .source-philidor { color: var(--source-ink-1); background: var(--source-1); border-color: transparent; }
 .source-risklayer { color: var(--source-ink-2); background: var(--source-2); border-color: transparent; }
-.matrix-source { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 12px; }
-.matrix-source small { display: block; color: var(--muted); font-size: 10px; font-weight: 500; margin-top: 1px; }
-.matrix-source:hover { color: var(--accent); }
+.th-sort { display: inline-flex; align-items: center; gap: 7px; max-width: 100%; padding: 5px 7px; margin: -5px -7px; border-radius: 6px; background: transparent; color: inherit; font: inherit; text-align: left; }
+.th-sort:hover { background: var(--surface); color: var(--ink); }
+.th-sort > svg { width: 13px; height: 13px; color: var(--faint); opacity: .55; }
+.th-sort:hover > svg { opacity: 1; }
+.th-sort small { display: block; margin-top: 1px; color: var(--muted); font-size: 10px; font-weight: 500; }
+.th-sort.source-head { gap: 8px; font-size: 12px; color: var(--ink); }
+.th-sort.sorted, .th-sort.sorted:hover { color: var(--accent); }
+.th-sort.sorted > svg { color: var(--accent); opacity: 1; }
 .matrix-assessment { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; border-radius: 4px; padding: 2px 0; }
 .matrix-verdict { font-size: 12px; font-weight: 700; white-space: nowrap; }
 .matrix-assessment:hover .matrix-verdict { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
@@ -419,7 +448,10 @@ details[open] > summary > svg:last-child { transform: rotate(180deg); }
   .search-field { flex-basis: 100%; }
   .toolbar-selects { display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; width: 100%; gap: 8px; }
   .toolbar-selects select { width: 100%; font-size: 11px; }
-  .toolbar-selects > label:first-child { grid-column: 1 / -1; }
+  .toolbar-selects > *:first-child, .toolbar-selects > .sort-select { grid-column: 1 / -1; }
+  .toolbar-selects .sort-select { display: block; }
+  .multiselect { max-width: none; }
+  .multiselect-panel { left: 0; right: 0; min-width: 0; }
   .category-bar { padding: 0 16px 15px; }
   .category-bar button { font-size: 11px; }
   .matrix-scroll { display: none; }
