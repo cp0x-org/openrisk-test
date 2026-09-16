@@ -1,6 +1,6 @@
 {
   "protocolId": "morphovaults",
-  "updatedAt": "2026-09-15T15:46:09.431Z",
+  "updatedAt": "2026-09-16T07:28:37.953Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,8 +30,84 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
         "collectorId": "risklayer"
+      }
+    },
+    "philidor": {
+      "status": "c",
+      "label": "192 Ethereum vaults",
+      "verbatim": "[v2] Paypal USD Main (Sentora): Core 7.72\n[v2] Sentora RLUSD Main (Sentora): Core 7.79\n[v2] Sentora PRIME Main (Sentora): Core 7.59",
+      "asOf": "2026-09-16",
+      "sourceUrl": "https://analytics.philidor.io/protocols/morpho",
+      "facets": [
+        {
+          "key": "assessment_unit",
+          "label": "Assessment unit",
+          "value": "vault",
+          "valueType": "enum"
+        },
+        {
+          "key": "vaults_metamorpho",
+          "label": "MetaMorpho vaults (Ethereum)",
+          "value": "192",
+          "valueType": "count"
+        }
+      ],
+      "raw": {
+        "philidorId": "morpho",
+        "chain": "ethereum",
+        "notRated": [],
+        "families": [
+          {
+            "family": "MetaMorpho",
+            "versions": [
+              "v1",
+              "v2"
+            ],
+            "listed": 192,
+            "vaults": [
+              {
+                "id": "morpho-1-0xb576765fb15505433af24fee2c0325895c559fb2",
+                "name": "Paypal USD Main",
+                "version": "v2",
+                "curator": "Sentora",
+                "riskTier": "Core",
+                "totalScore": 7.72,
+                "tvlUsd": 401684077.19449484,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xb576765fb15505433af24fee2c0325895c559fb2"
+              },
+              {
+                "id": "morpho-1-0x6dc58a0fdfc8d694e571dc59b9a52eeea780e6bf",
+                "name": "Sentora RLUSD Main",
+                "version": "v2",
+                "curator": "Sentora",
+                "riskTier": "Core",
+                "totalScore": 7.79,
+                "tvlUsd": 390806144.28241575,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x6dc58a0fdfc8d694e571dc59b9a52eeea780e6bf"
+              },
+              {
+                "id": "morpho-1-0xc21b08c16458202593d4d9b26b9984ee67b38bbd",
+                "name": "Sentora PRIME Main",
+                "version": "v2",
+                "curator": "Sentora",
+                "riskTier": "Core",
+                "totalScore": 7.59,
+                "tvlUsd": 195137880.13647667,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xc21b08c16458202593d4d9b26b9984ee67b38bbd"
+              }
+            ]
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectorId": "philidor"
       }
     }
   }

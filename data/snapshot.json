@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-15T15:46:14.021Z",
-  "liveUpdatedAt": "2026-09-15T15:46:09.416Z",
+  "generatedAt": "2026-09-16T07:29:47.593Z",
+  "liveUpdatedAt": "2026-09-16T07:28:37.933Z",
   "meta": {
     "version": 1,
     "project": "openrisk",
@@ -54,6 +54,15 @@
       "methodologyUrl": "https://deficollective.org/blog/introducing-defiscan/"
     },
     {
+      "id": "philidor",
+      "name": "Philidor Analytics",
+      "type": "rating",
+      "typeLabel": "R",
+      "focus": "Vault-level risk scores (0–10; Prime / Core / Edge) across asset, platform, control, and history vectors — no protocol-level score. Powered by Philidor · api.philidor.io",
+      "url": "https://analytics.philidor.io",
+      "methodologyUrl": "https://docs.philidor.io/docs/methodology"
+    },
+    {
       "id": "risklayer",
       "name": "Risklayer",
       "type": "rating",
@@ -84,8 +93,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 14999776682.722445,
-      "ethereumTvlUsd": 14999776682.722445,
+      "tvlUsd": 14826802605.814709,
+      "ethereumTvlUsd": 14826802605.814709,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -159,7 +168,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -328,12 +337,135 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "c",
+          "label": "93 Ethereum vaults",
+          "verbatim": "[v3] Aave Ethereum WETH: Prime 8.88\n[v3] Aave Ethereum weETH: Core 7.9\n[v3] Aave Ethereum USDT: Prime 8.84\n[v4] Aave V4 Main WETH: Prime 8\n[v4] Aave V4 Etherfi weETH: Core 7.9\n[v4] Aave V4 Main USDG: Core 7.9",
+          "asOf": "2026-09-16",
+          "sourceUrl": "https://analytics.philidor.io/protocols/aave",
+          "facets": [
+            {
+              "key": "assessment_unit",
+              "label": "Assessment unit",
+              "value": "vault",
+              "valueType": "enum"
+            },
+            {
+              "key": "vaults_v3",
+              "label": "v3 vaults (Ethereum)",
+              "value": "58",
+              "valueType": "count"
+            },
+            {
+              "key": "vaults_v4",
+              "label": "v4 vaults (Ethereum)",
+              "value": "35",
+              "valueType": "count"
+            }
+          ],
+          "raw": {
+            "philidorId": "aave",
+            "chain": "ethereum",
+            "notRated": [],
+            "families": [
+              {
+                "family": "v3",
+                "versions": [
+                  "v3"
+                ],
+                "listed": 58,
+                "vaults": [
+                  {
+                    "id": "aave-1-0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+                    "name": "Aave Ethereum WETH",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.88,
+                    "tvlUsd": 5038067225.526833,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8"
+                  },
+                  {
+                    "id": "aave-1-0xbdfa7b7893081b35fb54027489e2bc7a38275129",
+                    "name": "Aave Ethereum weETH",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.9,
+                    "tvlUsd": 3498719123.3916745,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xbdfa7b7893081b35fb54027489e2bc7a38275129"
+                  },
+                  {
+                    "id": "aave-1-0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
+                    "name": "Aave Ethereum USDT",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.84,
+                    "tvlUsd": 3161102628.167036,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x23878914efe38d27c4d67ab83ed1b93a74d4086a"
+                  }
+                ]
+              },
+              {
+                "family": "v4",
+                "versions": [
+                  "v4"
+                ],
+                "listed": 35,
+                "vaults": [
+                  {
+                    "id": "aave-1-0x2dbec45b81201f85b2254c281d9607dc332cfb7f",
+                    "name": "Aave V4 Main WETH",
+                    "version": "v4",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8,
+                    "tvlUsd": 88637680.49614632,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x2dbec45b81201f85b2254c281d9607dc332cfb7f"
+                  },
+                  {
+                    "id": "aave-1-0x105116a23e46ae26d2fcef81856b853a03395744",
+                    "name": "Aave V4 Etherfi weETH",
+                    "version": "v4",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.9,
+                    "tvlUsd": 87786415.05339795,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x105116a23e46ae26d2fcef81856b853a03395744"
+                  },
+                  {
+                    "id": "aave-1-0x7f8bb7efffc48af5c4630f4a626a6fd2ec9a275e",
+                    "name": "Aave V4 Main USDG",
+                    "version": "v4",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.9,
+                    "tvlUsd": 69734075.66613056,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x7f8bb7efffc48af5c4630f4a626a6fd2ec9a275e"
+                  }
+                ]
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "balancer",
@@ -355,8 +487,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 39244086.71251055,
-      "ethereumTvlUsd": 39244086.71251055,
+      "tvlUsd": 39597352.450729266,
+      "ethereumTvlUsd": 39597352.450729266,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -371,7 +503,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -387,12 +519,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "compound",
@@ -414,8 +562,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1420914443.3732612,
-      "ethereumTvlUsd": 1420914443.3732612,
+      "tvlUsd": 1399578203.2964957,
+      "ethereumTvlUsd": 1399578203.2964957,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -510,7 +658,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -679,12 +827,95 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "p",
+          "label": "5 Ethereum vaults",
+          "verbatim": "[v3] Compound V3 USDC: Core 7.5\n[v3] Compound V3 USDT: Core 7.5\n[v3] Compound V3 WETH: Core 7.5",
+          "asOf": "2026-09-16",
+          "sourceUrl": "https://analytics.philidor.io/protocols/compound",
+          "facets": [
+            {
+              "key": "assessment_unit",
+              "label": "Assessment unit",
+              "value": "vault",
+              "valueType": "enum"
+            },
+            {
+              "key": "vaults_v3",
+              "label": "v3 vaults (Ethereum)",
+              "value": "5",
+              "valueType": "count"
+            },
+            {
+              "key": "families_without_vaults",
+              "label": "No Philidor vaults",
+              "value": "v2",
+              "valueType": "text"
+            }
+          ],
+          "raw": {
+            "philidorId": "compound",
+            "chain": "ethereum",
+            "notRated": [
+              "v2"
+            ],
+            "families": [
+              {
+                "family": "v3",
+                "versions": [
+                  "v3"
+                ],
+                "listed": 5,
+                "vaults": [
+                  {
+                    "id": "compound-1-0xc3d688b66703497daa19211eedff47f25384cdc3",
+                    "name": "Compound V3 USDC",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.5,
+                    "tvlUsd": 373331010.8391353,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xc3d688b66703497daa19211eedff47f25384cdc3"
+                  },
+                  {
+                    "id": "compound-1-0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
+                    "name": "Compound V3 USDT",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.5,
+                    "tvlUsd": 179216492.0659644,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x3afdc9bca9213a35503b077a6072f3d0d5ab0840"
+                  },
+                  {
+                    "id": "compound-1-0xa17581a9e3356d9a858b789d68b4d866e593ae94",
+                    "name": "Compound V3 WETH",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.5,
+                    "tvlUsd": 123748098.56951883,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+                  }
+                ]
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "cowswap",
@@ -720,7 +951,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -736,12 +967,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "curve",
@@ -762,8 +1009,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1462019331.1946375,
-      "ethereumTvlUsd": 1462019331.1946375,
+      "tvlUsd": 1452251979.9089794,
+      "ethereumTvlUsd": 1452251979.9089794,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -837,7 +1084,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1006,12 +1253,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "euler",
@@ -1031,8 +1294,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 48117190.93767503,
-      "ethereumTvlUsd": 48117190.93767503,
+      "tvlUsd": 63485097.67537111,
+      "ethereumTvlUsd": 63485097.67537111,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1047,7 +1310,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1063,12 +1326,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "fluid",
@@ -1090,8 +1369,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 965477587.378063,
-      "ethereumTvlUsd": 965477587.378063,
+      "tvlUsd": 954025285.3767937,
+      "ethereumTvlUsd": 954025285.3767937,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1106,7 +1385,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1122,12 +1401,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "gearbox",
@@ -1147,8 +1442,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 20115587.647194974,
-      "ethereumTvlUsd": 20115587.647194974,
+      "tvlUsd": 19771807.174660675,
+      "ethereumTvlUsd": 19771807.174660675,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1163,7 +1458,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1179,12 +1474,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "lido",
@@ -1205,8 +1516,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 23732050233.628654,
-      "ethereumTvlUsd": 23732050233.628654,
+      "tvlUsd": 23333953013.715416,
+      "ethereumTvlUsd": 23333953013.715416,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1280,7 +1591,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1449,12 +1760,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "liquity",
@@ -1476,8 +1803,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 272699431.1169908,
-      "ethereumTvlUsd": 272699431.1169908,
+      "tvlUsd": 269689063.2780937,
+      "ethereumTvlUsd": 269689063.2780937,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1551,7 +1878,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1567,12 +1894,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "mellow",
@@ -1592,8 +1935,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 271324941.4079093,
-      "ethereumTvlUsd": 271324941.4079093,
+      "tvlUsd": 267732243.3469922,
+      "ethereumTvlUsd": 267732243.3469922,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1608,7 +1951,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1624,12 +1967,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "morpho",
@@ -1649,8 +2008,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 4593502326.727453,
-      "ethereumTvlUsd": 4593502326.727453,
+      "tvlUsd": 4642561074.704222,
+      "ethereumTvlUsd": 4642561074.704222,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1724,7 +2083,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1893,12 +2252,29 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping",
+            "note": "Philidor 'morpho' scores curated vaults (mapped to morphovaults); Morpho Blue markets are not scored"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "morphovaults",
@@ -1932,7 +2308,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -1948,12 +2324,88 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "c",
+          "label": "192 Ethereum vaults",
+          "verbatim": "[v2] Paypal USD Main (Sentora): Core 7.72\n[v2] Sentora RLUSD Main (Sentora): Core 7.79\n[v2] Sentora PRIME Main (Sentora): Core 7.59",
+          "asOf": "2026-09-16",
+          "sourceUrl": "https://analytics.philidor.io/protocols/morpho",
+          "facets": [
+            {
+              "key": "assessment_unit",
+              "label": "Assessment unit",
+              "value": "vault",
+              "valueType": "enum"
+            },
+            {
+              "key": "vaults_metamorpho",
+              "label": "MetaMorpho vaults (Ethereum)",
+              "value": "192",
+              "valueType": "count"
+            }
+          ],
+          "raw": {
+            "philidorId": "morpho",
+            "chain": "ethereum",
+            "notRated": [],
+            "families": [
+              {
+                "family": "MetaMorpho",
+                "versions": [
+                  "v1",
+                  "v2"
+                ],
+                "listed": 192,
+                "vaults": [
+                  {
+                    "id": "morpho-1-0xb576765fb15505433af24fee2c0325895c559fb2",
+                    "name": "Paypal USD Main",
+                    "version": "v2",
+                    "curator": "Sentora",
+                    "riskTier": "Core",
+                    "totalScore": 7.72,
+                    "tvlUsd": 401684077.19449484,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xb576765fb15505433af24fee2c0325895c559fb2"
+                  },
+                  {
+                    "id": "morpho-1-0x6dc58a0fdfc8d694e571dc59b9a52eeea780e6bf",
+                    "name": "Sentora RLUSD Main",
+                    "version": "v2",
+                    "curator": "Sentora",
+                    "riskTier": "Core",
+                    "totalScore": 7.79,
+                    "tvlUsd": 390806144.28241575,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x6dc58a0fdfc8d694e571dc59b9a52eeea780e6bf"
+                  },
+                  {
+                    "id": "morpho-1-0xc21b08c16458202593d4d9b26b9984ee67b38bbd",
+                    "name": "Sentora PRIME Main",
+                    "version": "v2",
+                    "curator": "Sentora",
+                    "riskTier": "Core",
+                    "totalScore": 7.59,
+                    "tvlUsd": 195137880.13647667,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xc21b08c16458202593d4d9b26b9984ee67b38bbd"
+                  }
+                ]
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "oneinch",
@@ -1974,8 +2426,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2849357.783122911,
-      "ethereumTvlUsd": 2849357.783122911,
+      "tvlUsd": 2805914.6621064544,
+      "ethereumTvlUsd": 2805914.6621064544,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -1990,7 +2442,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -2006,12 +2458,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "pendle",
@@ -2031,8 +2499,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 686799718.7716966,
-      "ethereumTvlUsd": 686799718.7716966,
+      "tvlUsd": 696580315.7183574,
+      "ethereumTvlUsd": 696580315.7183574,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2106,7 +2574,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -2275,12 +2743,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "rocketpool",
@@ -2300,8 +2784,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 1276265097.9208875,
-      "ethereumTvlUsd": 1276265097.9208875,
+      "tvlUsd": 1252806312.0920255,
+      "ethereumTvlUsd": 1252806312.0920255,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2316,7 +2800,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -2485,12 +2969,28 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "spark",
@@ -2513,8 +3013,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 8041748875.813694,
-      "ethereumTvlUsd": 8041748875.813694,
+      "tvlUsd": 8229610182.603881,
+      "ethereumTvlUsd": 8229610182.603881,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2588,7 +3088,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -2757,12 +3257,135 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "c",
+          "label": "20 Ethereum vaults",
+          "verbatim": "[v1] SparkLend wstETH: Prime 8.72\n[v1] SparkLend WETH: Prime 8.87\n[v1] SparkLend USDS: Prime 8.33\n[v2] USDS Savings Vault: Core 7.9\n[v2] Spark Savings USDT: Prime 8.33\n[v2] Spark Savings USDC: Prime 8.71",
+          "asOf": "2026-09-16",
+          "sourceUrl": "https://analytics.philidor.io/protocols/spark",
+          "facets": [
+            {
+              "key": "assessment_unit",
+              "label": "Assessment unit",
+              "value": "vault",
+              "valueType": "enum"
+            },
+            {
+              "key": "vaults_sparklend",
+              "label": "SparkLend vaults (Ethereum)",
+              "value": "14",
+              "valueType": "count"
+            },
+            {
+              "key": "vaults_susds",
+              "label": "sUSDS vaults (Ethereum)",
+              "value": "6",
+              "valueType": "count"
+            }
+          ],
+          "raw": {
+            "philidorId": "spark",
+            "chain": "ethereum",
+            "notRated": [],
+            "families": [
+              {
+                "family": "SparkLend",
+                "versions": [
+                  "v1"
+                ],
+                "listed": 14,
+                "vaults": [
+                  {
+                    "id": "spark-1-0x12b54025c112aa61face2cdb7118740875a566e9",
+                    "name": "SparkLend wstETH",
+                    "version": "v1",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.72,
+                    "tvlUsd": 3129365721.875076,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x12b54025c112aa61face2cdb7118740875a566e9"
+                  },
+                  {
+                    "id": "spark-1-0x59cd1c87501baa753d0b5b5ab5d8416a45cd71db",
+                    "name": "SparkLend WETH",
+                    "version": "v1",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.87,
+                    "tvlUsd": 1422726821.8060143,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x59cd1c87501baa753d0b5b5ab5d8416a45cd71db"
+                  },
+                  {
+                    "id": "spark-1-0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359",
+                    "name": "SparkLend USDS",
+                    "version": "v1",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.33,
+                    "tvlUsd": 1256600669.011146,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359"
+                  }
+                ]
+              },
+              {
+                "family": "sUSDS",
+                "versions": [
+                  "v2"
+                ],
+                "listed": 6,
+                "vaults": [
+                  {
+                    "id": "spark-1-0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+                    "name": "USDS Savings Vault",
+                    "version": "v2",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.9,
+                    "tvlUsd": 4413391939.411772,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+                  },
+                  {
+                    "id": "spark-1-0xe2e7a17dff93280dec073c995595155283e3c372",
+                    "name": "Spark Savings USDT",
+                    "version": "v2",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.33,
+                    "tvlUsd": 392640647.042842,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xe2e7a17dff93280dec073c995595155283e3c372"
+                  },
+                  {
+                    "id": "spark-1-0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d",
+                    "name": "Spark Savings USDC",
+                    "version": "v2",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.71,
+                    "tvlUsd": 316254520.525758,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d"
+                  }
+                ]
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "uniswap",
@@ -2786,8 +3409,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 2331518115.956104,
-      "ethereumTvlUsd": 2331518115.956104,
+      "tvlUsd": 2315533466.823315,
+      "ethereumTvlUsd": 2315533466.823315,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -2882,7 +3505,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -3051,12 +3674,143 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "p",
+          "label": "108 Ethereum vaults",
+          "verbatim": "[v3] Uniswap V3 USDC/WETH 0.05%: Prime 8.72\n[v3] Uniswap V3 USDC/WETH 0.3%: Prime 8.72\n[v3] Uniswap V3 WETH/USDT 0.3%: Prime 8.53\n[v4] Uniswap V4 ETH/USDC 0.3%: Core 7.9\n[v4] Uniswap V4 ETH/USDT 0.3%: Core 7.9\n[v4] Uniswap V4 ETH/LINK 0.3%: Core 7.69",
+          "asOf": "2026-09-16",
+          "sourceUrl": "https://analytics.philidor.io/protocols/uniswap",
+          "facets": [
+            {
+              "key": "assessment_unit",
+              "label": "Assessment unit",
+              "value": "vault",
+              "valueType": "enum"
+            },
+            {
+              "key": "vaults_v3",
+              "label": "v3 vaults (Ethereum)",
+              "value": "69",
+              "valueType": "count"
+            },
+            {
+              "key": "vaults_v4",
+              "label": "v4 vaults (Ethereum)",
+              "value": "39",
+              "valueType": "count"
+            },
+            {
+              "key": "families_without_vaults",
+              "label": "No Philidor vaults",
+              "value": "UniswapX",
+              "valueType": "text"
+            }
+          ],
+          "raw": {
+            "philidorId": "uniswap",
+            "chain": "ethereum",
+            "notRated": [
+              "UniswapX"
+            ],
+            "families": [
+              {
+                "family": "v3",
+                "versions": [
+                  "v3"
+                ],
+                "listed": 69,
+                "vaults": [
+                  {
+                    "id": "uniswap-1-0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+                    "name": "Uniswap V3 USDC/WETH 0.05%",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.72,
+                    "tvlUsd": 408549453.5487691,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+                  },
+                  {
+                    "id": "uniswap-1-0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+                    "name": "Uniswap V3 USDC/WETH 0.3%",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.72,
+                    "tvlUsd": 300141948.0147803,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8"
+                  },
+                  {
+                    "id": "uniswap-1-0x4e68ccd3e89f51c3074ca5072bbac773960dfa36",
+                    "name": "Uniswap V3 WETH/USDT 0.3%",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.53,
+                    "tvlUsd": 293482024.7492057,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x4e68ccd3e89f51c3074ca5072bbac773960dfa36"
+                  }
+                ]
+              },
+              {
+                "family": "v4",
+                "versions": [
+                  "v4"
+                ],
+                "listed": 39,
+                "vaults": [
+                  {
+                    "id": "uniswap-1-0xdce6394339af00981949f5f3baf27e3610c76326a700af57e4b3e3ae4977f78d",
+                    "name": "Uniswap V4 ETH/USDC 0.3%",
+                    "version": "v4",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.9,
+                    "tvlUsd": 42772660.82451922,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xdce6394339af00981949f5f3baf27e3610c76326a700af57e4b3e3ae4977f78d"
+                  },
+                  {
+                    "id": "uniswap-1-0x50b00c1a5a8e582ec808e97e71598cd135206a9f9c548eab2ed73659e7ee5fa8",
+                    "name": "Uniswap V4 ETH/USDT 0.3%",
+                    "version": "v4",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.9,
+                    "tvlUsd": 28227212.77809363,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x50b00c1a5a8e582ec808e97e71598cd135206a9f9c548eab2ed73659e7ee5fa8"
+                  },
+                  {
+                    "id": "uniswap-1-0xb2b5618903d74bbac9e9049a035c3827afc4487cde3b994a1568b050f4c8e2e4",
+                    "name": "Uniswap V4 ETH/LINK 0.3%",
+                    "version": "v4",
+                    "curator": null,
+                    "riskTier": "Core",
+                    "totalScore": 7.69,
+                    "tvlUsd": 20303576.79818986,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xb2b5618903d74bbac9e9049a035c3827afc4487cde3b994a1568b050f4c8e2e4"
+                  }
+                ]
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "yearn",
@@ -3076,8 +3830,8 @@
       "governance": [],
       "audits": [],
       "incidents": [],
-      "tvlUsd": 218811846.11835903,
-      "ethereumTvlUsd": 218811846.11835903,
+      "tvlUsd": 214168109.08409378,
+      "ethereumTvlUsd": 214168109.08409378,
       "volume24hUsd": null,
       "coverage": {
         "defiscan": {
@@ -3092,7 +3846,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -3108,12 +3862,87 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "c",
+          "label": "24 Ethereum vaults",
+          "verbatim": "[v3] USDC-1 yVault: Prime 8.64\n[v3] WETH-1 yVault: Prime 8.34\n[v3] USD yVault: Prime 8.48",
+          "asOf": "2026-09-16",
+          "sourceUrl": "https://analytics.philidor.io/protocols/yearn",
+          "facets": [
+            {
+              "key": "assessment_unit",
+              "label": "Assessment unit",
+              "value": "vault",
+              "valueType": "enum"
+            },
+            {
+              "key": "vaults_v3",
+              "label": "v3 vaults (Ethereum)",
+              "value": "24",
+              "valueType": "count"
+            }
+          ],
+          "raw": {
+            "philidorId": "yearn",
+            "chain": "ethereum",
+            "notRated": [],
+            "families": [
+              {
+                "family": "v3",
+                "versions": [
+                  "v3"
+                ],
+                "listed": 24,
+                "vaults": [
+                  {
+                    "id": "yearn-1-0xbe53a109b494e5c9f97b9cd39fe969be68bf6204",
+                    "name": "USDC-1 yVault",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.64,
+                    "tvlUsd": 20930268.234322548,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xbe53a109b494e5c9f97b9cd39fe969be68bf6204"
+                  },
+                  {
+                    "id": "yearn-1-0xc56413869c6cdf96496f2b1ef801fedbdfa7ddb0",
+                    "name": "WETH-1 yVault",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.34,
+                    "tvlUsd": 12582674.773591897,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0xc56413869c6cdf96496f2b1ef801fedbdfa7ddb0"
+                  },
+                  {
+                    "id": "yearn-1-0x696d02db93291651ed510704c9b286841d506987",
+                    "name": "USD yVault",
+                    "version": "v3",
+                    "curator": null,
+                    "riskTier": "Prime",
+                    "totalScore": 8.48,
+                    "tvlUsd": 11163260.444302505,
+                    "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                    "url": "https://analytics.philidor.io/vault/ethereum/0x696d02db93291651ed510704c9b286841d506987"
+                  }
+                ]
+              }
+            ]
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     },
     {
       "id": "zerox",
@@ -3150,7 +3979,7 @@
           },
           "collection": {
             "method": "git",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "defiscan"
           }
         },
@@ -3166,21 +3995,37 @@
           },
           "collection": {
             "method": "api",
-            "collectedAt": "2026-09-15T15:46:09.431Z",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
             "collectorId": "risklayer"
+          }
+        },
+        "philidor": {
+          "status": "n",
+          "label": null,
+          "verbatim": null,
+          "asOf": null,
+          "sourceUrl": null,
+          "facets": [],
+          "raw": {
+            "reason": "no_mapping"
+          },
+          "collection": {
+            "method": "api",
+            "collectedAt": "2026-09-16T07:28:37.953Z",
+            "collectorId": "philidor"
           }
         }
       },
-      "coverageUpdatedAt": "2026-09-15T15:46:09.431Z"
+      "coverageUpdatedAt": "2026-09-16T07:28:37.953Z"
     }
   ],
   "kpis": {
     "protocolCount": 20,
-    "feedCount": 2,
-    "cellsAssessed": 40,
-    "coveragePct": 45,
-    "fundsAtRiskUsd": 60380385497.427536,
-    "coveredCells": 17,
-    "partialCells": 1
+    "feedCount": 3,
+    "cellsAssessed": 60,
+    "coveragePct": 40,
+    "fundsAtRiskUsd": 59978146113.06413,
+    "coveredCells": 21,
+    "partialCells": 3
   }
 }

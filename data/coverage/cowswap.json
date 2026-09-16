@@ -1,6 +1,6 @@
 {
   "protocolId": "cowswap",
-  "updatedAt": "2026-09-15T15:46:09.431Z",
+  "updatedAt": "2026-09-16T07:28:37.953Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,8 +30,24 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
         "collectorId": "risklayer"
+      }
+    },
+    "philidor": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_mapping"
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectorId": "philidor"
       }
     }
   }

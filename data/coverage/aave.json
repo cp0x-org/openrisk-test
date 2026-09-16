@@ -1,6 +1,6 @@
 {
   "protocolId": "aave",
-  "updatedAt": "2026-09-15T15:46:09.431Z",
+  "updatedAt": "2026-09-16T07:28:37.953Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
         "collectorId": "defiscan"
       }
     },
@@ -242,8 +242,131 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
         "collectorId": "risklayer"
+      }
+    },
+    "philidor": {
+      "status": "c",
+      "label": "93 Ethereum vaults",
+      "verbatim": "[v3] Aave Ethereum WETH: Prime 8.88\n[v3] Aave Ethereum weETH: Core 7.9\n[v3] Aave Ethereum USDT: Prime 8.84\n[v4] Aave V4 Main WETH: Prime 8\n[v4] Aave V4 Etherfi weETH: Core 7.9\n[v4] Aave V4 Main USDG: Core 7.9",
+      "asOf": "2026-09-16",
+      "sourceUrl": "https://analytics.philidor.io/protocols/aave",
+      "facets": [
+        {
+          "key": "assessment_unit",
+          "label": "Assessment unit",
+          "value": "vault",
+          "valueType": "enum"
+        },
+        {
+          "key": "vaults_v3",
+          "label": "v3 vaults (Ethereum)",
+          "value": "58",
+          "valueType": "count"
+        },
+        {
+          "key": "vaults_v4",
+          "label": "v4 vaults (Ethereum)",
+          "value": "35",
+          "valueType": "count"
+        }
+      ],
+      "raw": {
+        "philidorId": "aave",
+        "chain": "ethereum",
+        "notRated": [],
+        "families": [
+          {
+            "family": "v3",
+            "versions": [
+              "v3"
+            ],
+            "listed": 58,
+            "vaults": [
+              {
+                "id": "aave-1-0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+                "name": "Aave Ethereum WETH",
+                "version": "v3",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.88,
+                "tvlUsd": 5038067225.526833,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8"
+              },
+              {
+                "id": "aave-1-0xbdfa7b7893081b35fb54027489e2bc7a38275129",
+                "name": "Aave Ethereum weETH",
+                "version": "v3",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.9,
+                "tvlUsd": 3498719123.3916745,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xbdfa7b7893081b35fb54027489e2bc7a38275129"
+              },
+              {
+                "id": "aave-1-0x23878914efe38d27c4d67ab83ed1b93a74d4086a",
+                "name": "Aave Ethereum USDT",
+                "version": "v3",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.84,
+                "tvlUsd": 3161102628.167036,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x23878914efe38d27c4d67ab83ed1b93a74d4086a"
+              }
+            ]
+          },
+          {
+            "family": "v4",
+            "versions": [
+              "v4"
+            ],
+            "listed": 35,
+            "vaults": [
+              {
+                "id": "aave-1-0x2dbec45b81201f85b2254c281d9607dc332cfb7f",
+                "name": "Aave V4 Main WETH",
+                "version": "v4",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8,
+                "tvlUsd": 88637680.49614632,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x2dbec45b81201f85b2254c281d9607dc332cfb7f"
+              },
+              {
+                "id": "aave-1-0x105116a23e46ae26d2fcef81856b853a03395744",
+                "name": "Aave V4 Etherfi weETH",
+                "version": "v4",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.9,
+                "tvlUsd": 87786415.05339795,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x105116a23e46ae26d2fcef81856b853a03395744"
+              },
+              {
+                "id": "aave-1-0x7f8bb7efffc48af5c4630f4a626a6fd2ec9a275e",
+                "name": "Aave V4 Main USDG",
+                "version": "v4",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.9,
+                "tvlUsd": 69734075.66613056,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x7f8bb7efffc48af5c4630f4a626a6fd2ec9a275e"
+              }
+            ]
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectorId": "philidor"
       }
     }
   }
