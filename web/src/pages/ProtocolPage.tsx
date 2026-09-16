@@ -1,181 +1,34 @@
 import { Link, useParams } from "react-router-dom";
-import { asOfLabel, cellOf, coveredCount, fmtUsd } from "../lib/data";
+import { cellOf, coveredCount, dateInfo, fmtUsd, metricOf } from "../lib/data";
 import type { Snapshot } from "../lib/types";
-import { SubNav } from "../components/Layout";
+import { FeedAssessment } from "../components/FeedAssessment";
+import { IconArrow, IconChevron } from "../components/Icons";
+import { DataAgeHelp, Info, ProtocolAvatar } from "../components/UI";
 
-type Props = { snapshot: Snapshot };
-
-export const ProtocolPage = ({ snapshot }: Props) => {
+export const ProtocolPage = ({ snapshot }: { snapshot: Snapshot }) => {
   const { id } = useParams();
   const protocol = snapshot.protocols.find((p) => p.id === id);
-  const category = snapshot.categories.find((c) => c.id === protocol?.category);
-
-  if (!protocol) {
-    return (
-      <>
-        <SubNav />
-        <div className="error">
-          Protocol not found. <Link to="/">Back to matrix</Link>
-        </div>
-      </>
-    );
-  }
-
-  const feedIds = snapshot.feeds.map((f) => f.id);
-  const covered = coveredCount(protocol, feedIds);
-  const partial = snapshot.feeds.filter((f) => cellOf(protocol, f.id).status === "p").length;
-  const shown = snapshot.feeds.filter((f) => cellOf(protocol, f.id).status !== "n").length;
-  const tvl = fmtUsd(protocol.tvlUsd);
-  const initials = protocol.name
-    .split(/\s+/)
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-
-  return (
-    <>
-      <SubNav />
-      <div className="detail-layout">
-        <aside className="detail-aside">
-          <div className="aside-label">Governance</div>
-          {protocol.governance.length === 0 ? (
-            <p className="empty-note">No governance records in the open data layer yet.</p>
-          ) : (
-            protocol.governance.map((g) => (
-              <div key={g.key} className="sidebar-item">
-                <div className="k">{g.key}</div>
-                <p className="v">
-                  {g.value}
-                  <span className={`prov-tag ${g.provenance}`}>
-                    {g.provenance === "selfrep" ? "self-reported" : g.provenance}
-                  </span>
-                </p>
-              </div>
-            ))
-          )}
-
-          <div className="aside-label" style={{ marginTop: 32 }}>
-            Audit History
-          </div>
-          {protocol.audits.length === 0 ? (
-            <p className="empty-note">None recorded yet.</p>
-          ) : (
-            protocol.audits.map((a) => (
-              <div key={`${a.year}-${a.summary}`} className="hist-row">
-                <span className="yr">{a.year}</span>
-                <span className="what">{a.summary}</span>
-                <span className={`prov-tag ${a.provenance}`}>
-                  {a.provenance === "selfrep" ? "self-reported" : a.provenance}
-                </span>
-              </div>
-            ))
-          )}
-
-          <div className="aside-label" style={{ marginTop: 32 }}>
-            Incident History
-          </div>
-          {protocol.incidents.length === 0 ? (
-            <p className="empty-note">No major incidents recorded.</p>
-          ) : (
-            protocol.incidents.map((i) => (
-              <div key={`${i.year}-${i.summary}`} className="hist-row">
-                <span className="yr">{i.year}</span>
-                <span className="what">{i.summary}</span>
-                <span className="prov-tag">
-                  {i.severity === "crit" ? "CRITICAL" : i.severity === "ser" ? "SERIOUS" : "RESOLVED"}
-                </span>
-              </div>
-            ))
-          )}
-        </aside>
-
-        <section className="detail-main">
-          <div className="detail-identity">
-            <div className="detail-identity__left">
-              <div className="detail-avatar">{initials}</div>
-              <div>
-                <h2>{protocol.name}</h2>
-                <div className="detail-tags">
-                  {protocol.families.map((f) => (
-                    <span key={f} className="tag">
-                      {f}
-                    </span>
-                  ))}
-                  {category && <span className="tag cat">▪ {category.name}</span>}
-                </div>
-              </div>
-            </div>
-            <div className="detail-stats">
-              <div>
-                <div className="k">Protocol TVL</div>
-                <div className="v">{tvl == null ? "—" : `$${tvl}`}</div>
-                <div className="sub">
-                  {protocol.tvlWithin ? "Within Morpho · DefiLlama" : "DefiLlama · Live"}
-                </div>
-              </div>
-              <div>
-                <div className="k">Feeds Covering</div>
-                <div className="v">
-                  {covered}
-                  <small>/{snapshot.feeds.length}</small>
-                </div>
-                <div className={`sub${partial ? " warn" : ""}`}>
-                  {partial ? `${partial} Partial` : "No partial cells"}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section-head">
-            <span>Feed Assessments — Verbatim, Unweighted</span>
-            <span>
-              Showing {shown} covered/partial · {snapshot.feeds.length - shown} missing
-            </span>
-          </div>
-
-          <div className="feed-grid">
-            {snapshot.feeds.map((f) => {
-              const c = cellOf(protocol, f.id);
-              const cls = c.status === "c" ? "" : c.status === "p" ? "is-p" : "is-n";
-              return (
-                <div key={f.id} className={`feed-card ${cls}`}>
-                  <div className="feed-card__top">
-                    <h3>{f.name}</h3>
-                    <div className="feed-card__badges">
-                      <span className="badge type">{f.type}</span>
-                      <span className={`badge ${c.status}`}>
-                        {c.status === "c" ? "Covered" : c.status === "p" ? "Partial" : "Missing"}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="feed-card__focus">{f.focus}</p>
-                  {c.facets && c.facets.length > 0 && (
-                    <div className="feed-card__facets">
-                      {c.facets.map((facet) => (
-                        <span key={facet.key} className="tag">
-                          {facet.key === "stage" ? `Stage ${facet.value}` : `${facet.label}: ${facet.value}`}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  <blockquote className="feed-card__quote">
-                    {c.verbatim
-                      ? `“${c.verbatim}”`
-                      : "No assessment published for this protocol."}
-                  </blockquote>
-                  <div className="feed-card__foot">
-                    <span>{asOfLabel(c.asOf)}</span>
-                    <a href={c.sourceUrl ?? f.url} target="_blank" rel="noreferrer">
-                      source ↗
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      </div>
-    </>
-  );
+  if (!protocol) return <div className="empty-state page-empty"><h1>Protocol not found</h1><p>This protocol is not in the current collection.</p><Link to="/" className="button primary">Explore protocols <IconArrow/></Link></div>;
+  const category = snapshot.categories.find((c) => c.id === protocol.category);
+  const covered = coveredCount(protocol, snapshot.feeds.map((f) => f.id));
+  const available = snapshot.feeds.filter((f) => cellOf(protocol, f.id).status !== "n");
+  const missing = snapshot.feeds.filter((f) => cellOf(protocol, f.id).status === "n");
+  const metric = metricOf(protocol);
+  return <>
+    <nav className="breadcrumbs" aria-label="Breadcrumb"><Link to="/">Protocols</Link><span>/</span><span aria-current="page">{protocol.name}</span></nav>
+    <section className="protocol-heading"><div className="protocol-identity"><ProtocolAvatar id={protocol.id} name={protocol.name} large/><div><span className="eyebrow">{category?.name ?? protocol.category} · ETHEREUM</span><h1>{protocol.name}</h1><div className="family-tags">{protocol.families.map((f) => <span key={f}>{f}</span>)}</div></div></div><Link to="/sources" className="button secondary">About the sources <IconArrow/></Link></section>
+    <div className="protocol-summary"><div><span className="summary-label">{metric.label}<Info label="What this metric means">A snapshot of protocol size from DefiLlama, not a risk rating. TVL uses the Ethereum value. Volume, where shown, is a separate activity metric.</Info></span><strong>{protocol.tvlWithin ? "Within Morpho" : metric.value == null ? "Not available" : `$${fmtUsd(metric.value)}`}</strong><small>{protocol.tvlWithin ? "Included in the parent protocol" : `DefiLlama · ${dateInfo(snapshot.liveUpdatedAt).label}`}</small></div><div><span className="summary-label">Independent assessments<Info label="About assessment coverage">Available includes partial coverage. A source may assess only one deployment or a sample of vaults, even when data is present. More assessments do not imply greater safety.</Info></span><strong>{covered}<span className="summary-total"> / {snapshot.feeds.length}</span></strong><small>{missing.length ? `${missing.length} source${missing.length === 1 ? "" : "s"} without collected data` : "Check the scope of each assessment"}</small></div><div className="summary-guidance"><span className="eyebrow">WHERE TO START</span><p>{covered ? "Compare the assessments below. Open a source to understand its reasoning." : "Coverage is still limited. Check the source websites before making a decision."}</p><a href="#assessments" className="text-link">{covered ? "Explore assessments" : "See coverage gaps"} <IconArrow/></a></div></div>
+    <nav className="section-nav" aria-label="On this page"><a href="#assessments">Assessments <span>{covered}</span></a><a href="#protocol-context">Protocol context</a><Link to="/methodology">Reading guide</Link></nav>
+    <section id="assessments" className="assessment-section"><div className="section-heading"><div><h2>What the sources say</h2><p>Independent views. Original scales. Different scopes.</p></div><span className="section-aside">Provider assessment dates<DataAgeHelp/></span></div>
+      {covered === 0 && <div className="coverage-notice"><strong>No assessments collected yet</strong><span>We track {protocol.name}, but have no assessment from the current sources. This does not establish whether it is safe or unsafe.</span></div>}
+      <div className="assessment-grid">{available.map((feed) => <FeedAssessment key={feed.id} feed={feed} cell={cellOf(protocol, feed.id)}/>)}</div>
+      {missing.length > 0 && <div className="coverage-gaps"><h3>Coverage gaps <span className="count-badge">{missing.length}</span><Info label="Why a source may be missing">Missing data can mean an unmapped protocol, an unsupported scope or no assessment in our current collection. It is not proof that the provider has never reviewed the protocol.</Info></h3><div className="gap-grid">{missing.map((feed) => <FeedAssessment key={feed.id} feed={feed} cell={cellOf(protocol, feed.id)}/>)}</div></div>}
+    </section>
+    <section id="protocol-context" className="context-section"><div className="section-heading"><div><h2>Protocol context</h2><p>Supporting records from the open data layer.</p></div><Info label="About supporting records">These records are separate from the provider assessments above. An empty section means the information has not been collected here. It is not evidence of clean audits, absent incidents or safe governance.</Info></div><div className="context-grid">
+      <details className="context-card"><summary><span><strong>Governance & control</strong><small>{protocol.governance.length ? `${protocol.governance.length} records` : "Not yet collected"}</small></span><IconChevron/></summary><div>{protocol.governance.length ? <dl className="all-dimensions">{protocol.governance.map((g) => <div key={g.key}><dt>{g.key}<span className="small muted">{g.provenance === "selfrep" ? "Self-reported" : g.provenance}</span></dt><dd>{g.value}</dd></div>)}</dl> : <p>Governance records have not been added. DeFiScan assessments, where available, contain the provider’s analysis of control and upgradeability.</p>}</div></details>
+      <details className="context-card"><summary><span><strong>Audit history</strong><small>{protocol.audits.length ? `${protocol.audits.length} records` : "Not yet collected"}</small></span><IconChevron/></summary><div>{protocol.audits.length ? <ul className="history-list">{protocol.audits.map((a, i) => <li key={i}><span className="mono">{a.year}</span><p>{a.summary}<small>{a.provenance === "selfrep" ? "Self-reported" : a.provenance}</small></p></li>)}</ul> : <p>No audit records have been collected here. Check the protocol’s published audits; this does not mean it has not been audited.</p>}</div></details>
+      <details className="context-card"><summary><span><strong>Incident history</strong><small>{protocol.incidents.length ? `${protocol.incidents.length} records` : "Not yet collected"}</small></span><IconChevron/></summary><div>{protocol.incidents.length ? <ul className="history-list">{protocol.incidents.map((event, i) => <li key={i}><span className="mono">{event.year}</span><p>{event.summary}<small>{event.severity === "crit" ? "Critical" : event.severity === "ser" ? "Serious" : "Recorded event"}</small></p></li>)}</ul> : <p>No incident history has been collected here. This is not evidence that the protocol has never experienced an incident.</p>}</div></details>
+    </div></section>
+    <div className="page-end-note"><span>Spotted an outdated assessment or a missing source?</span><Link to="/methodology#contribute" className="text-link">Help improve the data <IconArrow/></Link></div>
+  </>;
 };

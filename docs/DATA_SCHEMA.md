@@ -72,6 +72,7 @@ Facets are a **uniform bag of key/value dimensions**. Different feeds use differ
 | --- | --- |
 | DeFiScan | `stage`, `chain`, `upgradeability`, `autonomy`, `exit_window`, `accessibility` |
 | Risklayer | `overall_score`, `risk_level`, plus dimension scores |
+| Philidor | `assessment_unit=vault`, `vaults_<family>` counts, `families_without_vaults`; per-vault tier + score in `verbatim` / `raw` |
 | Credora | `credit_rating`, `outlook` |
 | LlamaRisk | `report_count`, `latest_title` |
 | Live dashboards | `mode=live`, optional metric snapshots |
