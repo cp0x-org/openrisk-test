@@ -1,6 +1,6 @@
 {
   "protocolId": "lido",
-  "updatedAt": "2026-09-15T15:46:09.431Z",
+  "updatedAt": "2026-09-16T01:53:10.385Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T01:53:10.385Z",
         "collectorId": "defiscan"
       }
     },
@@ -242,7 +242,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-15T15:46:09.431Z",
+        "collectedAt": "2026-09-16T01:53:10.385Z",
         "collectorId": "risklayer"
       }
     }
