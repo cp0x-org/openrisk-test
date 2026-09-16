@@ -266,6 +266,89 @@
         "collectedAt": "2026-09-16T01:53:10.385Z",
         "collectorId": "risklayer"
       }
+    },
+    "philidor": {
+      "status": "p",
+      "label": "5 Ethereum vaults",
+      "verbatim": "[v3] Compound V3 USDC: Core 7.5\n[v3] Compound V3 USDT: Core 7.5\n[v3] Compound V3 WETH: Core 7.5",
+      "asOf": "2026-09-16",
+      "sourceUrl": "https://analytics.philidor.io/protocols/compound",
+      "facets": [
+        {
+          "key": "assessment_unit",
+          "label": "Assessment unit",
+          "value": "vault",
+          "valueType": "enum"
+        },
+        {
+          "key": "vaults_v3",
+          "label": "v3 vaults (Ethereum)",
+          "value": "5",
+          "valueType": "count"
+        },
+        {
+          "key": "families_without_vaults",
+          "label": "No Philidor vaults",
+          "value": "v2",
+          "valueType": "text"
+        }
+      ],
+      "raw": {
+        "philidorId": "compound",
+        "chain": "ethereum",
+        "notRated": [
+          "v2"
+        ],
+        "families": [
+          {
+            "family": "v3",
+            "versions": [
+              "v3"
+            ],
+            "listed": 5,
+            "vaults": [
+              {
+                "id": "compound-1-0xc3d688b66703497daa19211eedff47f25384cdc3",
+                "name": "Compound V3 USDC",
+                "version": "v3",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.5,
+                "tvlUsd": 373331010.8391353,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xc3d688b66703497daa19211eedff47f25384cdc3"
+              },
+              {
+                "id": "compound-1-0x3afdc9bca9213a35503b077a6072f3d0d5ab0840",
+                "name": "Compound V3 USDT",
+                "version": "v3",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.5,
+                "tvlUsd": 179216492.0659644,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x3afdc9bca9213a35503b077a6072f3d0d5ab0840"
+              },
+              {
+                "id": "compound-1-0xa17581a9e3356d9a858b789d68b4d866e593ae94",
+                "name": "Compound V3 WETH",
+                "version": "v3",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.5,
+                "tvlUsd": 123748098.56951883,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+              }
+            ]
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectorId": "philidor"
+      }
     }
   }
 }

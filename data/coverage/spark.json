@@ -245,6 +245,129 @@
         "collectedAt": "2026-09-16T01:53:10.385Z",
         "collectorId": "risklayer"
       }
+    },
+    "philidor": {
+      "status": "c",
+      "label": "20 Ethereum vaults",
+      "verbatim": "[v1] SparkLend wstETH: Prime 8.72\n[v1] SparkLend WETH: Prime 8.87\n[v1] SparkLend USDS: Prime 8.33\n[v2] USDS Savings Vault: Core 7.9\n[v2] Spark Savings USDT: Prime 8.33\n[v2] Spark Savings USDC: Prime 8.71",
+      "asOf": "2026-09-16",
+      "sourceUrl": "https://analytics.philidor.io/protocols/spark",
+      "facets": [
+        {
+          "key": "assessment_unit",
+          "label": "Assessment unit",
+          "value": "vault",
+          "valueType": "enum"
+        },
+        {
+          "key": "vaults_sparklend",
+          "label": "SparkLend vaults (Ethereum)",
+          "value": "14",
+          "valueType": "count"
+        },
+        {
+          "key": "vaults_susds",
+          "label": "sUSDS vaults (Ethereum)",
+          "value": "6",
+          "valueType": "count"
+        }
+      ],
+      "raw": {
+        "philidorId": "spark",
+        "chain": "ethereum",
+        "notRated": [],
+        "families": [
+          {
+            "family": "SparkLend",
+            "versions": [
+              "v1"
+            ],
+            "listed": 14,
+            "vaults": [
+              {
+                "id": "spark-1-0x12b54025c112aa61face2cdb7118740875a566e9",
+                "name": "SparkLend wstETH",
+                "version": "v1",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.72,
+                "tvlUsd": 3129365721.875076,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x12b54025c112aa61face2cdb7118740875a566e9"
+              },
+              {
+                "id": "spark-1-0x59cd1c87501baa753d0b5b5ab5d8416a45cd71db",
+                "name": "SparkLend WETH",
+                "version": "v1",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.87,
+                "tvlUsd": 1422726821.8060143,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x59cd1c87501baa753d0b5b5ab5d8416a45cd71db"
+              },
+              {
+                "id": "spark-1-0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359",
+                "name": "SparkLend USDS",
+                "version": "v1",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.33,
+                "tvlUsd": 1256600669.011146,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xc02ab1a5eaa8d1b114ef786d9bde108cd4364359"
+              }
+            ]
+          },
+          {
+            "family": "sUSDS",
+            "versions": [
+              "v2"
+            ],
+            "listed": 6,
+            "vaults": [
+              {
+                "id": "spark-1-0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+                "name": "USDS Savings Vault",
+                "version": "v2",
+                "curator": null,
+                "riskTier": "Core",
+                "totalScore": 7.9,
+                "tvlUsd": 4413391939.411772,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+              },
+              {
+                "id": "spark-1-0xe2e7a17dff93280dec073c995595155283e3c372",
+                "name": "Spark Savings USDT",
+                "version": "v2",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.33,
+                "tvlUsd": 392640647.042842,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0xe2e7a17dff93280dec073c995595155283e3c372"
+              },
+              {
+                "id": "spark-1-0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d",
+                "name": "Spark Savings USDC",
+                "version": "v2",
+                "curator": null,
+                "riskTier": "Prime",
+                "totalScore": 8.71,
+                "tvlUsd": 316254520.525758,
+                "scoreComputedAt": "2026-09-16T07:19:22.087Z",
+                "url": "https://analytics.philidor.io/vault/ethereum/0x28b3a8fb53b741a8fd78c0fb9a6b2393d896a43d"
+              }
+            ]
+          }
+        ]
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectorId": "philidor"
+      }
     }
   }
 }
