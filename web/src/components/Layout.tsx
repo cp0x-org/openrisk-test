@@ -7,7 +7,7 @@ import { ExternalLink } from "./UI";
 
 export const Layout = ({ snapshot }: { snapshot: Snapshot }) => {
   const location = useLocation();
-  const [dark, setDark] = useState(() => { try { return localStorage.getItem("openrisk-theme") === "dark"; } catch { return false; } });
+  const [dark, setDark] = useState(() => { try { return localStorage.getItem("openrisk-theme") !== "light"; } catch { return true; } });
   useEffect(() => {
     document.documentElement.dataset.theme = dark ? "dark" : "light";
     try { localStorage.setItem("openrisk-theme", dark ? "dark" : "light"); } catch { /* Storage may be disabled. */ }
