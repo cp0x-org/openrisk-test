@@ -1,6 +1,6 @@
 {
   "protocolId": "zerox",
-  "updatedAt": "2026-09-16T07:28:37.953Z",
+  "updatedAt": "2026-09-16T01:53:10.385Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectedAt": "2026-09-16T01:53:10.385Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,7 +30,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-16T07:28:37.953Z",
+        "collectedAt": "2026-09-16T01:53:10.385Z",
         "collectorId": "risklayer"
       }
     },
