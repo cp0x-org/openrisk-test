@@ -1,0 +1,123 @@
+# Manual-only twin of pages.yml.
+#
+# The workflow file stays on main and takes the branch as an input instead of
+# being dispatched against a ref. Two reasons:
+#   1. workflow_dispatch runs the YAML found at the selected ref, so a ref-picker
+#      run would need this file on every branch.
+#   2. github.ref stays refs/heads/main, so the github-pages environment's
+#      "deployment branches" rule is satisfied without loosening it.
+# There is only one Pages site per repo: this overwrites the live site.
+name: Manual deploy Pages (pick branch)
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to build the web app from"
+        required: true
+        default: data-artifacts
+        type: string
+      data_tag:
+        description: "Release tag to pull collected data from"
+        required: true
+        default: data-latest
+        type: string
+      collect_run_id:
+        description: "Optional: Collect run id to take the openrisk-data artifact from (overrides the release)"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+# Shared with the push-triggered Pages workflow so deploys serialize
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  DATA_TAG: ${{ inputs.data_tag }}
+  DATA_BUNDLE: openrisk-data.tar.gz
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report target
+        run: |
+          echo "### Manual Pages deploy" >> "$GITHUB_STEP_SUMMARY"
+          echo "- branch: \`${{ inputs.branch }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- data source: ${{ inputs.collect_run_id != '' && format('artifact from run {0}', inputs.collect_run_id) || format('release {0}', inputs.data_tag) }}" >> "$GITHUB_STEP_SUMMARY"
+
+      # The workflow comes from main, the site being built comes from the input branch
+      - name: Checkout selected branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # Preferred path when a specific Collect run was named
+      - name: Fetch data from Collect artifact
+        if: inputs.collect_run_id != ''
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: openrisk-data
+          path: data
+          run-id: ${{ inputs.collect_run_id }}
+          github-token: ${{ github.token }}
+
+      # Fallback: the rolling release, or if the named run's artifact expired
+      - name: Fetch data from release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f data/snapshot.json ]; then
+            echo "Data restored from the Collect artifact"
+            exit 0
+          fi
+          mkdir -p data
+          if gh release download "$DATA_TAG" --pattern "$DATA_BUNDLE" --dir "$RUNNER_TEMP" 2>/dev/null; then
+            tar -xzf "$RUNNER_TEMP/$DATA_BUNDLE" -C data
+            echo "Data restored from release $DATA_TAG"
+          else
+            echo "::warning::No collected data available — building from curated files only"
+          fi
+
+      # Rebuilds data/feeds.json from the feed modules, then reassembles the snapshot
+      - name: Rebuild snapshot
+        run: npm run build:snapshot
+
+      - name: Build web
+        run: npm run build -w web
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_DATA_URL: https://github.com/${{ github.repository }}/releases/download/${{ env.DATA_TAG }}/snapshot.json
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
