@@ -1,6 +1,6 @@
 {
   "protocolId": "euler",
-  "updatedAt": "2026-09-17T01:57:18.482Z",
+  "updatedAt": "2026-09-17T15:43:51.998Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-17T01:57:18.482Z",
+        "collectedAt": "2026-09-17T15:43:51.998Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,7 +30,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T01:57:18.482Z",
+        "collectedAt": "2026-09-17T15:43:51.998Z",
         "collectorId": "risklayer"
       }
     },
@@ -46,7 +46,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T01:57:18.482Z",
+        "collectedAt": "2026-09-17T15:43:51.998Z",
         "collectorId": "philidor"
       }
     }
