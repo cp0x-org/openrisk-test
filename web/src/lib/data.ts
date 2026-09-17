@@ -17,13 +17,30 @@ export const coveredCount = (p: Protocol, feedIds: string[]): number =>
     return n + (s === "c" || s === "p" ? 1 : 0);
   }, 0);
 
-export const loadSnapshot = async (): Promise<Snapshot> => {
-  const url = `${import.meta.env.BASE_URL}data/snapshot.json`;
-  const res = await fetch(url);
+/** Copy baked into the bundle at build time — always present, may lag the feed. */
+const BUNDLED_SNAPSHOT = `${import.meta.env.BASE_URL}data/snapshot.json`;
+/** Rolling GitHub release asset, refreshed by every collect run. Unset in local dev. */
+const RELEASE_SNAPSHOT = import.meta.env.VITE_DATA_URL;
+const RELEASE_TIMEOUT_MS = 5000;
+
+const fetchSnapshot = async (url: string, signal?: AbortSignal): Promise<Snapshot> => {
+  const res = await fetch(url, { signal });
   if (!res.ok) {
     throw new Error(`Failed to load snapshot: ${res.status}`);
   }
   return (await res.json()) as Snapshot;
+};
+
+export const loadSnapshot = async (): Promise<Snapshot> => {
+  if (RELEASE_SNAPSHOT) {
+    try {
+      return await fetchSnapshot(RELEASE_SNAPSHOT, AbortSignal.timeout(RELEASE_TIMEOUT_MS));
+    } catch (err) {
+      // Release unreachable (CORS, expired tag, offline) — the bundled copy still renders.
+      console.warn("[openrisk] release snapshot unavailable, falling back to bundled copy", err);
+    }
+  }
+  return fetchSnapshot(BUNDLED_SNAPSHOT);
 };
 
 export const dateInfo = (value?: string | null, now = Date.now()) => {

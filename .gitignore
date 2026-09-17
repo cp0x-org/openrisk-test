@@ -11,3 +11,9 @@ web/public/data/
 /coverage/
 *.tsbuildinfo
 /todo/
+
+# Collected data — published as a GitHub Actions artifact + the data-latest release
+data/live/
+data/coverage/
+data/feeds.json
+data/snapshot.json

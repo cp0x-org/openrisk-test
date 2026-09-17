@@ -2,6 +2,7 @@ import {
   dataDir,
   listProtocolIds,
   readJson,
+  readJsonOptional,
   writeJson,
   type CoverageFile,
   type Feed,
@@ -28,12 +29,18 @@ type LiveTvl = {
 export const buildSnapshot = (): void => {
   const feedsFile = readJson<{ feeds: Feed[] }>("data/feeds.json");
   const categoriesFile = readJson<{ categories: Category[] }>("data/categories.json");
-  const live = readJson<LiveTvl>("data/live/tvl.json");
+  const live = readJsonOptional<LiveTvl>("data/live/tvl.json") ?? {
+    updatedAt: null,
+    protocols: {},
+  };
   const meta = readJson<Record<string, unknown>>("data/meta.json");
+
+  const missing: string[] = [];
 
   const protocols = listProtocolIds().map((id) => {
     const p = readJson<Protocol>(`data/protocols/${id}.json`);
-    const coverage = readJson<CoverageFile>(`data/coverage/${id}.json`);
+    const coverage = readJsonOptional<CoverageFile>(`data/coverage/${id}.json`);
+    if (!coverage) missing.push(id);
     const liveRow = live.protocols[id] ?? {
       tvlUsd: null,
       ethereumTvlUsd: null,
@@ -46,8 +53,8 @@ export const buildSnapshot = (): void => {
       tvlUsd: liveRow.tvlUsd,
       ethereumTvlUsd: liveRow.ethereumTvlUsd,
       volume24hUsd: liveRow.volume24hUsd,
-      coverage: coverage.assessments,
-      coverageUpdatedAt: coverage.updatedAt,
+      coverage: coverage?.assessments ?? {},
+      coverageUpdatedAt: coverage?.updatedAt ?? null,
     };
   });
 
@@ -92,4 +99,12 @@ export const buildSnapshot = (): void => {
   // Keep a tiny checksum for CI visibility
   const bytes = readFileSync(join(dataDir, "snapshot.json")).byteLength;
   console.log(`[snapshot] wrote data/snapshot.json (${bytes} bytes, ${protocols.length} protocols)`);
+  if (live.updatedAt === null) {
+    console.warn("[snapshot] data/live/tvl.json absent — TVL columns will be empty");
+  }
+  if (missing.length > 0) {
+    console.warn(
+      `[snapshot] no collected coverage for ${missing.length} protocol(s): ${missing.join(", ")}`,
+    );
+  }
 };

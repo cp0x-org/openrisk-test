@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-only",
   "scripts": {
     "collect": "tsx src/index.ts",
-    "snapshot": "tsx src/snapshot.ts",
+    "snapshot": "tsx src/build.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

@@ -2,17 +2,18 @@ name: Collect data
 
 on:
   schedule:
-    # Every 6 hours
+    # Every 12 hours
     - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     paths:
       - "data/protocols/**"
-      - "data/feeds.json"
+      - "data/categories.json"
+      - "data/meta.json"
       - "collectors/**"
-      - "collectors/config/**"
       - ".github/workflows/collect.yml"
 
+# contents: write is needed to publish the rolling data release, not to push commits
 permissions:
   contents: write
 
@@ -20,21 +21,16 @@ concurrency:
   group: collect-data
   cancel-in-progress: true
 
+env:
+  DATA_TAG: data-latest
+  DATA_BUNDLE: openrisk-data.tar.gz
+
 jobs:
   collect:
-    # Extra guard: bot data commits must never start another collect
-    if: |
-      github.event_name != 'push' ||
-      (
-        !contains(github.event.head_commit.message, 'chore(data):') &&
-        !contains(github.event.head_commit.message, '[skip collect]')
-      )
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.DATA_PUSH_TOKEN || github.token }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -45,17 +41,55 @@ jobs:
       - name: Install
         run: npm ci
 
+      # Collected data no longer lives in git. Restore the previous run's output
+      # first so a feed that fails today keeps yesterday's assessments instead of
+      # silently collapsing to "no data".
+      - name: Restore previous data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data
+          if gh release download "$DATA_TAG" --pattern "$DATA_BUNDLE" --dir "$RUNNER_TEMP" 2>/dev/null; then
+            tar -xzf "$RUNNER_TEMP/$DATA_BUNDLE" -C data
+            echo "Restored previous data from release $DATA_TAG"
+          else
+            echo "No $DATA_TAG release yet — starting from curated files only"
+          fi
+
       - name: Run collectors
         run: npm run collect
 
-      - name: Commit updated data
+      - name: Package data
         run: |
-          git config user.name "openrisk-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/live data/coverage data/snapshot.json
-          if git diff --staged --quiet; then
-            echo "No data changes"
-            exit 0
+          mkdir -p data/live data/coverage
+          tar -czf "$RUNNER_TEMP/$DATA_BUNDLE" -C data live coverage feeds.json snapshot.json
+          ls -l data/snapshot.json "$RUNNER_TEMP/$DATA_BUNDLE"
+
+      # Transport for the Pages build (private to Actions, 30-day retention)
+      - name: Upload data artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openrisk-data
+          path: |
+            data/live
+            data/coverage
+            data/feeds.json
+            data/snapshot.json
+          retention-days: 30
+          if-no-files-found: error
+
+      # Public open-data endpoint (stable URL, no auth, no retention limit)
+      - name: Publish data release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view "$DATA_TAG" >/dev/null 2>&1; then
+            gh release create "$DATA_TAG" \
+              --title "Latest collected data" \
+              --notes "Rolling release. Overwritten by every successful Collect run — do not link to it as an immutable snapshot." \
+              --latest=false
           fi
-          git commit -m "chore(data): refresh live metrics and feed assessments [skip collect]"
-          git push
+          gh release upload "$DATA_TAG" \
+            data/snapshot.json \
+            "$RUNNER_TEMP/$DATA_BUNDLE" \
+            --clobber
