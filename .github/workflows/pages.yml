@@ -3,10 +3,15 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main, master]
+  # Data no longer arrives as a commit — rebuild when Collect finishes instead
+  workflow_run:
+    workflows: ["Collect data"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -14,8 +19,13 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  DATA_TAG: data-latest
+  DATA_BUNDLE: openrisk-data.tar.gz
+
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,13 +40,43 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Ensure snapshot exists
+      # Preferred path: the artifact produced by the Collect run that triggered us
+      - name: Fetch data from Collect artifact
+        if: github.event_name == 'workflow_run'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: openrisk-data
+          path: data
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      # Fallback for push / manual runs, or if the artifact expired
+      - name: Fetch data from release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f data/snapshot.json ]; then
+            echo "Data restored from the Collect artifact"
+            exit 0
+          fi
+          mkdir -p data
+          if gh release download "$DATA_TAG" --pattern "$DATA_BUNDLE" --dir "$RUNNER_TEMP" 2>/dev/null; then
+            tar -xzf "$RUNNER_TEMP/$DATA_BUNDLE" -C data
+            echo "Data restored from release $DATA_TAG"
+          else
+            echo "::warning::No collected data available — building from curated files only"
+          fi
+
+      # Rebuilds data/feeds.json from the feed modules, then reassembles the snapshot
+      - name: Rebuild snapshot
         run: npm run build:snapshot
 
       - name: Build web
         run: npm run build -w web
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_DATA_URL: https://github.com/${{ github.repository }}/releases/download/${{ env.DATA_TAG }}/snapshot.json
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

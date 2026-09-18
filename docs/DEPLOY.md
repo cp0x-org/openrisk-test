@@ -2,7 +2,7 @@
 
 This guide takes a local copy of the project to a public GitHub repo with:
 
-1. **Scheduled collectors** that refresh JSON under `data/` and commit back to the repo  
+1. **Scheduled collectors** that refresh JSON under `data/` and publish it as a GitHub Actions artifact + a public release asset — **not** as commits  
 2. **GitHub Pages** that hosts the React UI reading that open data layer  
 
 No paid infra is required. No custom API keys are required for DefiLlama or DeFiScan.
@@ -12,21 +12,38 @@ No paid infra is required. No custom API keys are required for DefiLlama or DeFi
 ## What happens after deploy
 
 ```
-Every 6 hours (UTC) ──► workflow "Collect data"
+Every 12 hours (UTC) ─► workflow "Collect data"
                               │
+                              ├─ restore previous data from release "data-latest"
                               ├─ npm run collect
                               ├─ 1. DefiLlama → data/live/tvl.json
                               ├─ 2. feeds     → data/coverage + data/live/feeds/
-                              └─ 3. snapshot  → data/snapshot.json
+                              ├─ 3. snapshot  → data/snapshot.json
                               │
-                              └─ git commit + push (if anything changed)
+                              ├─ upload-artifact "openrisk-data"   (30 days, private)
+                              └─ gh release upload "data-latest"   (public, permanent)
                                         │
+                                        │ workflow_run: completed
                                         ▼
-                              push to main ──► workflow "Deploy GitHub Pages"
+                              workflow "Deploy GitHub Pages"
                                         │
+                                        ├─ download-artifact "openrisk-data"
+                                        │    (falls back to the release)
+                                        ├─ npm run build:snapshot
                                         └─ build web/ → publish site
                                            https://<user>.github.io/<repo>/
 ```
+
+Nothing is committed to `main` by CI. The collected JSON lives in two places:
+
+| Where | URL | Auth | Retention |
+| --- | --- | --- | --- |
+| Actions artifact | `…/actions/runs/<RUN_ID>` → *Artifacts* | **required** | 30 days |
+| Release asset | `https://github.com/<USER>/<REPO>/releases/download/data-latest/snapshot.json` | none | permanent |
+
+Actions artifacts are **not** publicly downloadable, even on a public repo, and are
+always zipped — the browser cannot fetch them. They exist only to hand data from
+*Collect data* to *Deploy GitHub Pages*. The release asset is the public endpoint.
 
 Manual overrides:
 
@@ -92,9 +109,10 @@ CI uses `npm ci`, which **requires** `package-lock.json` in the repo.
 
 ---
 
-## 3. Enable Actions permissions (needed for bot commits)
+## 3. Enable Actions permissions (needed to publish the data release)
 
-Collectors commit updated JSON **from inside GitHub Actions**.
+Collectors publish updated JSON as a release asset **from inside GitHub Actions**.
+This needs `contents: write`, which `collect.yml` already requests.
 
 ### Preferred: built-in `GITHUB_TOKEN`
 
@@ -135,10 +153,13 @@ Push the workflow change, then run **Collect data** once.
 
 ### If `main` is branch-protected
 
-If you require PR reviews on `main`, the bot `git push` in `collect.yml` will fail. Options:
+Branch protection no longer matters for collectors — they never push. `gh release
+upload` writes to a tag, not to a protected branch.
 
-- Allow the actor (github-actions bot or the PAT user) to bypass in rulesets, **or**  
-- Keep `main` unprotected until Milestone 1 is stable  
+### If tag protection is enabled
+
+A tag protection rule matching `data-latest` will block the release. Exclude that
+tag, or rename `DATA_TAG` in `collect.yml` and `pages.yml` to something unprotected.
 
 ---
 
@@ -166,15 +187,19 @@ File: `.github/workflows/collect.yml`
 ```yaml
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 00:00, 06:00, 12:00, 18:00 UTC
+    - cron: "0 */12 * * *"    # 00:00 and 12:00 UTC
   workflow_dispatch:          # manual button in the Actions UI
   push:
-    paths:                    # also runs when configs/data inputs change
+    paths:                    # also runs when curated inputs change
       - "data/protocols/**"
-      - "data/coverage/**"
-      - "data/feeds.json"
+      - "data/categories.json"
+      - "data/meta.json"
       - "collectors/**"
 ```
+
+Only **curated** paths trigger a collect. Generated paths are gone from git, so the
+old feedback-loop guards (`[skip collect]`, the `chore(data):` check) are no longer
+needed and have been removed.
 
 Important GitHub quirks:
 
@@ -186,17 +211,14 @@ Important GitHub quirks:
 | Delay | Cron is best-effort; jobs may start a few minutes late |
 | Secrets | None required today; DefiLlama + DeFiScan GitHub raw files are public |
 
-After a successful collect with changes, Actions commits something like:
+After a successful collect, the `data-latest` release is overwritten and
+**Deploy GitHub Pages** starts via `workflow_run`, so the site picks up new
+TVL / DeFiScan cells.
 
-```text
-chore(data): refresh live metrics and feed assessments
-```
-
-author: `openrisk-bot` / `github-actions[bot]`.
-
-That push then triggers **Deploy GitHub Pages**, so the site picks up new TVL / DeFiScan cells.
-
-Important: collector commits intentionally do **not** re-trigger Collect (path filters + `[skip collect]` in the commit message). Otherwise timestamp updates in `data/coverage` would loop forever.
+Important: *Collect data* restores the previous release **before** running. If a
+feed's `run()` throws, `collectors/src/index.ts` skips it and yesterday's
+assessments survive. Without that restore step a single failed request would wipe
+that feed's entire column.
 
 
 ---
@@ -207,8 +229,16 @@ Important: collector commits intentionally do **not** re-trigger Collect (path f
 
 1. **Actions → Collect data → Run workflow**  
 2. Wait for green  
-3. Check that a new commit appeared (or the log says `No data changes`)  
-4. Inspect `data/live/tvl.json`, `data/live/feeds/defiscan.json`, `data/snapshot.json`  
+3. Open the run page — the **Artifacts** block at the bottom should list `openrisk-data`  
+4. Check the public asset resolves without auth:
+
+```bash
+curl -sIL https://github.com/<USER>/<REPO>/releases/download/data-latest/snapshot.json | grep -i "^HTTP/\|^access-control-allow-origin"
+```
+
+Expect a final `200` and `access-control-allow-origin: *`. If the CORS header is
+absent the site still works — `loadSnapshot` falls back to the copy bundled in
+`dist` — but the data will only be as fresh as the last Pages build.
 
 ### Site
 
@@ -231,9 +261,11 @@ npm run dev
 | Task | How |
 | --- | --- |
 | Force a data refresh | Actions → Collect data → Run workflow |
+| Grab the current data locally | `npm run data:pull` (needs `gh auth login`) |
+| Inspect published data | `https://github.com/<USER>/<REPO>/releases/tag/data-latest` |
 | Change collect interval | Edit cron in `.github/workflows/collect.yml` |
 | Add a risk feed | PR with only `collectors/src/feeds/<id>.ts` (see CONTRIBUTING) |
-| Fix coverage by hand | PR against `data/coverage/<protocol>.json` (see `docs/CONTRIBUTING.md`) |
+| Fix coverage by hand | No longer possible via PR — `data/coverage/` left git and is fully rewritten by each collect. Correct the feed module or the upstream source instead. |
 | Disable DefiLlama / snapshot | Edit `enabled` in `collectors/config/collectors.json` |
 | Disable one feed | Set `enabled: false` inside that feed’s `.ts` module |
 | Rename the GitHub repo | Update nothing in code if you keep using `VITE_BASE: /${{ github.event.repository.name }}/` — it follows the new name on next Pages build |
@@ -255,7 +287,9 @@ npm run dev
 - [ ] Actions → General → **Read and write** workflow permissions  
 - [ ] Pages → Source = **GitHub Actions**  
 - [ ] Manual **Collect data** succeeded  
-- [ ] Manual or automatic **Deploy GitHub Pages** succeeded  
+- [ ] `data-latest` release exists with `snapshot.json` + `openrisk-data.tar.gz`  
+- [ ] `openrisk-data` artifact visible on the Collect run page  
+- [ ] **Deploy GitHub Pages** started automatically after Collect  
 - [ ] Site opens and matrix renders  
 - [ ] (Later) fill `docs/CONFLICTS.md` and name a long-term curator in `CHARTER.md`  
 

@@ -2,7 +2,7 @@
   "name": "openrisk",
   "private": true,
   "version": "0.1.0",
-  "description": "Neutral DeFi risk intelligence aggregator — open data layer + collectors + GitHub Pages UI",
+  "description": "Neutral DeFi risk intelligence aggregator \u2014 open data layer + collectors + GitHub Pages UI",
   "license": "AGPL-3.0-only",
   "workspaces": [
     "collectors",
@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "collect": "npm run collect -w collectors",
+    "data:pull": "gh release download data-latest --pattern openrisk-data.tar.gz --output - | tar -xzf - -C data",
     "build:snapshot": "npm run snapshot -w collectors",
     "dev": "npm run dev -w web",
     "build": "npm run snapshot -w collectors && npm run build -w web",

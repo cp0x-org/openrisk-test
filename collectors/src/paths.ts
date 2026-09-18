@@ -11,6 +11,15 @@ export const readJson = <T>(relPath: string): T => {
   return JSON.parse(readFileSync(full, "utf8")) as T;
 };
 
+/** Generated files live outside git — read them defensively. */
+export const readJsonOptional = <T>(relPath: string): T | null => {
+  try {
+    return readJson<T>(relPath);
+  } catch {
+    return null;
+  }
+};
+
 export const writeJson = (relPath: string, data: unknown): void => {
   const full = join(repoRoot, relPath);
   mkdirSync(dirname(full), { recursive: true });
