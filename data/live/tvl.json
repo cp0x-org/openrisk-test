@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "source": "defillama",
+  "updatedAt": "2026-09-18T15:16:33.670Z",
+  "protocols": {
+    "aave": {
+      "tvlUsd": 15300700423.756271,
+      "ethereumTvlUsd": 15300700423.756271,
+      "volume24hUsd": null,
+      "defillamaSlug": "aave-v3",
+      "defillamaSlugs": [
+        "aave-v3",
+        "aave-v4"
+      ],
+      "defillamaParent": "parent#aave",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "aave-v3",
+        "aave-v4",
+        "aave-horizon-rwa",
+        "aave-v2",
+        "aave-v1",
+        "aave-aptos",
+        "aave-arc"
+      ]
+    },
+    "balancer": {
+      "tvlUsd": 41707725.20948889,
+      "ethereumTvlUsd": 41707725.20948889,
+      "volume24hUsd": null,
+      "defillamaSlug": "balancer-v2",
+      "defillamaSlugs": [
+        "balancer-v2",
+        "balancer-v3"
+      ],
+      "defillamaParent": "parent#balancer",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "balancer-v2",
+        "balancer-v3",
+        "balancer-v1",
+        "balancer-cow-amm"
+      ]
+    },
+    "compound": {
+      "tvlUsd": 1414386331.0620744,
+      "ethereumTvlUsd": 1414386331.0620744,
+      "volume24hUsd": null,
+      "defillamaSlug": "compound-v3",
+      "defillamaSlugs": [
+        "compound-v3",
+        "compound-v2"
+      ],
+      "defillamaParent": "parent#compound-finance",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "compound-v3",
+        "compound-v2",
+        "compound-v1"
+      ]
+    },
+    "cowswap": {
+      "tvlUsd": null,
+      "ethereumTvlUsd": null,
+      "volume24hUsd": null,
+      "defillamaSlug": "cowswap",
+      "defillamaSlugs": [
+        "cowswap"
+      ],
+      "defillamaParent": null,
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "cowswap"
+      ]
+    },
+    "curve": {
+      "tvlUsd": 1475767665.25217,
+      "ethereumTvlUsd": 1475767665.25217,
+      "volume24hUsd": null,
+      "defillamaSlug": "curve-dex",
+      "defillamaSlugs": [
+        "curve-dex"
+      ],
+      "defillamaParent": "parent#curve-finance",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "curve-dex",
+        "crvusd",
+        "curve-llamalend",
+        "curve-llamalend-v2"
+      ]
+    },
+    "euler": {
+      "tvlUsd": 59124138.66778538,
+      "ethereumTvlUsd": 59124138.66778538,
+      "volume24hUsd": null,
+      "defillamaSlug": "euler-v2",
+      "defillamaSlugs": [
+        "euler-v2"
+      ],
+      "defillamaParent": "parent#euler",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "euler-v2",
+        "euler-v1"
+      ]
+    },
+    "fluid": {
+      "tvlUsd": 972260332.0304173,
+      "ethereumTvlUsd": 972260332.0304173,
+      "volume24hUsd": null,
+      "defillamaSlug": "fluid-lending",
+      "defillamaSlugs": [
+        "fluid-lending",
+        "fluid-dex"
+      ],
+      "defillamaParent": "parent#fluid",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "fluid-lending",
+        "fluid-dex",
+        "fluid-lite",
+        "fluid-dex-lite"
+      ]
+    },
+    "gearbox": {
+      "tvlUsd": 21010515.135306146,
+      "ethereumTvlUsd": 21010515.135306146,
+      "volume24hUsd": null,
+      "defillamaSlug": "gearbox",
+      "defillamaSlugs": [
+        "gearbox"
+      ],
+      "defillamaParent": null,
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "gearbox"
+      ]
+    },
+    "lido": {
+      "tvlUsd": 24364000005.06088,
+      "ethereumTvlUsd": 24364000005.06088,
+      "volume24hUsd": null,
+      "defillamaSlug": "lido",
+      "defillamaSlugs": [
+        "lido"
+      ],
+      "defillamaParent": null,
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "lido"
+      ]
+    },
+    "liquity": {
+      "tvlUsd": 282378808.2115014,
+      "ethereumTvlUsd": 282378808.2115014,
+      "volume24hUsd": null,
+      "defillamaSlug": "liquity-v1",
+      "defillamaSlugs": [
+        "liquity-v1",
+        "liquity-v2"
+      ],
+      "defillamaParent": "parent#liquity",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "liquity-v1",
+        "liquity-v2"
+      ]
+    },
+    "mellow": {
+      "tvlUsd": 287247720.7343351,
+      "ethereumTvlUsd": 287247720.7343351,
+      "volume24hUsd": null,
+      "defillamaSlug": "mellow",
+      "defillamaSlugs": [
+        "mellow"
+      ],
+      "defillamaParent": "parent#mellow-protocol",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "mellow-core",
+        "mellow-restaking",
+        "mellow-yield"
+      ]
+    },
+    "morpho": {
+      "tvlUsd": 4852488630.512656,
+      "ethereumTvlUsd": 4852488630.512656,
+      "volume24hUsd": null,
+      "defillamaSlug": "morpho-blue",
+      "defillamaSlugs": [
+        "morpho-blue"
+      ],
+      "defillamaParent": "parent#morpho",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "morpho-blue",
+        "morpho-midnight",
+        "morpho-optimizer-aavev2",
+        "morpho-optimizer-compoundv2",
+        "morpho-optimizer-aavev3"
+      ]
+    },
+    "morphovaults": {
+      "tvlUsd": null,
+      "ethereumTvlUsd": null,
+      "volume24hUsd": null,
+      "defillamaSlug": null,
+      "defillamaSlugs": [],
+      "defillamaParent": null,
+      "tvlWithin": "morpho",
+      "matchedSlugs": []
+    },
+    "oneinch": {
+      "tvlUsd": 2913172.260904464,
+      "ethereumTvlUsd": 2913172.260904464,
+      "volume24hUsd": null,
+      "defillamaSlug": "1inch-swap",
+      "defillamaSlugs": [
+        "1inch-swap"
+      ],
+      "defillamaParent": "parent#1inch",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "1inch-swap",
+        "1inch-aqua"
+      ]
+    },
+    "pendle": {
+      "tvlUsd": 714919688.8116509,
+      "ethereumTvlUsd": 714919688.8116509,
+      "volume24hUsd": null,
+      "defillamaSlug": "pendle-v2",
+      "defillamaSlugs": [
+        "pendle-v2"
+      ],
+      "defillamaParent": "parent#pendle",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "pendle-v2",
+        "boros"
+      ]
+    },
+    "rocketpool": {
+      "tvlUsd": 1343640591.195556,
+      "ethereumTvlUsd": 1343640591.195556,
+      "volume24hUsd": null,
+      "defillamaSlug": "rocket-pool",
+      "defillamaSlugs": [
+        "rocket-pool"
+      ],
+      "defillamaParent": null,
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "rocket-pool"
+      ]
+    },
+    "spark": {
+      "tvlUsd": 8525173185.720135,
+      "ethereumTvlUsd": 8525173185.720135,
+      "volume24hUsd": null,
+      "defillamaSlug": "sparklend",
+      "defillamaSlugs": [
+        "sparklend",
+        "spark-savings",
+        "spark-liquidity-layer"
+      ],
+      "defillamaParent": "parent#spark",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "sparklend",
+        "spark-liquidity-layer",
+        "spark-savings"
+      ]
+    },
+    "uniswap": {
+      "tvlUsd": 2374181860.1135716,
+      "ethereumTvlUsd": 2374181860.1135716,
+      "volume24hUsd": null,
+      "defillamaSlug": "uniswap-v3",
+      "defillamaSlugs": [
+        "uniswap-v3",
+        "uniswap-v4",
+        "uniswap-v2"
+      ],
+      "defillamaParent": "parent#uniswap",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "uniswap-v3",
+        "uniswap-v4",
+        "uniswap-v2",
+        "uniswap-v1",
+        "uniswap-auctions"
+      ]
+    },
+    "yearn": {
+      "tvlUsd": 225455198.8126382,
+      "ethereumTvlUsd": 225455198.8126382,
+      "volume24hUsd": null,
+      "defillamaSlug": "yearn-finance",
+      "defillamaSlugs": [
+        "yearn-finance"
+      ],
+      "defillamaParent": "parent#yearn",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "yearn-finance",
+        "yearn-curating",
+        "yearn-ether"
+      ]
+    },
+    "zerox": {
+      "tvlUsd": null,
+      "ethereumTvlUsd": null,
+      "volume24hUsd": null,
+      "defillamaSlug": "0x",
+      "defillamaSlugs": [
+        "0x"
+      ],
+      "defillamaParent": "parent#0x-protocol",
+      "tvlWithin": null,
+      "matchedSlugs": [
+        "0x-aggregator",
+        "0x-bridge-aggregator"
+      ]
+    }
+  }
+}

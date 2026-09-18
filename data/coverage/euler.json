@@ -1,0 +1,54 @@
+{
+  "protocolId": "euler",
+  "updatedAt": "2026-09-18T15:16:33.685Z",
+  "assessments": {
+    "defiscan": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_defiscan_review_mapped_or_found"
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
+        "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_mapping"
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
+        "collectorId": "risklayer"
+      }
+    },
+    "philidor": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_mapping"
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
+        "collectorId": "philidor"
+      }
+    }
+  }
+}

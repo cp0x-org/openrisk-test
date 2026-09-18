@@ -1,0 +1,113 @@
+{
+  "protocolId": "liquity",
+  "updatedAt": "2026-09-18T15:16:33.685Z",
+  "assessments": {
+    "defiscan": {
+      "status": "c",
+      "label": "Stage 2",
+      "verbatim": "Stage 2. Liquity is a decentralized borrowing protocol that allows you to draw interest-free loans against Ether used as collateral. Loans are paid out in LUSD (a USD pegged stablecoin) and need to maintain a minimum collateral ratio of 110%. In addition to the collateral, the loans are secured by a Stability Pool containing LUSD and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms under Liquidation.",
+      "asOf": "2024-10-23",
+      "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum",
+      "facets": [
+        {
+          "key": "stage",
+          "label": "Decentralization stage",
+          "value": "2",
+          "valueType": "stage",
+          "scale": "0-2"
+        },
+        {
+          "key": "chain",
+          "label": "Chain",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "upgradeability",
+          "label": "Upgradeability",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "autonomy",
+          "label": "Autonomy",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "exit_window",
+          "label": "Exit Window",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        },
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "value": "L",
+          "valueType": "enum",
+          "scale": "L|M|H"
+        }
+      ],
+      "raw": {
+        "reviews": [
+          {
+            "slug": "liquity",
+            "chain": "ethereum",
+            "role": "primary",
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "path": "src/content/protocols/liquity/ethereum.md",
+            "sourceUrl": "https://www.defiscan.info/protocols/liquity/ethereum"
+          }
+        ]
+      },
+      "collection": {
+        "method": "git",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
+        "collectorId": "defiscan"
+      }
+    },
+    "risklayer": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_mapping"
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
+        "collectorId": "risklayer"
+      }
+    },
+    "philidor": {
+      "status": "n",
+      "label": null,
+      "verbatim": null,
+      "asOf": null,
+      "sourceUrl": null,
+      "facets": [],
+      "raw": {
+        "reason": "no_mapping"
+      },
+      "collection": {
+        "method": "api",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
+        "collectorId": "philidor"
+      }
+    }
+  }
+}
