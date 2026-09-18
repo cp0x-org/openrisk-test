@@ -1,6 +1,6 @@
 {
   "protocolId": "yearn",
-  "updatedAt": "2026-09-17T15:43:51.998Z",
+  "updatedAt": "2026-09-18T01:44:23.015Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,15 +30,15 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "risklayer"
       }
     },
     "philidor": {
       "status": "c",
       "label": "24 Ethereum vaults",
-      "verbatim": "[v3] USDC-1 yVault: Prime 8.64\n[v3] WETH-1 yVault: Prime 8.34\n[v3] USD yVault: Prime 8.44",
-      "asOf": "2026-09-17",
+      "verbatim": "[v3] USDC-1 yVault: Prime 8.64\n[v3] WETH-1 yVault: Prime 8.34\n[v3] USD yVault: Prime 8.48",
+      "asOf": "2026-09-18",
       "sourceUrl": "https://analytics.philidor.io/protocols/yearn",
       "facets": [
         {
@@ -73,8 +73,8 @@
                 "curator": null,
                 "riskTier": "Prime",
                 "totalScore": 8.64,
-                "tvlUsd": 20924315.98443863,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "tvlUsd": 20926943.486001708,
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0xbe53a109b494e5c9f97b9cd39fe969be68bf6204"
               },
               {
@@ -84,8 +84,8 @@
                 "curator": null,
                 "riskTier": "Prime",
                 "totalScore": 8.34,
-                "tvlUsd": 17476836.846116707,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "tvlUsd": 17235916.56354928,
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0xc56413869c6cdf96496f2b1ef801fedbdfa7ddb0"
               },
               {
@@ -94,9 +94,9 @@
                 "version": "v3",
                 "curator": null,
                 "riskTier": "Prime",
-                "totalScore": 8.44,
-                "tvlUsd": 11162220.159668567,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "totalScore": 8.48,
+                "tvlUsd": 11135805.384650692,
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0x696d02db93291651ed510704c9b286841d506987"
               }
             ]
@@ -105,7 +105,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "philidor"
       }
     }

@@ -1,6 +1,6 @@
 {
   "protocolId": "uniswap",
-  "updatedAt": "2026-09-17T15:43:51.998Z",
+  "updatedAt": "2026-09-18T01:44:23.015Z",
   "assessments": {
     "defiscan": {
       "status": "p",
@@ -94,7 +94,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "defiscan"
       }
     },
@@ -263,7 +263,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "risklayer"
       }
     },
@@ -271,7 +271,7 @@
       "status": "p",
       "label": "108 Ethereum vaults",
       "verbatim": "[v3] Uniswap V3 USDC/WETH 0.05%: Prime 8.72\n[v3] Uniswap V3 USDC/WETH 0.3%: Prime 8.72\n[v3] Uniswap V3 WETH/USDT 0.3%: Prime 8.53\n[v4] Uniswap V4 ETH/USDC 0.3%: Core 7.9\n[v4] Uniswap V4 ETH/USDT 0.3%: Core 7.9\n[v4] Uniswap V4 ETH/LINK 0.3%: Core 7.69",
-      "asOf": "2026-09-17",
+      "asOf": "2026-09-18",
       "sourceUrl": "https://analytics.philidor.io/protocols/uniswap",
       "facets": [
         {
@@ -320,8 +320,8 @@
                 "curator": null,
                 "riskTier": "Prime",
                 "totalScore": 8.72,
-                "tvlUsd": 412331764.2157138,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "tvlUsd": 411108527.8530833,
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
               },
               {
@@ -331,8 +331,8 @@
                 "curator": null,
                 "riskTier": "Prime",
                 "totalScore": 8.72,
-                "tvlUsd": 305428768.10290766,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "tvlUsd": 304386727.59864324,
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8"
               },
               {
@@ -342,8 +342,8 @@
                 "curator": null,
                 "riskTier": "Prime",
                 "totalScore": 8.53,
-                "tvlUsd": 298466011.62495595,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "tvlUsd": 298407488.5611159,
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0x4e68ccd3e89f51c3074ca5072bbac773960dfa36"
               }
             ]
@@ -363,7 +363,7 @@
                 "riskTier": "Core",
                 "totalScore": 7.9,
                 "tvlUsd": 42772660.82451922,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0xdce6394339af00981949f5f3baf27e3610c76326a700af57e4b3e3ae4977f78d"
               },
               {
@@ -374,7 +374,7 @@
                 "riskTier": "Core",
                 "totalScore": 7.9,
                 "tvlUsd": 28227212.77809363,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0x50b00c1a5a8e582ec808e97e71598cd135206a9f9c548eab2ed73659e7ee5fa8"
               },
               {
@@ -385,7 +385,7 @@
                 "riskTier": "Core",
                 "totalScore": 7.69,
                 "tvlUsd": 20303576.79818986,
-                "scoreComputedAt": "2026-09-17T15:34:12.597Z",
+                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0xb2b5618903d74bbac9e9049a035c3827afc4487cde3b994a1568b050f4c8e2e4"
               }
             ]
@@ -394,7 +394,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "philidor"
       }
     }

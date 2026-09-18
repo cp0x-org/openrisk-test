@@ -1,6 +1,6 @@
 {
   "protocolId": "balancer",
-  "updatedAt": "2026-09-17T15:43:51.998Z",
+  "updatedAt": "2026-09-18T01:44:23.015Z",
   "assessments": {
     "defiscan": {
       "status": "n",
@@ -14,7 +14,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "defiscan"
       }
     },
@@ -30,7 +30,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "risklayer"
       }
     },
@@ -46,7 +46,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-17T15:43:51.998Z",
+        "collectedAt": "2026-09-18T01:44:23.015Z",
         "collectorId": "philidor"
       }
     }
