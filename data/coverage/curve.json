@@ -1,6 +1,6 @@
 {
   "protocolId": "curve",
-  "updatedAt": "2026-09-18T01:44:23.015Z",
+  "updatedAt": "2026-09-18T15:16:33.685Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -73,7 +73,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-18T01:44:23.015Z",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
         "collectorId": "defiscan"
       }
     },
@@ -242,7 +242,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-18T01:44:23.015Z",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
         "collectorId": "risklayer"
       }
     },
@@ -258,7 +258,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-18T01:44:23.015Z",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
         "collectorId": "philidor"
       }
     }

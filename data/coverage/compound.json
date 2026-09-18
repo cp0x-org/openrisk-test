@@ -1,6 +1,6 @@
 {
   "protocolId": "compound",
-  "updatedAt": "2026-09-18T01:44:23.015Z",
+  "updatedAt": "2026-09-18T15:16:33.685Z",
   "assessments": {
     "defiscan": {
       "status": "c",
@@ -94,7 +94,7 @@
       },
       "collection": {
         "method": "git",
-        "collectedAt": "2026-09-18T01:44:23.015Z",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
         "collectorId": "defiscan"
       }
     },
@@ -263,7 +263,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-18T01:44:23.015Z",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
         "collectorId": "risklayer"
       }
     },
@@ -314,8 +314,8 @@
                 "curator": null,
                 "riskTier": "Core",
                 "totalScore": 7.5,
-                "tvlUsd": 372733800.11667323,
-                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
+                "tvlUsd": 373595887.76766104,
+                "scoreComputedAt": "2026-09-18T14:34:19.324Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0xc3d688b66703497daa19211eedff47f25384cdc3"
               },
               {
@@ -325,8 +325,8 @@
                 "curator": null,
                 "riskTier": "Core",
                 "totalScore": 7.5,
-                "tvlUsd": 176249892.7829002,
-                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
+                "tvlUsd": 176202397.73411608,
+                "scoreComputedAt": "2026-09-18T14:34:19.324Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0x3afdc9bca9213a35503b077a6072f3d0d5ab0840"
               },
               {
@@ -336,8 +336,8 @@
                 "curator": null,
                 "riskTier": "Core",
                 "totalScore": 7.5,
-                "tvlUsd": 125953318.53302285,
-                "scoreComputedAt": "2026-09-18T01:34:11.226Z",
+                "tvlUsd": 131217026.24375372,
+                "scoreComputedAt": "2026-09-18T14:34:19.324Z",
                 "url": "https://analytics.philidor.io/vault/ethereum/0xa17581a9e3356d9a858b789d68b4d866e593ae94"
               }
             ]
@@ -346,7 +346,7 @@
       },
       "collection": {
         "method": "api",
-        "collectedAt": "2026-09-18T01:44:23.015Z",
+        "collectedAt": "2026-09-18T15:16:33.685Z",
         "collectorId": "philidor"
       }
     }
