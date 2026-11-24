@@ -48,10 +48,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Report target
+        env:
+          BRANCH: ${{ inputs.branch }}
+          DATA_SOURCE: ${{ inputs.collect_run_id != '' && format('artifact from run {0}', inputs.collect_run_id) || format('release {0}', inputs.data_tag) }}
         run: |
           echo "### Manual Pages deploy" >> "$GITHUB_STEP_SUMMARY"
-          echo "- branch: \`${{ inputs.branch }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "- data source: ${{ inputs.collect_run_id != '' && format('artifact from run {0}', inputs.collect_run_id) || format('release {0}', inputs.data_tag) }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- branch: \`$BRANCH\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- data source: $DATA_SOURCE" >> "$GITHUB_STEP_SUMMARY"
 
       # The workflow comes from main, the site being built comes from the input branch
       - name: Checkout selected branch

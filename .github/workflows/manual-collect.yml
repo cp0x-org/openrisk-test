@@ -38,10 +38,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Report target
+        env:
+          BRANCH: ${{ inputs.branch }}
+          DATA_TAG: ${{ inputs.data_tag }}
         run: |
           echo "### Manual collect" >> "$GITHUB_STEP_SUMMARY"
-          echo "- branch: \`${{ inputs.branch }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "- release tag: \`${{ inputs.data_tag }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- branch: \`$BRANCH\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- release tag: \`$DATA_TAG\`" >> "$GITHUB_STEP_SUMMARY"
 
       # The workflow comes from main, the code being run comes from the input branch
       - name: Checkout selected branch
